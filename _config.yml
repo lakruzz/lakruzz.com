@@ -5,10 +5,5 @@ timezone: Europe/Copenhagen
 url: www.lakruzz.com
 markdown: kramdown
 
+
 permalink: pretty
-defaults:
-  -
-    scope:
-      type: posts
-    values:
-      permalink: /:categories/:title/
