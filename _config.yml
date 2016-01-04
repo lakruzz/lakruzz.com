@@ -4,6 +4,4 @@ exclude: [README.md]
 timezone: Europe/Copenhagen
 url: www.lakruzz.com
 markdown: kramdown
-
-
-permalink: pretty
+permalink: /:categories/:title
