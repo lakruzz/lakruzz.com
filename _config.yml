@@ -1,5 +1,5 @@
 name: Lakruzz - Personal blog by Lars Kruse
-highlighter: pygments
+highlighter: rouge
 exclude: [README.md]
 timezone: Europe/Copenhagen
 url: www.lakruzz.com
