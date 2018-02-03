@@ -23,7 +23,7 @@ Through the windows out to the airfield we can see the bags from our plane lying
 
 India is already showing us that procedures are different from what we know.
 
-##The Drive
+## The Drive
 As soon as we left the airport all order and efficiency seemed to be restored. Our chauffer was waving a sign with our names on it and he had a colleague with him, so there were two cars for five people, plenty of room for our luggage and seat belts for everyone. We had been warned that traffic in India is hectic and rules does not apply the same way as we know from home.
 
 Immediately when we got off the airport ground we got introduced to the hectic traffic as our car entered into the a roundabout, instead of holding back for the crossing traffic the driver just blew the horn and trusted that since his car was bigger than the tuk tuks, they'd probably hold back. And they did indeed.
@@ -46,7 +46,7 @@ I fell asleep again, thinking "it's been a good life so far, I'm happy zzzzZZ".
 
 The last two kilometers up to Dewalokam we drove through rubber and pineapple plantations.
 
-##Very very welcome to Dewalokam
+## Very very welcome to Dewalokam
 ![Welcome](/images/blog/DSCN0754.JPG){: .stdright} Dewalokam is a two-story yellow building with doors and windows in teak. The building is organised so that we arrive into a court yard. The first thing that catches my eye is five women dressed in similar orange dresses, then three young men, one of them carrying a tray with freshly made lemon and ginger lemonade.
 
 Sinta, our hostess comes up to us even before we're done unloading the car for bags signalling that we should leave that to the drivers and step aside, over to the orange women and the young men.
@@ -65,7 +65,7 @@ As we get settled Heidi takes a look at the toilet and notices a bucket right ne
 
 It turns our that we can flush the toilet paper.
 
-##River cottage - in Kerala
+## River cottage - in Kerala
 After arrival we all need to go to sleep. Lunch is at a quater past one so we can take almost an hour an half. We overslept.
 
 Ulrich who wasn't asleep wakes us up at half past one and we quickly rush to the dinner room - fifteen minutes late and not quite awake. The room is crowded. Some twenty people are sitting at a long table eating while engaged in conversations with each others. The five of us are offered a table for ourselves. The long table simply can not fit everyone.

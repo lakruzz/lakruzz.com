@@ -10,7 +10,7 @@ You have probably already read the story of [The Bonnie Situation](/wolfware/int
 
 The interpretation is viewed from the perspective of the consultant, and as you'll see later, Mr. Wolf represents the consultant in the Bonnie Situation  - but let's get on with it.
 
-##Jules and Vincent: The Customer
+## Jules and Vincent: The Customer
 
 Jules Winnfield and Vincent Vega are representing _the customer_. They are the ones that need consultancy! Now if a potential customer reads this he or she might get somewhat insulted by that comparison as it appears - at least in the beginning - that they are doing really bad. But in the end when The Bonnie Situation is avoided and looking back on their behavior, they actually did The Right Thing. They requested help and they participated very actively in the problem solving.
 
@@ -24,11 +24,11 @@ Like the typical customer, Jules and Vincent are very competent at handling diff
 
 If you try to analyze: Why is the Bonnie Situation really such an interesting story that Tarantino finds it worth telling? Sure it's fascinating to see Mr. Wolf's charisma and talent be laid out in front of you. But the twist of the story, which makes it a good one, is that Jules and Vincent practically does all the actual work themselves. They just needed a guide.
 
-##The Bonnie Situation: The Customer's Problem
+## The Bonnie Situation: The Customer's Problem
 
 Now when you know the story about _The Bonnie Situation_ we can introduce the same term to be a metaphor for _The Customer's Problem_. The definition is: Some delicate situation that requires a solution (faliure is not an option) within a limited time and with limited resources. It's a situation that requires on-site help from an expert.
 
-##Jimmi and Bonnie: The consumers
+## Jimmi and Bonnie: The consumers
 
 Jimmi - and potentially also Bonnie - are being dragged into Vincent's and Jules' business without really wanting to be. Sure Jimmi wants to help his friend Jules with his problem - but he doesn't want to become divorced doing it.
 
@@ -39,7 +39,7 @@ As he says to the blood soaked Jules when he's standing in front of him in his o
 Jimmi insists, that even if he is indeed suffering from the problem that Vincent and Jules opposed upon him, he still has no part in it, and therefore he's only willing to take part in the solution to a very limited extend. He is giving them some leash, but his demands are basically non-negotionable.
 In other words: He's putting pressure on Jules and Vincent!
 
-##Marsellus Wallace: The Consulting Bureau
+## Marsellus Wallace: The Consulting Bureau
 
 ![Marcellus at the pool with Miss Mia](/wolfware/images/marcellus-at-the-pool-with-mia.jpg){: .pic-right .pic-small}Marcellus Wallace is the obvious place where Jules (The Customer) can call - and expect to get help. His own understanding of the situation is that he needs the entire cavalry. Marcellus asks Jules for details about the The Bonnie Situation and based on his analysis he takes the full ownership of the problem and he gives Jules what he requests - well, not an entire army, but he's sending the Wolf.
 

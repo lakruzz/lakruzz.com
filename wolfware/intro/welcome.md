@@ -21,5 +21,5 @@ Once again: Welcome!
 
 Now hurry on to read the story of ["The Bonnie Situation"](/wolfware/intro/bonnie).
 
-###NOTE
+### NOTE
 >The reference on this page to the WolfWare Forum is no longer valid, but We do have a pack of Mr. Wolves and you're [invited to join](http://www.praqma.com/jobs){: target="praqma-jobs"}.

@@ -22,6 +22,6 @@ To become one of the pack, simply join the forum. To Join the forum simply send 
 
 ---
 
-###NOTE:
+### NOTE:
 
 > The references to the WolfWare Forum are removed from the original, as the WolfWare forum is no longer online. But [Josra - the Joint Open Source Roadmap Alliance](http://www.josra.org){: target="josra"} is really a successful implementation of the same idea. And remember, that [Praqma](http://www.praqma.com){: target="praqma"} is all about WolfWare and regardless if you are a potential employee, a customer or a partner, you shouldn't hesitate to [contact us](mailto:mr-wolf@praqma.com).
