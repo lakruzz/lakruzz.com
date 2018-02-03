@@ -2,16 +2,8 @@
 layout: front
 title: Lakruzz Front
 ---
-#Lars Kruse
+# Lars Kruse
 
-This is my personal blog. Things I write about here are not _necessarily_ related to my professional life. 
+This is my personal blog.
 
-Here in these pages I write about my various interests that comes in flavours such as _writing_, _communication_, _reading_, _travelling_, _software development_, _social communities_, _mountainbikes_, _dinghy sailing_, _politics_ including some of the things I like to mock - read on to find out what they are.
-
-If your are looking for things I've released related to my work you could look at  [Praqma][Praqma], the [Joint Open Source Roadmap Alliance][JOSRA]. 
-
-
-
-[Praqma]:http://www.praqma.com/
-[JOSRA]:http://www.josra.org/
-[CoDe-U web]:http://www.codeu.eu/
+Here on these pages I write about my various personal interests that maybe not fit that well into the context of Praqma - Where [I'm also blogging quite frequently](https://www.praqma.com/stories/#?lakruzz){: target="_blank"} - about software and Continuous Delivery.

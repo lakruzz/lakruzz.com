@@ -4,15 +4,15 @@ title:  Tea plantations - goddamit
 author: Lars Kruse
 tags:   [Dewalokam, Kerala in India, Travel]
 ---
-NB: _start with the [blog from the previous day](/en/dewalokam+day+3.html), if you haven't read it already_
+NB: _start with the [blog from the previous day](/en/dewalokam+day+3), if you haven't read it already_
 
 ![Vagamon tea plantations](/images/blog/DSCN1002.JPG){: .stdcenter}
 
-The [day we went to the nature walk](en/dewalokam+day+2.html) with the two drivers and Richard and Patricia our driver incepted an idea in our heads by suggesting that we should go to Moonar to see the mountains and the tea plantations. It wasn't in our original itinerary but we all seemed keen on the idea. It turns out that it's a three hour ride to Moonar and none of us really feel comfortable with spending 6 hous of a day in a car in the Indian traffic.
+The [day we went to the nature walk](en/dewalokam+day+2) with the two drivers and Richard and Patricia our driver incepted an idea in our heads by suggesting that we should go to Moonar to see the mountains and the tea plantations. It wasn't in our original itinerary but we all seemed keen on the idea. It turns out that it's a three hour ride to Moonar and none of us really feel comfortable with spending 6 hous of a day in a car in the Indian traffic.
 
 Sinta suggest that we could go to Vagamon instead it a different mountain closer by but not as high and not as well known. We had a family pow wow about this topic yesterday and we decided _not_ to go. We'll do it next time we're here.
 
-Jose approached us later and kind of insisted on us going there; "It's a beautiful scenery, you will not regret it". In fact he wanted us to go so badly that he offered to pay for the driver to take us there. Of course we wouldn't acceppt that but on the other hand we were finally convinced by the way Sinta and Jose insisted that we should go. So this morning we're off to Vagamon. 
+Jose approached us later and kind of insisted on us going there; "It's a beautiful scenery, you will not regret it". In fact he wanted us to go so badly that he offered to pay for the driver to take us there. Of course we wouldn't acceppt that but on the other hand we were finally convinced by the way Sinta and Jose insisted that we should go. So this morning we're off to Vagamon.
 
 ![Vagamon](/images/blog/DSCN1070.JPG){: .stdright}Our driver Siby turns out to be quite skilled, and this ride doesn't seem the slightest bit unsafe. He has prepared a huge basket of candy and fruit for us, well mostly for Niels, he eats about 3 quarters of it all by himself. The Mountains are like a plateau. Once we're up there the mountains turn into a high altitude hilly scenery with tea plantations. It truly is scenic.
 
@@ -42,7 +42,7 @@ The photographer is indeed a pro, he shoots commercials for the Philips corporat
 
 ![Wedding shoot](/images/blog/DSC_0562.JPG){: .stdcenter}
 
-The photographer shoots and shoots, at some point his two assistants drops their equipment too and joins us as well. 
+The photographer shoots and shoots, at some point his two assistants drops their equipment too and joins us as well.
 
 Siby gets a call that the visit he arranged at the tea factory is off. The factory had to shut down early. Instead he managed to arrange a visit at the dairy of an ashram close by but when we reach the gates of the asram property they are closed and a guard stands next to a sign saying that unfortunately the asaram is closed for visitors due to serious outbreak of foot and mouth cows decease.
 
@@ -52,7 +52,7 @@ I guess money talks.
 
 ![Asram](/images/blog/DSCN1047.JPG){: .stdleft}The scenery of the small narrow roads up to the asram reminds me of Scotland. The road has stone fences at both sides and the landscape is hilly just covered in grass. When we get to the asram we all get out of the car. Siby talks to a priest that's comes out af some administration building as we arrive. Aaargh - It didn't work after all. You can not buy your way into a diary farm when there's a cows disease outbreak in the area, I guess that's kind of reassuring in a way - even though I'd really would have liked to see the asram.
 
-We have to turn around again. On our way back down we see the guard coming up towards us walking in the side of the road. 
+We have to turn around again. On our way back down we see the guard coming up towards us walking in the side of the road.
 
 I notice that Siby doesn't salute him.
 
@@ -65,18 +65,14 @@ In the afternoon, after coming home again Niels and Ulrich went to play badminto
 
 Conversations continued non-stop onto pre-dinner drinks, during dinner and well beyond that as well.
 
-Chewang, the father of the family from little Tibet, has a [trekking company in Ladakh](http://www.rimoriverexpeditions.com/), with locations 2-3 other places in Northindia and a station in Nepal. They employ more then 50 people all year round and even more during high season. With three different stations they can move equipment from one place to the next and this way have tourist season all year. 
+Chewang, the father of the family from little Tibet, has a [trekking company in Ladakh](http://www.rimoriverexpeditions.com/), with locations 2-3 other places in Northindia and a station in Nepal. They employ more then 50 people all year round and even more during high season. With three different stations they can move equipment from one place to the next and this way have tourist season all year.
 
 It turns out he also arranges mountain-biking as well as trekking and that he even has the Lhasa-Everest basecamp-Katmandou route in his program. This is the route which we have been fabulating about back home in the local [MTB-gang](http://www.mtb-listen.dk) that we want to take in spring '16. Interesting how things can sometimes work out - we might try to get engaged to Chewang arrange our tour.
 
-Kunzes, the daughter of the family is same age as Marie and studies at the university of New Delhi. She tells us that up there, women her age can't walk alone in the streets at night due to assaults and rapes. Kerala seem so different. Down here muslims, catholics and Hindus seem to have found a fine balance with plenty of room for everyone and plenty of respect for each other. 
+Kunzes, the daughter of the family is same age as Marie and studies at the university of New Delhi. She tells us that up there, women her age can't walk alone in the streets at night due to assaults and rapes. Kerala seem so different. Down here muslims, catholics and Hindus seem to have found a fine balance with plenty of room for everyone and plenty of respect for each other.
 
 Discussions goes on for hours after dinner and after that, card games.
 
 Kerala rules.
 
-NB: _Read on in [the blog from the following day](/en/dewalokam+day+5.html)_
-
-
-
-
+NB: _Read on in [the blog from the following day](/en/dewalokam+day+5)_

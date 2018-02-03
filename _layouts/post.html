@@ -10,8 +10,8 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-        
-          <strong>Category</strong> 
+
+          <strong>Category</strong>
             {% for catname in site.data.catnames %}
               {% for category in page.categories %}
                 {% if catname.dir == category %}
@@ -22,26 +22,26 @@
           <strong>By:&nbsp;</strong>{% for author in page.author %}
             <em>{{author}}</em>&nbsp;&nbsp;
           {% endfor %}<br/>
-          <strong> On:</strong>          
+          <strong> On:</strong>
           {{page.date | date: "%A, %B %d. %Y"}}<br/>
           <strong>Tags:&nbsp;|</strong>
           {% for tag in page.tags %}
-            <a href="/tags.html#{{tag}}">{{tag}}</a>&nbsp;|&nbsp;
+            <a href="/tags/#{{tag}}">{{tag}}</a>&nbsp;|&nbsp;
           {% endfor %}
         <br/>
-        
+
           <h1>{{page.title}}</h1>
-        
+
           {{ content }}
-          
-        
+
+
         </section>
           <aside id="sidebar">
             {%include lsbycat.html%}
           </aside>
-  
+
         {%include google-comments.html%}
-        
+
       </div>
     </div>
   </body>

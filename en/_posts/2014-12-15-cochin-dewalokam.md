@@ -11,13 +11,13 @@ I didn't sleep at all in the first stretch, so now I'm really tired and looking 
 
 "I have a choice of lamb and vegetarian spinach" says the stewardess. OK, I'm starving, so I'll have a lamb dish for breakfast, sure.
 
-Listen - the funky harekrisna saxophone stoppe chanting. I empty a flight-size bottle of redwine and then I fall into sleep.
+Listen - the funky hare krisna saxophone stopped chanting. I empty a flight-size bottle of redwine and then I fall into sleep.
 
-In Cochin we spend the most of an hour getting through customs, Ebola registration check posts and we need to have our bags scanned to get out of the airport through the metal detector. The scanner beeps red alert for every person who goes through it. But the one guy who's operating the scanner doesn't seem to notice. 
+In Cochin we spend the most of an hour getting through customs, Ebola registration check posts and we need to have our bags scanned to get out of the airport through the metal detector. The scanner beeps red alert for every person who goes through it. But the one guy who's operating the scanner doesn't seem to notice.
 
 Im thinking that one good thing about all these checks that are taking so long is that at least our bags will the be on the luggage belt when we get to the baggage claim area.
 
-No. They are not. 
+No. They are not.
 
 Through the windows out to the airfield we can see the bags from our plane lying on luggage trucks, surrounded by lots of workers who aren't the slightest bit busy. The bags are loaded onto the belt in a pace of about one bag per minute.
 
@@ -26,7 +26,7 @@ India is already showing us that procedures are different from what we know.
 ##The Drive
 As soon as we left the airport all order and efficiency seemed to be restored. Our chauffer was waving a sign with our names on it and he had a colleague with him, so there were two cars for five people, plenty of room for our luggage and seat belts for everyone. We had been warned that traffic in India is hectic and rules does not apply the same way as we know from home.
 
-Immediately when we got off the airport ground we got introduced to the hectic traffic as our car entered into the a roundabout, instead of holding back for the crossing traffic the driver just blew the horn and trusted that since his car was bigger than the tuk tuks, they'd probably hold back. And they did indeed. 
+Immediately when we got off the airport ground we got introduced to the hectic traffic as our car entered into the a roundabout, instead of holding back for the crossing traffic the driver just blew the horn and trusted that since his car was bigger than the tuk tuks, they'd probably hold back. And they did indeed.
 
 The town seemed to be organised just along the road. A few hundred meters behind the buildings lying along the road we could catch sight of the forest. The road only had one lane in each direction but in reality it was organised more like a three-lane motorway with the slowest going vehicles longest to the left and the speeders longest to the right. Counting from left to right the order seemed to be tuk tuks, lorries and trucks, cars, motorcycles and on the outside all the speeders - regardless og size and shape.
 
@@ -34,7 +34,7 @@ Our drive was a speeder.
 
 The traffic is so dense that all types a moving objects are going in each direction, all these obviously can't fit into lust one single lane, so most of the time our car was in the opposite lane taking over lorries, busses and slow going cars. And since the traffic going the opposite direction behaved the exact same way, we could for obvious reasons not be in the in the opposite lane for more than a few seconds - at a time.
 
-It was a 65 kilometer drive. 
+It was a 65 kilometer drive.
 
 I wondered if it would make any sense trying to explain the driver that we weren't in any kind of hurry, but when I turned to Heidi and Niels who were in the backseat to check if they were OK - they were both firm asleep. I gave in and fell asleep too.
 
@@ -94,10 +94,4 @@ Everything they serve for their guests originates from their own garden, spices,
 
 Before dinner drinks are served in front of the dining room, most guest that inhabit the Dewalokam homestay show up to mingle and Sinta and her husbond José and their children Paul and Tara join us as well.
 
-NB: _Read on in [the blog from the following day](/en/dewalokam+day+2.html)_
-
-
-
-
- 
-
+NB: _Read on in [the blog from the following day](/en/dewalokam+day+2)_

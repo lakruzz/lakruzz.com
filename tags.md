@@ -3,7 +3,7 @@ layout: default
 title: Browse by tags
 ---
 
-Would you rather <a href="/posts.html">browse by categories</a>?
+Would you rather <a href="/posts">browse by categories</a>?
 
 <h2>Articles by Tags:</h2>
 {% for tag in site.tags %}
