@@ -28,6 +28,7 @@ permalink: /:categories/:title/
 plugins:
   - jekyll-responsive-image
   - jekyll-seo-tag
+  - jekyll-feed
 
 
 responsive_image:
