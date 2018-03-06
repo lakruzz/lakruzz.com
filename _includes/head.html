@@ -19,4 +19,6 @@
     <script src="/javascripts/googleanalytics.js"></script>
 
       {% seo %}
+    <meta name="twitter:image" content="{%if page.image%}{{site.url | append:page.image}}{%else%}{{site.url | site.image}}{%endif%}"/>
+  
   </head>
