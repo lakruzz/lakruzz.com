@@ -10,10 +10,10 @@ tags:
   - MacOS
 ---
 
-Jekyll is a static web page generator made in Ruby. It's the engine that runs GitHub Pages. In the following you will get five easy steps to run jekyll locally, without even installing it, but simply running a docker image.
+Jekyll is a static web page generator made in Ruby. It's the engine that runs GitHub Pages. In the following you will get five easy steps to run jekyll locally, without even installing it, but simply through running a docker image.
 {: .kicker}
 
-The following instructions expect that you are on a Mac, but it's even easier if you are on Linux. On linux you can simply skip steps 2+3, since you don't need a virtual host machine for your Docker.
+The following instructions assumes that you are on a Mac, but it's even easier if you are on Linux. On linux you can simply skip steps 2+3, since you don't need a virtual host machine for your Docker.
 
 ![Docker Jekyll](/images/blog/docker-jekyll.png){: .pic .right .small}
 ## 1. Get Docker on your machine
@@ -28,7 +28,7 @@ ruby -e "$(curl -fsSL \
   https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Once Homebrew is installed on your Mac, Docker installation has become as easy as:
+Once Homebrew is installed on your Mac, Docker installation is as easy as:
 
 ```shell
 brew cask install virtualbox
@@ -38,14 +38,14 @@ brew install docker-machine
 
 ## 2. Create a "default" Docker Machine
 
-Since your Mac isn't running Linux natively and your Docker container depends on it, You must have a _docker-machine_ available. This is simply how Docker works on non-linux OS, including MacOS and Windows. I'll use the name "default" in my example, but if you want to call it something else, go ahead, just replace my instances of `default` with you own name in the following instructions.
+Since your Mac isn't running Linux natively and your Docker container depends on it, you must have a _docker-machine_ available. This is simply how Docker works on non-linux OS, including MacOS and Windows. I'll use the name "default" in my example, but if you want to call it something else, go ahead, just replace my instances of "default" with you own name in the following instructions.
 
 I you already have a "default" docker machine running then you can move directly onto the next step. If not this is what you need to do:
 
 ```shell
 docker-machine create --driver virtualbox default
 ```
-OK that was easy - "default" docker-machine created - now you need to start it.
+OK that was easy - "default" docker-machine created! Now you need to start it.
 
 If you just created it, then it will be running. To be sure you can run `docker-machine ls`. If your "default" machine isn't running, you need to start it again.
 
@@ -97,7 +97,7 @@ Unfortunately you need to do this every time you open a new terminal. If you fin
 
 ## 4. Define a "jekyll" alias
 
-We want Jekyll to be available as a native command, without actually installing it, so now when I have Docker working for me, I can use a docker container (**lakruzz/jekyll-plus**[^jekyll-plus]) that I've made available from the public Docker registry. So all we need is an alias, it looks like this:
+We want jekyll to be available as a native command, without actually installing it, so now when I have Docker working for me, I can use a docker container (**lakruzz/jekyll-plus**[^jekyll-plus]) that I've made available from the public Docker registry. So all we need is an alias, it looks like this:
 
 ```shell
 alias jekyll="docker run -i -t --rm \
@@ -115,11 +115,11 @@ And while you have your resource file open I have another useful alias that I us
 alias stage="open http://`docker-machine ip default`"
 ```
 
-It defines an alias `stage`. When you run it, it will open a web browser, pointing to the "default" Docker machine you have running.
+It defines an alias `stage`. When you run it, it will open a web browser, pointing to the jekyll site hosted from your "default" Docker machine.
 
 ## 5. Create a local config file in you jekyll website
 
-To serve a Jekyll site you could simply run
+To serve a Jekyll site you could simply run:
 
 ```shell
 jekyll serve
@@ -162,7 +162,7 @@ Now, with everything set up, I can change directory into the folder that contain
 jekyll serve --config _config.yml,_dev_config.yml
 ```
 
-I've even created an alias for that as well. The things I end up adding to my `.zshrc` file sums up to:
+I've even created an alias for that as well. The things I end up adding to my `.zshrc` (... or `.bashrc`) file sums up to:
 
 ```shell
 # Docker-machine env setup
@@ -179,4 +179,4 @@ alias dev-jekyll='docker run -i -t --rm -v $(pwd):/app:rw --workdir /app \
 
 ## Docker Jekyll - anything as code
 
-The approached described here, for running Jekyll locally, without actually installing it taps perfectly into the contemporary _anything as code_ buzz; If you build your web site for production using the same image as you use for development it's game over for all the _snowflake_ servers - I'll touch on this topic more future blogs to come.
+The approached described here, for running Jekyll locally, without actually installing it taps perfectly into the contemporary _anything as code_ buzz; If you build your web site for production using the same image as you use for development it's game over for all the _snowflake_ servers - I'll touch on this topic in a future blog.
