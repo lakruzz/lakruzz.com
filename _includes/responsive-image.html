@@ -4,4 +4,48 @@
     {% endfor %}
 {% endcapture %}
 
-<img src="/{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}">
+{% capture class_caption_tuple %}
+  class="pic caption"
+{% endcapture%}
+
+{% capture class_pic_tuple %}
+  class="pic"
+{% endcapture%}
+
+{% if alt %}
+  {% capture alt_tuple %}
+    alt="{{ alt }}"
+  {% endcapture%}
+{% endif %}
+
+{% if width %}
+  {% capture width_tuple %}
+    width="{{ width }}"
+  {% endcapture%}
+  {% capture styled_width_tuple %}
+    style="width:{{ width }};"
+  {% endcapture%}
+{% endif %}
+
+{% if title %}
+  {% capture title_tuple %}
+    title="{{ title }}"
+  {% endcapture%}
+{% endif %}
+
+{% if class %}
+  {% capture class_pic_tuple %}
+    class="pic {{ class }}"
+  {% endcapture%}
+  {% capture class_caption_tuple %}
+    class="pic caption {{ class }}"
+  {% endcapture%}
+{% endif %}
+
+{% assign largest = resized | sort: 'width' | last %}
+
+{% if caption %}
+<div {{ class_caption_tuple | strip_newlines }} {{ styled_width_tuple | strip_newlines }}>
+{% endif %}
+<img src="/{{ largest.path }}" srcset="{{ srcset | strip_newlines }}"  {{ alt_tuple | strip_newlines }}  {{ title_tuple | strip_newlines }}  {{ class_pic_tuple | strip_newlines }} {{ width_tuple | strip_newlines }}>{% if caption %}{{ caption | strip_newlines}}</div>
+{% endif %}

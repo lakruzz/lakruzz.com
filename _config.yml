@@ -22,9 +22,9 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
-    - width: 480  # [Required] How wide the resized image will be.
-    - width: 850
-    - width: 1400
+    - width: 255
+    - width: 510
+    - width: 1020
 
   # [Optional, Default: false]
   # Rotate resized images depending on their EXIF rotation attribute. Useful for
@@ -53,7 +53,7 @@ responsive_image:
   #   %{width}       Width of the resized image
   #   %{height}      Height of the resized image
   #
-  output_path_format: assets/resized/%{width}/%{basename}
+  output_path_format: assets/responsive/%{width}/%{basename}
 
   # [Optional, Default: true]
   # Whether or not to save the generated assets into the source folder.
