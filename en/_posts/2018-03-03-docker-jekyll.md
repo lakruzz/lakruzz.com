@@ -2,7 +2,7 @@
 layout: post
 title:  Docker Jekyll - 5 easy steps
 author: lakruzz
-image: /images/blog/docker-jekyll.png
+image: /images/blog/docker-jekyll.some.png
 tags:
   - Docker
   - Docker machine
