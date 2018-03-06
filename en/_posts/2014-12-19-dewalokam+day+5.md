@@ -1,16 +1,15 @@
 ---
 layout: post
 title:  Goodbye Dewalokam
-author: Lars Kruse
+author: lakruzz
+image:  /images/blog/DSCN1144.JPG
 tags:   [Dewalokam, Kerala in India, Travel]
 ---
 
-NB: _start with the [blog from the previous day](/en/dewalokam+day+4), if you haven't read it already_
+Jose, the host at [Dewalokam](http://www.dewalokam.com), where we've been staying for [4 days now](/en/dewalokam+day+4) tells that this place originally came to live by a wrong. We're once again gathered for the pre-dinner drink session where all the guests summon. We're having a conversation on the subject of being and entrepreneur. He tries to give me the impression that this is not really who they are. Both he and his wife Sinta used be just teachers. And thats what they still are - deep down.
+{: .kicker}
 
 ## To be or not to be - an entrepreneur
-
-Jose, the host at [Dewalokam](http://www.dewalokam.com), where we've been staying for 4 days now tells that this place originally was came to live by a wrong. We're once again gathered for the pre-dinner drink session where all the guests summon. We're having a conversation on the subject of being and entrepreneur. He tries to give me the impression that this is not really who they are. Both he and his wife Sinta used be just teachers. And thats what they still are - deep down.
-
 I have to correct him. Look around. The four days here has been like entering a small paradise for a short time.
 
 They had many struggles in building Dewalokam to what it is today, Sinta [already told me](/en/dewalokam+day+3#no-regrets---for-the-past-two-years) about these struggles a few days ago.

@@ -1,12 +1,31 @@
 name: Lakruzz - Personal blog by Lars Kruse
+title: Lakruzz - Personal blog by Lars Kruse
+author: lakruzz
+url: www.lakruzz.com
+twitter:
+  username: lakruzz
+social:
+  name: Lars Kruse
+  links:
+    - https://twitter.com/lakruzz
+    - https://github.com/lakruzz
+    - https://www.linkedin.com/in/lakruzz
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/authors/lakruzz.png
+
+
 highlighter: rouge
 exclude: [README.md]
 timezone: Europe/Copenhagen
-url: www.lakruzz.com
 markdown: kramdown
 permalink: /:categories/:title/
 plugins:
   - jekyll-responsive-image
+  - jekyll-seo-tag
 
 
 responsive_image:

@@ -1,13 +1,14 @@
 ---
 layout:    post
 title:     Et Paradigmeskift inden for softwareudvikling
-author:    Lars Kruse
+author:    lakruzz
+lang:      da-DK
+image:     /images/blog/code-story.png
 tags:      [Continuos  Delivery, DevOps, Paradigmeskift]
 ---
 
-## Continuous Delivery og DevOps
-
-__Der blæser kraftige nye vinde inden for gængs opfattelse af hvordan software udvikles mest effektivt. Der er tale en tendens, hvor værdien af software alene måles på, hvad der konkret leveres til slutbrugerne og at de faktisk er glade for det de får.__
+Der blæser kraftige nye vinde inden for gængs opfattelse af hvordan software udvikles mest effektivt. Der er tale en tendens, hvor værdien af software alene måles på, hvad der konkret leveres til slutbrugerne og at de faktisk er glade for det de får.
+{: .kicker}
 
 Det nye er, at softwareindustrien er begyndt at bruge software til at verificere og validere software med. Samtidig med at det er software der implementerer den IT-infrastruktur, som vi alle sammen er afhængige af. For udenforstående virker det måske ret oplagt, at bruge software til den slags opgaver, men det er rent faktisk udtryk for revolutionerende nytænkning.
 
