@@ -6,27 +6,25 @@ services:
 language: ruby
 
 rvm:
- - 2.5.0
+  - 2.5.0
 
 install:
- - gem install html-proofer
- - docker pull lakruzz/jekyll-plus
+  - gem install html-proofer
+  - docker pull lakruzz/jekyll-plus
 
 before_script:
 
 script:
   - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
-  - htmlproofer --url-ignore https://jenkins.io/ ./_site
-
+  - htmlproofer ./_site
 
 # branch whitelist, only for GitHub Pages
-# branches:
-#  only:
-#  - gh-pages     # test the gh-pages branch
-#  - /pages-(.*)/ # test every branch which starts with "pages-"
+branches:
+  only:
+    - master
 
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 sudo: false # route your build to the container-based infrastructure for a faster build
