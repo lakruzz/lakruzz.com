@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "typhoeus"
 gem "github-pages"
+gem "jekyll"
 gem "jekyll-seo-tag"
 gem "jekyll-responsive-image"
 gem "html-proofer"
