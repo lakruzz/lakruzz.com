@@ -2,6 +2,8 @@ language: ruby
 rvm:
 - 2.3.3
 
+gemfile: ./_travis/gemfile
+
 install: gem install github-pages jekyll-responsive-image html-proofer
 
 before_script:
