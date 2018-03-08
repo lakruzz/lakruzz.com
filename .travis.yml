@@ -8,7 +8,7 @@ language: ruby
 install:
   - docker pull lakruzz/jekyll-plus
   - docker pull 18fgsa/html-proofer
-  - alias htmlproofer="docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer"
+  - echo alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer' >> ~/.bashrc
 
 before_script:
 
