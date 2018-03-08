@@ -15,7 +15,7 @@ Det nye er, at softwareindustrien er begyndt at bruge software til at verificere
 Det nye paradigme inden for softwareudvikling og IT går under navne som _Continuous Delivery_ og _DevOps_.
 
 ## Continuous Delivery
-Begrebet _Continuous Delivery_ er født ud af det første a tolv principper i [det agile manifest](http://agilemanifesto.org/){: target="_blank" }. Et kampskrift som 17 af datidens mest indflydelsesrige metodetænkere indenfor softwareudvikling forfattede på 3 dage i en skihytte i Utah - i 2001. Manifestet er senere blevet underskrevet af tusindevis af mennesker - Selv signerede jeg tilbage i [september 2005](http://agilemanifesto.org/sign/display.cgi?ms=000000049){: target="_blank" }.
+Begrebet _Continuous Delivery_ er født ud af det første a tolv principper i [det agile manifest](http://agilemanifesto.org/){: target="_blank" }. Et kampskrift som 17 af datidens mest indflydelsesrige metodetænkere indenfor softwareudvikling forfattede på 3 dage i en skihytte i Utah - i 2001. Manifestet er senere blevet underskrevet af tusindevis af mennesker - Selv signerede jeg tilbage i [september 2005](http://agilemanifesto.org/display/000000049.html){: target="_blank" }.
 
 Det første princip lyder:
 

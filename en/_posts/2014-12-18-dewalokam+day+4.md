@@ -8,7 +8,7 @@ NB: _start with the [blog from the previous day](/en/dewalokam+day+3), if you ha
 
 ![Vagamon tea plantations](/images/blog/DSCN1002.JPG){: .stdcenter}
 
-The [day we went to the nature walk](en/dewalokam+day+2) with the two drivers and Richard and Patricia our driver incepted an idea in our heads by suggesting that we should go to Moonar to see the mountains and the tea plantations. It wasn't in our original itinerary but we all seemed keen on the idea. It turns out that it's a three hour ride to Moonar and none of us really feel comfortable with spending 6 hous of a day in a car in the Indian traffic.
+The [day we went to the nature walk](/en/dewalokam+day+2) with the two drivers and Richard and Patricia our driver incepted an idea in our heads by suggesting that we should go to Moonar to see the mountains and the tea plantations. It wasn't in our original itinerary but we all seemed keen on the idea. It turns out that it's a three hour ride to Moonar and none of us really feel comfortable with spending 6 hous of a day in a car in the Indian traffic.
 
 Sinta suggest that we could go to Vagamon instead it a different mountain closer by but not as high and not as well known. We had a family pow wow about this topic yesterday and we decided _not_ to go. We'll do it next time we're here.
 
@@ -65,7 +65,7 @@ In the afternoon, after coming home again Niels and Ulrich went to play badminto
 
 Conversations continued non-stop onto pre-dinner drinks, during dinner and well beyond that as well.
 
-Chewang, the father of the family from little Tibet, has a [trekking company in Ladakh](http://www.rimoriverexpeditions.com/), with locations 2-3 other places in Northindia and a station in Nepal. They employ more then 50 people all year round and even more during high season. With three different stations they can move equipment from one place to the next and this way have tourist season all year.
+Chewang, the father of the family from little Tibet, has a [trekking company in Ladakh](http://www.rimoexpeditions.com/), with locations 2-3 other places in Northindia and a station in Nepal. They employ more then 50 people all year round and even more during high season. With three different stations they can move equipment from one place to the next and this way have tourist season all year.
 
 It turns out he also arranges mountain-biking as well as trekking and that he even has the Lhasa-Everest basecamp-Katmandou route in his program. This is the route which we have been fabulating about back home in the local [MTB-gang](http://www.mtb-listen.dk) that we want to take in spring '16. Interesting how things can sometimes work out - we might try to get engaged to Chewang arrange our tour.
 

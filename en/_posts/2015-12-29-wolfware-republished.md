@@ -23,12 +23,12 @@ The original story has several parts:
 
 ## Looking back at what actually happened
 
-Today when I write this, just a few days before the New Year 2016. [Praqma](http://www.Praqma.com){: target="praqma"}, of which I'm one of the original founders, is a reality. We started in 2007 and 6-7 years later we made it through the financial crises, it looked like we we're going to make it after a relative slow start.
+Today when I write this, just a few days before the New Year 2016. [Praqma](https://www.praqma.com){: target="praqma"}, of which I'm one of the original founders, is a reality. We started in 2007 and 6-7 years later we made it through the financial crises, it looked like we we're going to make it after a relative slow start.
 
 Up until the beginning of 2015; honestly we we struggling to kick-start or start-up. But then came 2015.
 
 In less than 12 months we have grown from 8 to 21 people, we have grown out of our old _PraqmaPlex_ office and we now have 5 offices in total, including one in each of the three Scandinavian capitals.
 
-I'm happy and proud to say that in reality WolfWare manifested itself in the sum of all that we've done: [Praqma](http://www.praqma.com){: target="praqma"}, the [CoDe conferences](http://www.code-conf.com){: target="code"}, [Josra](http://www.josra.org){: target="josra"}.
+I'm happy and proud to say that in reality WolfWare manifested itself in the sum of all that we've done: [Praqma](https://www.praqma.com){: target="_blank"}, the [CoDe conferences](https://www.code-conf.com){: target="_blank"}, [Continuous Delivery Alliance](http://alliance.praqma.com){: target="_blank"}.
 
-Today we call the Wolves CoDe'ers (Continuous Delivereres) but it's basically the same thing, and we're still [hiring](http://www.praqma.com/jobs){: target="praqma"} and we're still expanding into new countries and even new businesses.
+Today we call the Wolves CoDe'ers (Continuous Delivereres) but it's basically the same thing, and we're still [hiring](https://www.praqma.com/about/jobs/){: target="praqma"} and we're still expanding into new countries and even new businesses.
