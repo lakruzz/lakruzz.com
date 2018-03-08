@@ -15,7 +15,6 @@ install:
 before_script:
 
 script:
-  - docker run -it --rm -v $(pwd):/app --workdir /app jekyll build
   - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
   - htmlproofer ./_site
 
