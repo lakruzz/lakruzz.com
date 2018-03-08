@@ -5,10 +5,14 @@ services:
 
 language: ruby
 
+before_install:
+  - shopt -s expand_aliases
+
 install:
   - docker pull lakruzz/jekyll-plus
   - docker pull 18fgsa/html-proofer
-  - echo alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer' >> ~/.bashrc
+#  - echo alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer' >> ~/.bashrc
+  - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer'
 
 before_script:
 
