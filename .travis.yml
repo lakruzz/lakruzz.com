@@ -4,7 +4,7 @@ rvm:
 
 gemfile: ./_travis/gemfile
 
-install: gem install github-pages jekyll-responsive-image html-proofer
+install: gem install github-pages jekyll-responsive-image typhoeus html-proofer
 
 before_script:
  - chmod +x ./_travis/build # or do this locally and commit
