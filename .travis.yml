@@ -11,12 +11,14 @@ rvm:
 install:
   - gem install html-proofer
   - docker pull lakruzz/jekyll-plus
+  - docker pull 18fgsa/html-proofer
 
 before_script:
 
 script:
   - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
-  - htmlproofer --trace --check-favicon --check-opengraph --http-status-ignore 35 ./_site
+#  - htmlproofer --trace --check-favicon --check-opengraph ./_site
+  - docker run -it --rm -v $(pwd):/site 18fgsa/html-proofer --check-favicon --check-opengraph ./site
 
 # branch whitelist, only for GitHub Pages
 branches:
