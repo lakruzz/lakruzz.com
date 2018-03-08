@@ -11,7 +11,7 @@ The concept of WolfWare is one I came up with back in 2005. At that time I was w
 
 Part of the WolfWare concept was a retelling of the bloody but edifying tale of _The Bonnie Situation_, one of the side-stories in Tarantino's movie _Pulp Fiction_, and an interpretation of the story that reveals why Mr. Wolf is a role model for al consultants.
 
-Recently I found the story from way back then at the [WayBackMachine](http://www.waybackmachine.org){: target="waybackmachine"} and I'm republishing it here at these pages because it's still highly relevant - and edifying.
+Recently I found the story from way back then at the [WayBackMachine](http://web.archive.org/){: target="blank"} and I'm republishing it here at these pages because it's still highly relevant - and edifying.
 
 The original story has several parts:
 
