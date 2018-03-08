@@ -5,18 +5,16 @@ services:
 
 language: ruby
 
-# rvm:
-#  - 2.5.0
-
 install:
   - docker pull lakruzz/jekyll-plus
   - docker pull 18fgsa/html-proofer
+  - alias htmlproofer="docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer"
 
 before_script:
 
 script:
   - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
-  - docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer --check-favicon --check-opengraph ./_site
+  - htmlproofer --check-favicon --check-opengraph ./_site
 
 # branch whitelist, only for GitHub Pages
 branches:
