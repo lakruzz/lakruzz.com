@@ -16,7 +16,7 @@ before_script:
 
 script:
   - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
-  - htmlproofer ./_site
+  - htmlproofer --trace --check-favicon --check-opengraph ./_site
 
 # branch whitelist, only for GitHub Pages
 branches:
