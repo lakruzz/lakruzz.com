@@ -1,7 +1,7 @@
 ---
 layout: front
 title: Lakruzz Front
-published: true
+published: false
 ---
 # Lars Kruse
 
