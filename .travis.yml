@@ -13,16 +13,18 @@ install:
   - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll'
   - docker pull 18fgsa/html-proofer
   - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site 18fgsa/html-proofer'
+  - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
+  - git config user.name "Travis CI by @Lakruzz"
+  - git config user.email "travis@lakruzz.com"
+  - git config --global push.default simple
 
 before_script:
 
 script:
   - jekyll build
-  - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
+  - chown $UID:$UID
+  - sudo chown -R travis:travis _site
   - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
-  - git config user.name "Travis CI by @Lakruzz"
-  - git config user.email "travis@lakruzz.com"
-  - git config --global push.default simple
   - cd _site
   - git init
   - git remote add ghpages https://$(printenv GHTOKEN)@github.com/lakruzz/lakruzz.github.io.git
