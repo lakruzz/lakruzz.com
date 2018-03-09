@@ -27,7 +27,12 @@ Det agile manifest omfavner de ideer, som oprindeligt er formuleret inden for in
 
 Agile softwareudvikling er en metode, som ligesom sit ophav i industrien, skaber effektivisering gennem at minimere antallet af opgaver som er i gang samtidig, men til gengæld advokerer, at der ikke findes nogen egentlig faseeinddeling i produktionen. Det er et opgør med vandfaldsmetoder; Når en opgave er meldt færdig, er det fordi den opfylder definitionen af hvad _færdig_ betyder og den kan afleveres til produktion eller slutbruger.
 
-[![Andon cord](/images/blog/andon-cord.png) “Why Buy A Toyota - Andon Cord” (YouTube 1:41)](https://www.youtube.com/watch?v=B_nSvN_L4hc){: .stdcenter target="_blank" }
+{% responsive_image
+  path: "images/blog/andon-cord.png"
+  alt: "Andon cord"
+  caption: "Why Buy A Toyota - Andon Cord"
+  class: "center"
+%}
 
 Agile softwareudvikling er idag et ideal, som på verdensplan gennemsyrer hele softwareindustrien. Men indtil for nylig har der reelt været meget få af de teams og virksomheder, der siger, at de arbejder med agile metoder, som rent faktisk har kunne gøre det, altså levere opgaverne én ad gangen, færdige, direkte i produktion, uden en faseopdelt process.
 
