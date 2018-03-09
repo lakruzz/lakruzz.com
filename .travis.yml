@@ -10,23 +10,16 @@ before_install:
 
 install:
   - docker pull lakruzz/jekyll-plus
+  - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus'
   - docker pull 18fgsa/html-proofer
-#  - echo alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer' >> ~/.bashrc
-  - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site  18fgsa/html-proofer'
+  - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site 18fgsa/html-proofer'
 
 before_script:
 
 script:
-  - docker run -it --rm -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll build
+  - jekyll build
   - htmlproofer --check-favicon --check-opengraph ./_site
 
-# branch whitelist, only for GitHub Pages
 branches:
   only:
     - master
-
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
