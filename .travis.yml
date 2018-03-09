@@ -18,7 +18,7 @@ before_script:
 
 script:
   - jekyll build
-  - htmlproofer --check-favicon --check-opengraph ./_site
+  - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
 
 branches:
   only:
