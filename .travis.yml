@@ -9,6 +9,7 @@ before_install:
   - shopt -s expand_aliases
 
 install:
+  - gem install gist
   - docker pull lakruzz/jekyll-plus
   - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll'
   - docker pull 18fgsa/html-proofer
@@ -28,9 +29,12 @@ branches:
   - master
 
 after_success:
+  - git config user.name "Travis CI by @Lakruzz"
+  - git config user.email "travis@lakruzz.com"
+  - git config --global push.default simple
   - cd _site
   - git init
-  - git remote add origin https://github.com/lakruzz/lakruzz.github.io.git
+  - git remote add ghpages https://$(printenv GHTOKEN)@github.com/lakruzz/lakruzz.github.io.git
   - git add -A .
   - git commit -F version.txt
-  - git push -fu origin master
+  - git push -fu ghpages master
