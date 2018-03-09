@@ -5,10 +5,6 @@ services:
 
 language: ruby
 
-branches:
-  only:
-    - master
-
 before_install:
   - shopt -s expand_aliases
 
@@ -24,9 +20,11 @@ script:
   - jekyll build
   - htmlproofer --check-favicon --check-opengraph ./_site
 
-deploy:
-  skip_cleanup: true
+branches:
+  only:
+  - master
 
+after_success:
   - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
   - cd _site
   - git init && \
