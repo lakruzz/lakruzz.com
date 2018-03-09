@@ -47,5 +47,7 @@
 {% if caption %}
 <div {{ class_caption_tuple | strip_newlines }} {{ styled_width_tuple | strip_newlines }}>
 {% endif %}
-<img src="/{{ largest.path }}" srcset="{{ srcset | strip_newlines }}"  {{ alt_tuple | strip_newlines }}  {{ title_tuple | strip_newlines }}  {{ class_pic_tuple | strip_newlines }} {{ width_tuple | strip_newlines }}>{% if caption %}{{ caption | strip_newlines}}</div>
+{% if url%}
+<a href="{{ url }}" target="_blank">
 {% endif %}
+<img src="/{{ largest.path }}" srcset="{{ srcset | strip_newlines }}"  {{ alt_tuple | strip_newlines }}  {{ title_tuple | strip_newlines }}  {{ class_pic_tuple | strip_newlines }} {{ width_tuple | strip_newlines }}>{% if url%}</a>{% endif %}{% if caption %}{{ caption | strip_newlines}}</div>{% endif %}

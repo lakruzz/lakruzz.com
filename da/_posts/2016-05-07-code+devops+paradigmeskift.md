@@ -31,7 +31,7 @@ Agile softwareudvikling er en metode, som ligesom sit ophav i industrien, skaber
   path: "images/blog/andon-cord.png"
   alt: "Andon cord"
   caption: "Why Buy A Toyota - Andon Cord"
-  class: "center"
+  class: "center medium"
 %}
 
 Agile softwareudvikling er idag et ideal, som på verdensplan gennemsyrer hele softwareindustrien. Men indtil for nylig har der reelt været meget få af de teams og virksomheder, der siger, at de arbejder med agile metoder, som rent faktisk har kunne gøre det, altså levere opgaverne én ad gangen, færdige, direkte i produktion, uden en faseopdelt process.
@@ -66,7 +66,11 @@ Processen hertil kaldes ofte for _Continuous Integration_ og hvis udfaldet er ac
 
 Når testen er accepteret fuldstændig uden fejl, så udarbejdes automatisk dokumentation og eventuelt lovpligtige sporbarhedsrapporter, med dokumentation tilbage til de oprindelige krav. Og derefter sættes det i produktion - automatisk.
 
-[![CoDe Storyline](/images/blog/code-story.png)](/images/blog/code-story.png){: target="_blank" .stdcenter}
+{% responsive_image
+  path: "images/blog/code-story.png"
+  alt: "Continuous delivery Storyline"
+  class: "center"
+%}
 
 Den her proces køre ikke én gang om dagen eller én gang om ugen. Den kører automatisk hver evig eneste gang en softwareudvikler melder klar med en opgave. Det gør han formentlig et par gange om dagen.
 
@@ -143,11 +147,17 @@ Skandinavien er traditionelt set en region, som nyder stor anerkendelse indenfor
 
 Denne sommer har vi formaliseret undervisningen i et [Continuous Delivery Academy](http://www.code-conf.com/academy2016){: target="_blank" }, Hvor vi hen over sommeren underviser på fire forskellige lokationer, Trondheim, København, Århus og Oslo, med op til 100 deltagere på hvert academy.
 
-[![CoDe Academy](/images/blog/code-academy-2016-front.jpg)CoDe Academy er en 5 dages workshop, som er gratis for studerende, køre i 4 universitetsbyer i Skandinavien hen over sommeren 2016](http://www.code-conf.com/academy2016){: .stdcenter target="_blank"}
+{% responsive_image
+  path: "images/blog/code-academy-2016-front.jpg"
+  alt: "Continuous Delivery Academy"
+  caption: "CoDe Academy er en 5 dages workshop, som er gratis for studerende, køre i 4 universitetsbyer i Skandinavien hen over sommeren 2016"
+  class: "center medium"
+  url: "http://www.code-conf.com/academy2016"
+%}
 
 Undervisningen kører som træning over 5 dage i intensive workshops, Vi underviser i metoder som _Test Driven Devlopement_ (TDD) og Agile opgavestyring samt Open Source teknologier som [Git](https://git-scm.com/){: target="_blank" },
-<div data-proofer-ignore>[Jenkins](https://jenkins.io/){: target="_blank" }
-</div> og [Docker](https://www.docker.com/){: target="_blank" }. På den sidste dag i kurset, skal eleverne sætte det hele sammen til en fungerende _Continuous Delivery pipeline_.
+[Jenkins](https://jenkins.io/){: target="_blank" }
+og [Docker](https://www.docker.com/){: target="_blank" }. På den sidste dag i kurset, skal eleverne sætte det hele sammen til en fungerende _Continuous Delivery pipeline_.
 
 Undervisningen er gratis, hvis man er studerende på en Computer Science relateret uddannelse. Vi har allokeret tre underviserer på hvert academy og at vi beregner omtrent ligeså meget forberedelsestid som vi har undervisning, Samlet set påregner vi, i vores virksomhed, at levere 120 mandedage på dette projekt. Omkostningerne er sponsoreret af 5 lokale virksomheder per academy, altså 20 sponsorere i alt (bl.a. [Danfoss](http://drives.danfoss.dk/){: target="_blank" }, [Napatech](http://www.napatech.com/){: target="_blank" }), der som tak får deres støtte til projektet får lejlighed til at tale til de studerende og mødes med dem til en barbeque på akademiets sidste dag - og potentielt rekruttere studenterarbejdere til at udføre noget af dette vigtige arbejde i deres organisationer.
 
