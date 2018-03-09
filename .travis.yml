@@ -9,7 +9,6 @@ before_install:
   - shopt -s expand_aliases
 
 install:
-  - gem install gist
   - docker pull lakruzz/jekyll-plus
   - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll'
   - docker pull 18fgsa/html-proofer
@@ -20,12 +19,6 @@ before_script:
 script:
   - jekyll build
   - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
-
-branches:
-  only:
-  - master
-
-after_success:
   - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
   - git config user.name "Travis CI by @Lakruzz"
   - git config user.email "travis@lakruzz.com"
@@ -36,3 +29,7 @@ after_success:
   - git add -A .
   - git commit -F version.txt
   - git push -f ghpages master
+
+branches:
+  only:
+  - master
