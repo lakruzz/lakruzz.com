@@ -5,6 +5,10 @@ services:
 
 language: ruby
 
+branches:
+  only:
+  - master
+
 before_install:
   - shopt -s expand_aliases
 
@@ -13,7 +17,6 @@ install:
   - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll'
   - docker pull 18fgsa/html-proofer
   - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site 18fgsa/html-proofer'
-  - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
   - git config user.name "Travis CI by @Lakruzz"
   - git config user.email "travis@lakruzz.com"
   - git config --global push.default simple
@@ -22,7 +25,9 @@ before_script:
 
 script:
   - jekyll build
-  - chown $UID:$UID
+  - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
+
+after_success:
   - sudo chown -R travis:travis _site
   - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
   - cd _site
@@ -31,7 +36,3 @@ script:
   - git add -A .
   - git commit -F version.txt
   - git push -f ghpages master
-
-branches:
-  only:
-  - master
