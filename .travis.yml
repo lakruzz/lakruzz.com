@@ -5,6 +5,10 @@ services:
 
 language: ruby
 
+branches:
+  only:
+    - master
+
 before_install:
   - shopt -s expand_aliases
 
@@ -20,6 +24,13 @@ script:
   - jekyll build
   - htmlproofer --check-favicon --check-opengraph ./_site
 
-branches:
-  only:
-    - master
+deploy:
+  skip_cleanup: true
+
+  - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
+  - cd _site
+  - git init && \
+  - git remote add origin https://github.com/lakruzz/lakruzz.github.io.git
+  - git add -A .
+  - git commit -F version.txt
+  - git push -fu origin master
