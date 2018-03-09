@@ -21,14 +21,12 @@ script:
   - jekyll build
   - htmlproofer --disable-external --check-favicon --check-opengraph ./_site
 
-after_script:
-  - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
-
 branches:
   only:
   - master
 
 after_success:
+  - echo "Built with jekyll from $(git rev-parse --short HEAD) of lakruzz/lakruzz.com" > _site/version.txt
   - git config user.name "Travis CI by @Lakruzz"
   - git config user.email "travis@lakruzz.com"
   - git config --global push.default simple
