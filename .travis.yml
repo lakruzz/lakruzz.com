@@ -10,7 +10,7 @@ before_install:
 
 install:
   - docker pull lakruzz/jekyll-plus
-  - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus'
+  - alias jekyll='docker run -it -v $(pwd):/app:rw --workdir /app  lakruzz/jekyll-plus jekyll'
   - docker pull 18fgsa/html-proofer
   - alias htmlproofer='docker run -it -v $(pwd):/site --workdir /site 18fgsa/html-proofer'
 
