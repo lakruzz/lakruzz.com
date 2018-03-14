@@ -100,9 +100,9 @@ Unfortunately you need to do this every time you open a new terminal. If you fin
 We want jekyll to be available as a native command, without actually installing it, so now when I have Docker working for me, I can use a docker container (**lakruzz/jekyll-plus**[^jekyll-plus]) that I've made available from the public Docker registry. So all we need is an alias, it looks like this:
 
 ```shell
-alias jekyll="docker run -i -t --rm \
-  -v $(pwd):/app:rw --workdir /app \
-  -p 80:4000 --entrypoint jekyll lakruzz/jekyll-plus"
+alias jekyll='docker run -i -t --rm \
+  -v $(pwd):/app:rw --workdir /app --publish 80:4000 \
+  --entrypoint jekyll lakruzz/jekyll-plus'
 ```
 
 [^jekyll-plus]: The [lakruzz/jekyll-plus](https://hub.docker.com/r/lakruzz/jekyll-plus/){: target="_blank"} Docker image is an image that installs the stack used for GitHub Pages, It relies on the Ruby gem that is maintained by GitHub. In addition I've added a few jekyll plugins that are really neat but unsupported by GitHub pages. Most prominent is the [jekyll-responsive-image](https://github.com/wildlyinaccurate/jekyll-responsive-image){: target="_blank"} plugin, but if you use it, you will have to become self-hosted. I'll get back to that in another blog later.
@@ -112,7 +112,7 @@ Like in the previous step, this alias is not one you want to define every time y
 And while you have your resource file open I have another useful alias that I use frequently:
 
 ```shell
-alias stage="open http://`docker-machine ip default`"
+alias stage='open http://`docker-machine ip default`'
 ```
 
 It defines an alias `stage`. When you run it, it will open a web browser, pointing to the jekyll site hosted from your "default" Docker machine.
@@ -169,12 +169,16 @@ I've even created an alias for that as well. The things I end up adding to my `.
 eval $(docker-machine env default)
 
 # Docker Jekyll aliases
-alias stage="open http://`docker-machine ip default`"
-alias jekyll="docker run -i -t --rm -v $(pwd):/app:rw --workdir /app \
-  -p 80:4000 --entrypoint jekyll lakruzz/jekyll-plus"
-alias dev-jekyll='docker run -i -t --rm -v $(pwd):/app:rw --workdir /app \
-  -p 80:4000 --entrypoint jekyll lakruzz/jekyll-plus \
-  serve --config _config.yml,_dev_config.yml'
+alias stage='open http://`docker-machine ip default`'
+alias htmlproofer='docker run -it --rm\
+  -v $(pwd):/site --workdir /site 18fgsa/html-proofer'
+alias jekyll='docker run -i -t --rm \
+  -v $(pwd):/app:rw --workdir /app --publish 80:4000 \
+  --entrypoint jekyll lakruzz/jekyll-plus'
+alias dev-jekyll='docker run -i -t --rm \
+  -v $(pwd):/app:rw --workdir /app --publish 80:4000 \
+  --entrypoint jekyll lakruzz/jekyll-plus serve \
+  --config _config.yml,_dev_config.yml'
 ```
 
 ## Docker Jekyll - anything as code
