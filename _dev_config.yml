@@ -36,8 +36,8 @@ force_polling: true
 
 # How much to render? These all default to false
 show_drafts: true
-future: true
-unpublished: true
+future: false
+unpublished: false
 
 # Make the machine talk to you
 verbose: true

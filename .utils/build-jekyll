@@ -1,0 +1,37 @@
+#!/bin/sh
+
+
+version(){
+  echo "Built with jekyll from $VERSION of $GITREPO"
+  echo "Built with jekyll from $VERSION of $GITREPO" > $SITEDIR/version.txt
+  echo "The version info is stored in '$SITEDIR/version.txt'"
+}
+
+SITEDIR="_site"
+JEKYLL_IMAGE="lakruzz/jekyll-plus"
+
+# Verify that we're in the root of the repo
+PWD=`pwd`
+if ! REPOROOT=`git rev-parse --show-toplevel` || [ $PWD != $REPOROOT ]
+then
+  echo "ERROR: CD to the root of repo before executing"
+  exit 1
+fi
+
+VERSION=`git rev-parse --short HEAD`
+REPONAME=`basename $REPOROOT`
+ZIPFILE=$REPONAME\_$VERSION.zip
+GITREPO=`git remote get-url  origin | sed  s/'.*github.com[\/:]//' | sed s/.git//`
+
+
+docker run \
+  -i \
+  --rm \
+  -v $(pwd):/app:rw \
+  --workdir /app \
+  lakruzz/jekyll-plus \
+  jekyll build || exit 1
+
+version
+
+exit 0

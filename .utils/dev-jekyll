@@ -1,0 +1,80 @@
+#!/bin/sh
+
+kill_both_dockers(){
+  # Kill the process id they exist
+  LAMP_PS=`docker ps -q  --filter=ancestor=$LAMP_IMAGE`
+  JEKYLL_PS=`docker ps -q  --filter=ancestor=$JEKYLL_IMAGE`
+
+  [ ! -z $LAMP_PS ] && echo "Killing the $LAMP_IMAGE docker process" && docker kill $LAMP_PS
+  [ ! -z $JEKYLL_PS ] && "Killing the $JEKYLL_IMAGE docker process" && docker kill $JEKYLL_PS
+}
+
+mkzip(){
+  rm -rf $SITEDIR/zip
+  mkdir $SITEDIR/zip
+  echo "Built with jekyll from $VERSION of $GITREPO"
+  echo "Built with jekyll from $VERSION of $GITREPO" > $SITEDIR/version.txt
+  echo "The version info is stored in '$SITEDIR/version.txt'"
+
+  pushd _site/zip >/dev/null || exit 1
+
+  echo "Creating zip file ...hold on!"
+  zip -qr $ZIPFILE .. || exit 1
+
+  popd >/dev/null || exit 1
+
+  echo "The release is in \"$SITEDIR/zip/$ZIPFILE\""
+}
+
+echo "Hit <CTRL>+C to stop the server..."
+echo "...or run the script again, from another terminal."
+echo
+
+SITEDIR="_site"
+LAMP_IMAGE="fauria/lamp"
+JEKYLL_IMAGE="lakruzz/jekyll-plus"
+
+# Verify that we're in the root of the repo
+PWD=`pwd`
+if ! REPOROOT=`git rev-parse --show-toplevel` || [ $PWD != $REPOROOT ]
+then
+  echo "ERROR: CD to the root of repo before executing"
+  exit 1
+fi
+
+VERSION=`git rev-parse --short HEAD`
+REPONAME=`basename $REPOROOT`
+ZIPFILE=$REPONAME\_$VERSION.zip
+GITREPO=`git remote get-url  origin | sed  s/'.*github.com[\/:]//' | sed s/.git//`
+
+kill_both_dockers
+
+## Fork - child (LAMP)
+#(
+#docker run \
+#  --rm \
+#  -i \
+#  -v $(pwd)/_site:/var/www/html:rw \
+#  -p 80:80 \
+#  -e LOG_STDOUT=true \
+#  -e LOG_STDERR=true \
+#  -e LOG_LEVEL=warn \
+#  fauria/lamp || exit 1
+#
+#  exit
+#
+#)&
+## Fork - parent (Jekyll)
+
+docker run \
+  -i \
+  --rm \
+  -v $(pwd):/app:rw \
+  --workdir /app \
+  --publish 80:4000 \
+  lakruzz/jekyll-plus \
+  jekyll serve --config _config.yml,_dev_config.yml --watch || exit 1
+
+kill_both_dockers
+
+exit
