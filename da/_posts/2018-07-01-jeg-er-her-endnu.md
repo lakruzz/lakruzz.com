@@ -2,7 +2,7 @@
 layout: post
 title:  Jeg er her endnu
 author: lakruzz
-image: /images/blog/jeg-er-her-endnu/heart-after.jpg
+image: /images/blog/jeg-er-her-endnu/heart-before-and-after.jpg
 tags:
   - Blodprop
 ---
