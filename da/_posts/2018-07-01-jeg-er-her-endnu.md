@@ -85,3 +85,7 @@ Men det skal også fixes, så enten skal der en stent mere i dér også, eller o
 Resten af livet kommer til at stå på blodfortyndende og kolesterolsænkende medicin hver dag. Og motion og sund kost - hver dag.
 
 Det er er brat opvågnen, til et nyt liv.
+
+---
+
+_Læs også min blog om den videre færd, og de otte mellemliggende uger der gik, indtil jeg fik min anden hjerteoperation: ["Jeg har ikke lyst til at dø"](../ikke-lyst-til-at-do)_
