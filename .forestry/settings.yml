@@ -20,7 +20,7 @@ build:
   - JEKYLL_ENV=staging
   preview_output_directory: _site
   preview_docker_image: lakruzz/jekyll-plus
-  mount_path: _site
+  mount_path: "/app"
   working_dir: "/app"
   instant_preview_command: " jekyll serve --drafts --unpublished --future --port 8080
     --watch --host 0.0.0.0 -d _site"
