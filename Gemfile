@@ -6,6 +6,9 @@ gem "github-pages", group: :jekyll_plugins
 gem "tzinfo-data"
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "webrick"
+gem "faraday-retry"
+gem "csv"
+gem "rmagick", "~> 4.3.0"
 
 
 # If you have any plugins, put them here!
