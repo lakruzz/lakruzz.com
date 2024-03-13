@@ -2,7 +2,7 @@
 title: CoDe Maturity
 description: Continuous Delivery Maturity Model
 url: http://code-maturity.praqma.com
-name:  Contiuous Delivery Maturity # can be overriden by site.client.name
+name:  Contiuous Delivery Maturity Model # can be overriden by site.client.name
 logo:  /images/cards-icon.png # can be overriden by site.client.logo
 frontpage-title: Continuous Delivery Maturity Model
 
@@ -10,7 +10,7 @@ client:
   directory:  ttc
   name:       .the tech collective
   url:        https://www.thetechcollective.dev
-  logo:       images/ttc/thetechcollective.png
+  logo:       /images/ttc/thetechcollective.png
 name:         Continuous Delivery Maturity Model
 
 # Build settings
