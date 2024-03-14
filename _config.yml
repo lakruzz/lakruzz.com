@@ -2,8 +2,8 @@
 title: CoDe Maturity
 description: Continuous Delivery Maturity Model
 url: http://code-maturity.praqma.com
-name:  Contiuous Delivery Maturity Model # can be overriden by site.client.name
-logo:  /images/cards-icon.png # can be overriden by site.client.logo
+name:  Continuous Delivery Maturity Model # can be overriden by site.client.name
+logo:  /images/cards-icon.png             # can be overriden by site.client.logo
 frontpage-title: Continuous Delivery Maturity Model
 
 client:

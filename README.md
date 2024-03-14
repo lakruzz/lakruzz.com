@@ -1,28 +1,44 @@
 ---
 maintainer: lakruzz
 ---
-# code-maturity
+# Continuous Delivery Maturity Model
 
-To avoid strugling with Jekyll setup, use our praqma/gh-pages Docker image doing:
+## Development environment
 
-* cd into your code-maturity git repository
-* run the following command, where <customername> is obviously the customers name without spaces etc. It often matches the long lived branch names in the repository for that customer.
+To avoid struggling with Jekyll setup, use the "Ruby" devcontainer.
+
+When you (re)build the container be sure to wait for the `postcreate.sh` script to finish.
+
+Build and serve the model (default) site like this
+
+```shell
+bundle exec jekyll serve
+````
+
+To run a customer specific site include the customer specific `_config.yml` like this:
+
+```shell
+CUSTOMER=ttc         # Folder name in /_customer_details 
+bundle exec jekyll serve --config _config.yml,_customer_details/$CUSTOMER/_config.yml
+```
+
+## Changing the model
+
+The Model is defined be the content in the following folders:
+
+```
+/
+  _levels
+  _areas
+  _cards
+  _gauges
+``` 
+If you plan to change the model or want to create your own here's what you need to know
 
 
-**Serve to the network - non-local hosts**:
 
-`docker run -i -t --rm --name code-maturity-gh-pages -v $(pwd):/home/jenkins -p 4444:4000 praqma/gh-pages ./pserve <customername>`
 
-**Serve locally**:
 
-`docker run -i -t --rm --name code-maturity-gh-pages -v $(pwd):/home/jenkins -p 4444:4000 praqma/gh-pages ./serve <customername>`
-
-*Note the slightly difference in using `pserve` script instead of `serve` script, as `pserve` run jekyll command with --host=0.0.0.0 which makes jekyll serve the website to non-localhosts.*
-
-Our gh-pages Docker image:
-
-* https://github.com/Praqma/docker-gh-pages
-* https://hub.docker.com/r/praqma/gh-pages/
 
 ## PLEASE SAVE FINAL REPORTS
 
