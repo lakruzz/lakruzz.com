@@ -5,9 +5,7 @@ maintainer: lakruzz
 
 ## Development environment
 
-To avoid struggling with Jekyll setup, use the "Ruby" devcontainer.
-
-When you (re)build the container be sure to wait for the `postcreate.sh` script to finish.
+To avoid struggling with Jekyll setup, use the "Ruby" devcontainer. When you (re)build the container be sure to wait for the `postcreate.sh` script to finish.
 
 Build and serve the model (default) site like this
 
@@ -24,7 +22,7 @@ bundle exec jekyll serve --config _config.yml,_customer_details/$CUSTOMER/_confi
 
 ## Changing the model
 
-The Model is defined be the content in the following folders:
+The Model is defined by the content in the following folders:
 
 ```
 /
@@ -33,30 +31,70 @@ The Model is defined be the content in the following folders:
   _cards
   _gauges
 ``` 
+
+### Areas and levels
 If you plan to change the model or want to create your own here's what you need to know
 
+👉 The file names in areas are relevant to cards (explained next)but most important for Laying out the matrix the `title`and then `weight` that defines the order in both levels and areas files:
 
+```yaml
+---
+title: "Architecture & Design"
+weight: 40
+...
+---
+```
 
+### Cards
 
+Cards are ordered in a similar way - only now the weight is called level. And the cards are defined to belong to a certain area by the areas filenames
 
+```yaml
+---
+title:      Access to production-like environment
+level:      65
+area:       qa
+...
+---
+```
 
-## PLEASE SAVE FINAL REPORTS
+## Adding customer specifc findings
 
-When sending a customer the report in pdf-format, it should saves in several ways for references.
+For a customer designed model use create a new dedicated folder under _customer_details
 
-* save the pdf-file with the customer folder in our `praqma.customers` Google Drive
-* tag the final customer version with `<CUSTOMER>.DELIVERED` so we can always find the final version
-* add the pdf report version to the `gh-pages` as well under the `res` folders
+The folder should contain the following
 
-## Report for print and admin link
+```
+_customer_details
+  customer
+    _config.yml
+    score.md
+    report-parts
+      content.md
+      findings.md
+      front.md
+      score.md
+      summary.md
+      toc.md
+      tools.md
+    snippets
+      arch
+        # md files with file names matching the card filenames
+      build
+      ...
+      # create a folder for each file-name in _areas
+```
 
-You can add an `/admin` to your url, e.g. `http://localhost:4444/admin/` to printable formats and other views.
+In the snippets files you can add findes in header level 3 and sugested mitigation in header level 4
 
-## Compatibility issues and backwards Compatibility
+The file names must match _exactly_ the file name of the cards
 
-The `gh-pages` are always the latest version of the "engine" part, and where new reports branch of (yes, long-lived product variant branches used pr. customer) so this means that newest features described in this README are not always available on old customer branches.
+### Gauges
+The gauges are currently semi-hardcoded 🤷‍♂️ - sorry.
 
-It also means you should not merge latest master branch (`gh-pages`) to customer branches, as it might break their models.
+## Admin
+
+The compiled site insludes and admin page `/admin/` than has links to the printable cards, the report and other stuff
 
 ## Know issues
 
