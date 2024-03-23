@@ -8,10 +8,10 @@ logo:  /images/cards-icon.png             # can be overriden by site.client.logo
 frontpage-title: Continuous Delivery Maturity Model
 
 client:
-  directory:  ttc
-  name:       .the tech collective
-  url:        https://www.thetechcollective.dev
-  logo:       /images/ttc/thetechcollective.png
+  directory:  lakruzz
+  name:       lakruzz
+  url:        https://codemamo.lakruzz.com
+  logo:       /images/lakruzz/cards-icon.png
 name:         Continuous Delivery Maturity Model
 
 # Build settings
