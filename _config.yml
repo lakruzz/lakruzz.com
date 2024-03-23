@@ -1,5 +1,5 @@
 # Site settings
-title: CoDe Maturity
+title: Continuous Delivery Maturity Model
 description: Continuous Delivery Maturity Model
 baseurl: ""
 url: "https://codemamo.lakruzz.com"
@@ -16,6 +16,7 @@ name:         Continuous Delivery Maturity Model
 
 # Build settings
 remote_theme: thetechcollective/minimal-mistakes
+markdown: kramdown
 future: true
 
 collections:
