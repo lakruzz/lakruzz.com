@@ -1,8 +1,8 @@
 # Site settings
 title: CoDe Maturity
 description: Continuous Delivery Maturity Model
-baseurl: "/codemamo-ttc"
-url: "https://www.lakruzz.com"
+baseurl: ""
+url: "https://codemamo.lakruzz.com"
 name:  Continuous Delivery Maturity Model # can be overriden by site.client.name
 logo:  /images/cards-icon.png             # can be overriden by site.client.logo
 frontpage-title: Continuous Delivery Maturity Model
