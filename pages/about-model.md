@@ -57,7 +57,7 @@ Praqma's last official version of the model is captured by the [Way Back Machine
 
 ## A live sample - it's just a story
 
-Here on there pages a [codemamo.lakruzz.com](codemamo.lakruzz.com) I'm now releasing and hosting an anonymized and generalized summary of the best and most typical or illustrative findings from the total of 24 assessments that was conducted on the basis of this specific model.
+Here on there pages a [lakruzz.com](https://codemamo.lakruzz.com) I'm now releasing and hosting an anonymized and generalized write-up of the best and most typical or illustrative findings and mitigations from the total of 24 assessments that was conducted on the basis of this specific model.
 
 Any references to any the 24 companies or even the specific mentioning of their tool-stack, organization, location, domain of operation, or any data for that matter, that could possibly identify them is weeded out or scrambled.
 
@@ -67,19 +67,27 @@ But hey! Feel free to read much more into it than just that; I can reveal to you
 
 ## How to read the model
 
-<a href="/"><img width="32px" align="left" alt="Continuous Delivery Maturity Matrix" src="/images/lakruzz/cards-icon.png"/></a> Hit the icon in the top-left corner to go to the front of the model.
+<a href="/"><img width="32px" align="left" alt="Continuous Delivery Maturity Matrix" src="/images/lakruzz/cards-icon.png"/></a> Hit the icon in the top-left corner to go to the front of the model. You will see 5 levels of expertise - _Novice, Beginner, Intermediate, Advanced and Expert_. These levels are a chosen as a reference to [The Dreyfus Brother's model for skill acquisition](https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition){: target="_blank"} which contributed to the field of _Cognitive Science_ as early as in the 80's to propose an early model for understanding intelligence.
 
-You will see 5 levels of expertise - _Novice, Beginner, Intermediate, Advanced and Expert_. These levels are a chosen as a reference to [The Dreyfus Brother's model for skill acquisition](https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition){: target="_blank"} which contributed to the field of _Cognitive Science_ as early as in the 80's to propose an early model for understanding intelligence.
+In context of Continuous Delivery we chose to focus on six different areas of knowledge. _Build, Test, Version control, DevOps, Architecture & Design_ and _Organization & Culture_. These catagories can be seen as a-sign-o-the-times - back then. You would think that some of these areas no longer impose a problem. Surely for use on modern software development products adn teams these areas should be updated.
 
-In context of Continuous Delivery we chose to focus on six different areas of knowledge. _Build, Test, Version control, DevOps, Architecture & Design_ and _Organization & Culture_. These catagories can be seen as a-sign-o-the-times - back then. You would think that some of these areas no longer impose a problem. Maybe for modern use these areas should be updated.
+Maybe, sure! - But then again; you would be surprised how slow the world is moving - in large organizations.
 
-Maybe - and then again; you would be surprised how slow the world is moving - in large organizations.
-
-Each tile in the matrix has it's own landing-page which contains
+Each tile in the matrix has it's own landing-page which contains:
 
 - A score on each of the four gauges _Throughput, Feedback, Payback_ and  _Simplicity_ and a _total score_, calculated based on a weighted algorithm ([explained in details here](/gauges/)).
 - A short description.
-- A list of findings marked with a priority by the MoSCoW rules 
+- A list of findings marked with a priority by the MoSCoW rules.
 - Each finding is then followed up by least one, sometimes more, suggested possible mitigation.
 
+What to look for: As mentioned earlier, the gauges and the total score help to easily identify:
 
+### _Low hanging fruits_
+
+Findings that score high: in the range 21-27. These ar issues that would have a huge impact and that are relatively easy or simple to implement.
+
+### _Blockers_
+
+Findings that score relatively high in  _Throughput, Feedback, Payback_ but very low in _Simplicity_. These will show up with scores 7-9 but, but note that they only qualify as _blockers_ if _Simplicity_ is 1.
+
+We call them _blockers_ because they are equally important to fix as the _low hanging fruits_ but due to the nature of these; they are difficult and often expensive, maybe even impossible to fix. So teams and organizations tend to ignore them.
