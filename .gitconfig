@@ -5,7 +5,6 @@
   default = current
 
 [alias]
-  test = "!f() { git tag | grep -Eo '\\d+\\.\\d+\\.\\d+' | sort | tail -1; }; f"
   undo-commit = reset --soft HEAD^
   addremove = add -A
   recommit = commit -C HEAD --amend
