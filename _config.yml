@@ -15,7 +15,7 @@ client:
 name:         Continuous Delivery Maturity Model
 
 # Build settings
-markdown: kramdown
+remote_theme: thetechcollective/minimal-mistakes
 future: true
 
 collections:
