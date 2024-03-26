@@ -1,5 +1,5 @@
 ---
-layout:     page
+layout:     model-page
 title:      Report
 nav-weight: 10
 published:  false

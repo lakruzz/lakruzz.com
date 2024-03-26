@@ -76,22 +76,22 @@ defaults:
     scope:
       type: areas
     values:
-      layout: tag
+      layout: model-tag
   -
     scope:
       type: levels
     values:
-      layout: tag
+      layout: model-tag
   -
     scope:
       type: cards
     values:
-      layout: card
+      layout: model-card
   -
     scope:
       path: "" # any file
     values:
-      layout: page
+      layout: model-page
 
 atom_feed:
   path                   : # blank (default) uses feed.xml
