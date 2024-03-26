@@ -1,8 +1,8 @@
 # main links
 main:
 
-  - title: "Table of Contents"
-    url: /toc/
+  # - title: "Table of Contents"
+  #   url: /toc/
   - title: "Score"
     url: /score/
   - title: "Gauges"
