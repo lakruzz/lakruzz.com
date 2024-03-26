@@ -1,7 +1,13 @@
 /* ==========================================================================
-   The Tech Collective skin
+   CoDeMaMo skin
    ========================================================================== */
-/* .the tech collective colors */
+
+/* serif typefaces */
+$lato: "Lato", serif !default;
+
+$global-font-family: $lato !default;
+$header-font-family: $lato !default;
+$caption-font-family: $lato !default;
 
 $ttc-light-grey:   #e0dfdc !default;
 $ttc-dark-grey:    #1f1f23 !default;
