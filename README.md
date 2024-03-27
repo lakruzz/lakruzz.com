@@ -1,7 +1,7 @@
 ---
 maintainer: lakruzz
 ---
-# Continuous Delivery Maturity Model
+# Continuous Delivery Metric Model
 
 ## Development environment
 

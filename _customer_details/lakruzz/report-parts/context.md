@@ -28,7 +28,7 @@ The roadmap is manifested in the report you are currently reading.
 
 ## This report
 
-The report is structured around the Continuous Delivery Maturity Model which was presented to all participants during the workshop. The chapters in the report reflect the focus areas in the model.
+The report is structured around the Continuous Delivery Metric Model which was presented to all participants during the workshop. The chapters in the report reflect the focus areas in the model.
 
 Throughout the report, findings and observations are given their own section header and paragraphs under each section are marked with an up-arrow __&#xf0aa;__{: style="font-family:FontAwesome;" } indicating that it contains a recommended action mitigating an issue.
 
@@ -54,8 +54,8 @@ Each section is designed as a standalone piece so that the suggested remedies an
 This approach should enable you to copy most sections marked with __&#xf0aa;__{: style="font-family:FontAwesome;" } directly into JIRA and prioritize them.
 All you need to do hereafter is to groom the task, estimate the work, and put it on your backlog.
 
-![Maturity workshop](/images/report/universalrobots/universal_roundtable.jpg){:  .pic .medium .center "}
+![CoDe workshop](/images/report/universalrobots/universal_roundtable.jpg){:  .pic .medium .center "}
 
-![Maturity workshop](/images/report/universalrobots/universal_doing-process-drawing.jpg){:  .pic .medium .center "}
+![CoDe workshop](/images/report/universalrobots/universal_doing-process-drawing.jpg){:  .pic .medium .center "}
 
 

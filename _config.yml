@@ -1,11 +1,11 @@
-frontpage-title: Continuous Delivery Maturity Model
+frontpage-title: Continuous Delivery Metric Model
 
 client:
   directory:  lakruzz
   name:       lakruzz
   url:        https://codemamo.lakruzz.com
   logo:       /images/lakruzz/cards-icon.png
-name:         Continuous Delivery Maturity Model
+name:         Continuous Delivery Metric Model
 
 
 
@@ -32,9 +32,9 @@ minimal_mistakes_skin    : codemamo
 
 # Site Settings
 locale                   : "en-US"
-title                    : &title "Continuous Delivery Maturity Model"
+title                    : &title "Continuous Delivery Metric Model"
 title_separator          : "-"
-description              : &description "Continuous Delivery Maturity Model"
+description              : &description "Continuous Delivery Metric Model"
 subtitle                 : "Stories and Events" # site tagline that appears below site title in masthead
 name                     : *title # can be overriden by site.client.name
 url                      : "https://codemamo.lakruzz.com"

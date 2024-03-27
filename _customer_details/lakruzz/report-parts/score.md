@@ -11,11 +11,11 @@ Through six workshops over two days we ended up scoring all 30 cards in the mode
 
 The participants were split into smaller groups of 3-4 people, and each group was given one card to score. 
 The exercises was to discuss the best-practice described on each card and score them in terms of the four 
-[gauges](http://code-maturity.praqma.com/gauges/){: target="_blank"} throughput, feedback, payback and simplicity.
+[gauges](/gauges/){: target="_blank"} throughput, feedback, payback and simplicity.
 
 After scoring the cards each group presented their scoring briefly, and the rest of the group had the option to affect or discuss it, if they found a need for it.
 
-![Maturity workshop](/images/report/universalrobots/universal_doing_workshop.jpg){:  .pic .medium .center "}
+![CoDe workshop](/images/report/universalrobots/universal_doing_workshop.jpg){:  .pic .medium .center "}
 
 Throughput, feedback and payback are added together and multiplied by simplicity to calculate the total score on each card.
 

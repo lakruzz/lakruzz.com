@@ -6,7 +6,7 @@ web-report: true
 published:  true
 ---
 
-The findings and recommendations have mainly been picked up throughout the  two days of the workshop. We conducted this part as targeted group interviews focusing on the 6 main areas of the maturity model.
+The findings and recommendations have mainly been picked up throughout the  two days of the workshop. We conducted this part as targeted group interviews focusing on the 6 main areas of the metric model.
 
 On the first day, after the initial Continuous Delivery presentation, we had an exercise where all attendees together were asked to illustrate the process from the point where a requirement or a change request arrives until the implemented result can be accessed by the end-users. 
 
