@@ -147,8 +147,7 @@ footer:
 
 # Reading Files
 include:
-  - .htaccess
-  - _pages
+  - 
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -284,22 +283,18 @@ collections:
   gauges:
     output: true
     permalink: /gauges/:title/
-  customer_details:
+  pages:
     output: true
+    permalink: /:title/
+  posts:
+    output: true
+    permalink: /posts/:title/
+  customer_details:
+    output: true  
+
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
 # model
   - scope:
       type: areas
@@ -314,8 +309,17 @@ defaults:
     values:
       layout: model-card
   - scope:
-      path: "" # any file
+      type: pages
     values:
       layout: model-page
-
-
+# minimal mistakes
+  - scope:
+      type: posts
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
