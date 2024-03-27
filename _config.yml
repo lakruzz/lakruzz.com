@@ -35,7 +35,7 @@ locale                   : "en-US"
 title                    : &title "Continuous Delivery Metric Model"
 title_separator          : "-"
 description              : &description "Continuous Delivery Metric Model"
-subtitle                 : "Stories and Events" # site tagline that appears below site title in masthead
+subtitle                 : "Software as a Factory" # site tagline that appears below site title in masthead
 name                     : *title # can be overriden by site.client.name
 url                      : "https://codemamo.lakruzz.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
