@@ -4,7 +4,7 @@
 
 .layout--model-card-single{
   .layout-card{
-    $card-width: $container-width / 2.0 - 1;
+    $card-width: $container-width * 0.5 - 1;
     .card-header{
       margin-bottom: 40px;
       overflow: hidden;

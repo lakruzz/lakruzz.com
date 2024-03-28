@@ -63,5 +63,5 @@
     @return 'calc(#{$container} * #{$gutter} / 2)';
   }
 
-  @return $container * $gutter / 2;
+  @return $container * $gutter * 0.5;
 }

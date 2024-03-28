@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .layout-tag>.content{
   $card-width: 160px;
   /*.card-header{*/
@@ -9,7 +11,7 @@
   }
   .card_{
     float: left;
-    font-size: $card-width * $card-font-size-multiplier / 1.1;
+    font-size: math.div($card-width * $card-font-size-multiplier, 1.1);
     height: $card-width;
     width: $card-width;
   }
