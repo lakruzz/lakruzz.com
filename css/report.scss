@@ -222,7 +222,7 @@ a, a *{
       }
     }
     .details{
-      width: $container-width / 2.0 * 1.4;
+      width: calc($container-width / 2.0 * 1.4);
       .gauges{
         zoom: 1.65;
         /*transform: scale(1.65);*/
