@@ -307,7 +307,7 @@ defaults:
   - scope:
       type: cards
     values:
-      layout: model-card
+      layout: model-card-single
   - scope:
       type: pages
     values:

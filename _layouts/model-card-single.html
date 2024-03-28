@@ -1,5 +1,5 @@
 ---
-layout: mix-default
+layout: single
 ---
 
 {% capture a_details %}{% include func/get-area-details.html area=page.area %}{% endcapture %}
@@ -18,13 +18,13 @@ layout: mix-default
     </div>
 
     <div class="details">
-      <div class="tags model-tags">
-        <div class="tag model-tag area">
+      <div class="model-tags">
+        <div class="model-tag area">
           <a href="{{ a_details[1] }}#tag" style="background-color: #{{ a_details[2] }};">
             {{ a_details[0] }}
           </a>
         </div>
-        <div class="tag model-tag level">
+        <div class="model-tag level">
           <a href="{{ l_details[1] }}#tag" style="background: #444; opacity: {{ l_details[2] }};">
             {{ l_details[0] }}
           </a>

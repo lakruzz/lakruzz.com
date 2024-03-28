@@ -1,0 +1,86 @@
+.card_{
+  color: white;
+  font-family: $font-family-condensed;
+  font-size: 19px;
+  font-weight: normal;
+  height: $card-width-matrix;
+  line-height: 1.2em;
+  overflow: hidden;
+  position: relative;
+  width: $card-width-matrix;
+  text-align: left;
+  z-index: 0;
+  a {
+    color: white;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0.05 * $card-width-matrix;
+    text-decoration: none;
+    position: absolute;
+    -moz-transition: color 0.5s ease;
+    -moz-transition: text-shadow 0.5s ease;
+    -o-transition: color 0.5s ease;
+    -o-transition: text-shadow 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -ms-transition: text-shadow 0.5s ease;
+  }
+  
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  a:visited {
+    color: white;
+  } 
+
+  // Used to make printable background for cards and tags.
+  // Be sure you've set `overflow: hidden; position: relative;` to a parent
+  // `border-color` should be set by inline styles.
+  .bg{
+    border-style: solid;
+    border-width: 150pt;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  
+
+}
+
+// TODO: this replaces to old .tag class (remove it)
+.model-tag{
+  /*line-height: 1em;*/
+  font-size: 0.8em;
+  a{
+    color: white;
+    display: inline-block;
+    line-height: 1em;
+    padding: 0.5em 0.8em;
+    text-decoration: none;
+    &:visited{
+      color: white;
+    }
+    &:hover{
+      color: grey;
+      text-decoration: none;
+    }
+  }
+}
+
+.stars{
+  width: $stars-width;
+  display: inline-block;
+  .s_empty{
+    opacity: 0.2;
+  }
+}

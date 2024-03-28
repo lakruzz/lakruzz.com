@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* any style customization must be before the bootstrap import */
+@import "model/variables";
+@import "model/google-fonts";
+@import "model/card"; //the old  helpers/bg, compontent/tag, component/stars is now included in card
+@import "model/model-card-single"; //this is the old pages/card
+
+//@import "base/layout"; // not seeing any important styles here
+
+/*
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import "base/typography";
+@import "components/matrix";
+@import "components/card";
+@import "components/pic";
+@import "components/carousel";
+@import "components/nav";
+@import "components/stars";
+@import "pages/card";
+@import "pages/score";
+@import "pages/gagues";
+@import "pages/toc";
+@import "pages/tag";
+@import "base/print";
+*/
