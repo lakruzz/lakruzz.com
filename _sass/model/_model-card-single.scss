@@ -93,7 +93,7 @@
           height: 50px;
           padding-left: 80px;
           line-height: 50px;
-          &:before{
+          &:before, &:after{
             display: inline-block;
             width: 20px;
             height: 20px;
@@ -116,5 +116,49 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+.layout--model-card-single{
+  .layout-card{ 
+    .nav-prev-next {
+       a {
+           position: static;
+           transform: none;
+           width: auto;
+           &:hover{
+            background: rgba($color-black, 0.2);
+          }
+         span.title {
+           transform: none; // Remove rotation
+           position: static; // Reset positioning
+           bottom: auto; // Reset bottom positioning
+           left: auto; // Reset left positioning
+           transform-origin: none; // Reset transform origin
+           height: auto; // Reset height
+           padding-left: 0; // Reset padding
+           line-height: normal; // Reset line height
+         }
+         &.prev {
+           left: auto; // Reset left positioning
+           align: left;
+           span.title:before{
+            content: "←";
+          }
+         }
+         &.next {
+           right: auto; // Reset right positioning
+           align: right;
+           span.title:before{
+            content: "";
+           }
+           span.title:after{
+            content: "→";
+          }
+         }
+       }
+     }
+   }
   }
 }

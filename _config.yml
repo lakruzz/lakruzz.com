@@ -69,6 +69,7 @@ search_full_content      : true # true, false (default)
 search_provider          : lunr 
 lunr:
   search_within_pages    : # true, false (default)
+font_awesome_kit_id      : 17b5a92563 # Font Awesome Kit ID
 
 # SEO Related
 google_site_verification :
@@ -309,6 +310,12 @@ defaults:
       type: cards
     values:
       layout: model-card-single
+      author_profile: # true
+      read_time: # true
+      comments: # true
+      share: # true
+      related: # true
+      pagination: false # true  # next/prev buttons    
   - scope:
       type: pages
     values:
