@@ -315,11 +315,19 @@ defaults:
       comments: # true
       share: # true
       related: # true
+      search: true # true
       pagination: false # true  # next/prev buttons    
   - scope:
       type: pages
     values:
-      layout: model-page
+      layout: model-page-single
+      author_profile: # true
+      read_time: # true
+      comments: # true
+      share: # true
+      related: # true
+      search: true # true
+      pagination: false # true  # next/prev buttons    
 # minimal mistakes
   - scope:
       type: posts

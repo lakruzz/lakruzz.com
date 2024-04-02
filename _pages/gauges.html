@@ -1,10 +1,12 @@
 ---
 title: Gauges
+pagination: false
+last_modified_at: 2019-07-01
 ---
 
 {% assign sg = site.gauges | sort:"weight" %}
 {% assign index = 0 %}
-<div class="page-gauges">
+<div class="layout--model-page-single">
   <section>
     {% for s in sg %}
       <article>
