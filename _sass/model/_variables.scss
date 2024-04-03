@@ -9,7 +9,7 @@ $container-width: 600px;
 $card-gutter-matrix: 8px;
 $card-matrix-cols: 5;
 /*$card-width-matrix: ($container-width - ($card-gutter-matrix * ($card-matrix-cols - 1)))/$card-matrix-cols;*/
-$card-width-matrix: 124px;
+$card-width-matrix: 110px;
 $stars-width: 96px;
 
 // fonts
@@ -18,7 +18,7 @@ $font-family-base: "Lato", sans-serif;
 $font-family-condensed: "Lato", $font-family-base;
 
 
-$font-size-base:          14px; // used in model/matrix
+$font-size-base:          12px; // used in model/matrix
 
 
 /*$font-letter-spacing: 0.05em;*/

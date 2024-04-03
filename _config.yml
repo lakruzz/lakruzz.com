@@ -301,11 +301,11 @@ defaults:
   - scope:
       type: areas
     values:
-      layout: model-tag
+      layout: model-tag-single
   - scope:
       type: levels
     values:
-      layout: model-tag
+      layout: model-tag-single
   - scope:
       type: cards
     values:
