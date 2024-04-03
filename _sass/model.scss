@@ -4,7 +4,7 @@
 /* any style customization must be before the bootstrap import */
 @import "model/variables";
 @import "model/google-fonts";
-@import "model/card"; //the old  helpers/bg, compontent/tag, component/stars is now included in card
+@import "model/card"; //the old  helpers/bg, compontent/tag, component/stars, pages/score are now included in card
 @import "model/model-card-single"; //this is the old pages/card
 @import "model/model-page-single"; //this is the old pages/gauge
 
@@ -23,7 +23,6 @@
 @import "components/carousel";
 @import "components/nav";
 @import "components/stars";
-@import "pages/score";
 @import "pages/toc";
 @import "pages/tag";
 @import "base/print";
