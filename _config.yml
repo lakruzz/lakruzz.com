@@ -306,6 +306,13 @@ defaults:
       type: levels
     values:
       layout: model-tag-single
+      author_profile: false # true
+      read_time: false # true
+      comments: false # true
+      share: false # true
+      related: false # true
+      search: true # true
+      pagination: false # true  # next/prev buttons         
   - scope:
       type: cards
     values:
