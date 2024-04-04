@@ -26,6 +26,9 @@
   }
     .card_{
       font-size: $card-width * $card-font-size-multiplier;
+      .bg{
+        border-width: 80pt;
+      }
     }
     .details{
       padding-left: 0.06*$card-width;
@@ -202,6 +205,10 @@
   
       .card_{
         font-size: $card-width * $card-font-size-multiplier;
+        .bg{
+          border-width: 56pt;
+        }
+  
       }
       .details{
         .gauges{
