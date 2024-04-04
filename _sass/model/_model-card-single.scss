@@ -1,10 +1,11 @@
-
-
-
-
 .layout--model-card-single{
+
+  header{
+    display: none ;
+  }
+
   .layout-card{
-    $card-width: $container-width * 0.5 - 1;
+    $card-width: 207px;
     .card-header{
       margin-bottom: 40px;
       overflow: hidden;
@@ -17,6 +18,12 @@
       width: $card-width;
       height: $card-width;
     }
+
+    .model-tags {
+      padding-left: 0.06*$card-width;
+      position: relative;
+      float: left;
+  }
     .card_{
       font-size: $card-width * $card-font-size-multiplier;
     }
@@ -27,7 +34,7 @@
         /*bottom: -9px;*/
         bottom: 0;
         font-family: $font-family-base;
-        //font-size: 1.3em;
+        font-size: calc($font-size-base * 1.4);
         font-weight: 300;
         line-height: 1.6em;
         position: absolute;
@@ -37,7 +44,7 @@
           border-top: rgba(0,0,0,0.1) 1px solid;
           margin-top: 17px;
           padding-top: 9px;
-          margin-bottom: -8px;
+          margin-bottom: 0px;
           .value{
             font-weight: bold;
             font-size: 1.5em;
@@ -116,6 +123,13 @@
         }
       }
     }
+    .stars{
+      width: $stars-width;
+      display: inline-block;
+      .s_empty{
+        opacity: 0.2;
+      }
+    }
   }
 }
 
@@ -162,3 +176,55 @@
    }
   }
 }
+
+@media (max-width: 600px) {
+  .layout--model-card-single{
+    
+    .layout-card{
+
+      $stars-width: 65px;
+      .stars{
+        width: $stars-width;
+        display: inline-block;
+        .s_empty{
+          opacity: 0.2;
+        }
+      }
+      
+      $card-width: 147px;
+      .card-header{
+        margin-bottom: 30px;
+      }
+      .card_, .details{
+        width: $card-width;
+        height: $card-width;
+      }
+  
+      .card_{
+        font-size: $card-width * $card-font-size-multiplier;
+      }
+      .details{
+        .gauges{
+          font-size: calc($font-size-base * 1.1);
+          line-height: 1.5em;
+          .score{
+            border-top: rgba(0,0,0,0.1) 1px solid;
+            margin-top: 17px;
+            padding-top: 9px;
+            margin-bottom: 0px;
+            .value{
+              font-weight: bold;
+              font-size: 1.5em;
+              width: $stars-width;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+    
+
+    }  
+  }  
+}
+

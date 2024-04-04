@@ -18,18 +18,6 @@ layout: single
     </div>
 
     <div class="details">
-      <div class="model-tags">
-        <div class="model-tag area">
-          <a href="{{ a_details[1] }}#tag" style="background-color: #{{ a_details[2] }};">
-            {{ a_details[0] }}
-          </a>
-        </div>
-        <div class="model-tag level">
-          <a href="{{ l_details[1] }}#tag" style="background: #444; opacity: {{ l_details[2] }};">
-            {{ l_details[0] }}
-          </a>
-        </div>
-      </div>
       {% capture gauge_values %}{% include /func/get-gauge-values.html path=page.path %}{% endcapture %}
       <!--{% include /func/get-gauge-values.html path=page.path %}-->
       <!--{{ gauge_values | jsonify }}-->
@@ -53,6 +41,20 @@ layout: single
         </div>
       {% endif %}
     </div>
+
+    <div class="model-tags">
+      <div class="model-tag area">
+        <a href="{{ a_details[1] }}#tag" style="background-color: #{{ a_details[2] }};">
+          {{ a_details[0] }}
+        </a>
+      </div>
+      <div class="model-tag level">
+        <a href="{{ l_details[1] }}#tag" style="background: #444; opacity: {{ l_details[2] }};">
+          {{ l_details[0] }}
+        </a>
+      </div>
+    </div>
+
 
   </div>
 
