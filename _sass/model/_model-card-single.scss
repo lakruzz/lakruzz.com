@@ -23,7 +23,7 @@
       padding-left: 0.06*$card-width;
       position: relative;
       float: left;
-  }
+    }
     .card_{
       font-size: $card-width * $card-font-size-multiplier;
       .bg{
@@ -186,6 +186,7 @@
     .layout-card{
 
       $stars-width: 65px;
+      $card-width: 147px;
       .stars{
         width: $stars-width;
         display: inline-block;
@@ -194,10 +195,23 @@
         }
       }
       
-      $card-width: 147px;
+      .card-header{
+        .model-tags {
+          float:none;
+          padding-top: 0.06*$card-width;
+          padding-left: 0;
+          .model-tag {
+            float: left;
+          }
+        }
+      }
+
       .card-header{
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
       }
+
       .card_, .details{
         width: $card-width;
         height: $card-width;

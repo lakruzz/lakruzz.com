@@ -11,35 +11,37 @@ layout: single
 
 
   <div class="card-header">
+    <div>
 
-    <div class="card_">
-      {{ page.title }}
-      <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
-    </div>
-
-    <div class="details">
-      {% capture gauge_values %}{% include /func/get-gauge-values.html path=page.path %}{% endcapture %}
-      <!--{% include /func/get-gauge-values.html path=page.path %}-->
-      <!--{{ gauge_values | jsonify }}-->
-      {% assign gauge_values = gauge_values | split:" " %}
-      {% assign throughput = gauge_values[0] %}
-      {% assign feedback   = gauge_values[1] %}
-      {% assign payback    = gauge_values[2] %}
-      {% assign simplicity = gauge_values[3] %}
-      {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
-      {% assign score = score | strip_newlines %}
-      {% if score != "0" %}
-        <div class="gauges">
-          <div class="gauge">Throughput {% include func/stars.html star_count=throughput %}</div>
-          <div class="gauge">Feedback   {% include func/stars.html star_count=feedback %}  </div>
-          <div class="gauge">Payback    {% include func/stars.html star_count=payback %}   </div>
-          <div class="gauge">Simplicity {% include func/stars.html star_count=simplicity %}</div>
-          <div class="score">
-            Score
-            <span class="value">{{ score }}</span>
+      <div class="card_">
+        {{ page.title }}
+        <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+      </div>
+  
+      <div class="details">
+        {% capture gauge_values %}{% include /func/get-gauge-values.html path=page.path %}{% endcapture %}
+        <!--{% include /func/get-gauge-values.html path=page.path %}-->
+        <!--{{ gauge_values | jsonify }}-->
+        {% assign gauge_values = gauge_values | split:" " %}
+        {% assign throughput = gauge_values[0] %}
+        {% assign feedback   = gauge_values[1] %}
+        {% assign payback    = gauge_values[2] %}
+        {% assign simplicity = gauge_values[3] %}
+        {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+        {% assign score = score | strip_newlines %}
+        {% if score != "0" %}
+          <div class="gauges">
+            <div class="gauge">Throughput {% include func/stars.html star_count=throughput %}</div>
+            <div class="gauge">Feedback   {% include func/stars.html star_count=feedback %}  </div>
+            <div class="gauge">Payback    {% include func/stars.html star_count=payback %}   </div>
+            <div class="gauge">Simplicity {% include func/stars.html star_count=simplicity %}</div>
+            <div class="score">
+              Score
+              <span class="value">{{ score }}</span>
+            </div>
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
 
     <div class="model-tags">
