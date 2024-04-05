@@ -11,9 +11,7 @@ simplicity:
 weight: 2005
 ---
 
-To integrate means to merge your code on to the same branch as the one your colleagues are working on. 
-So obviously if your code breaks something you are potentially jeopardizing the work space - and pace - of your team mates as well.  
-To have a pristine integration branch means that it is _buildable_ at all times.
+To integrate means to merge your code on to the same branch as the one your colleagues are working on.  So obviously if your code breaks something you are potentially jeopardizing the work space - and pace - of your team mates as well. To have a pristine integration branch means that it is _buildable_ at all times.
 
 Code should be verified through some kind of toll-gate criteria, before it's accepted on to the integration branch. 
 Anything that doesn't meet the toll-gate criteria is rejected and will not enter the mainline. 
