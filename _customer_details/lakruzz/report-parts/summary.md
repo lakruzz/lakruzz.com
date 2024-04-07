@@ -6,6 +6,9 @@ web-report: true
 published:  true
 ---
 
+<!--TODO: write the analysis -->
+**_Note: the following is a sample summary from an anonymous client_**
+
 In general we were quite impressed with your enthusiasm and commitment at Universal Robots. 
 Such level of engagement is a rare sight, and it's obvious to us that you take pride in your craft. 
 

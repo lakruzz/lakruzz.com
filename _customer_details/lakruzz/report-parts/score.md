@@ -15,13 +15,16 @@ The exercises was to discuss the best-practice described on each card and score 
 
 After scoring the cards each group presented their scoring briefly, and the rest of the group had the option to affect or discuss it, if they found a need for it.
 
-![CoDe workshop](/images/report/universalrobots/universal_doing_workshop.jpg){:  .pic .medium .center "}
+<!--TODO: add pictures from the workshop -->
 
 Throughput, feedback and payback are added together and multiplied by simplicity to calculate the total score on each card.
 
 All the cards that got a score are listed in the following:
 
 {% include report/scores.minimal.html %}
+
+<!--TODO: write the analysis -->
+**_Note: the following is a sample analysis from an anonymous client_**
 
 ## Analysis
 The majority of the cards received some type of score in the value gauges. With the exception of the following

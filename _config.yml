@@ -1,4 +1,13 @@
-frontpage-title: Continuous Delivery Metric Model
+# Build and serve your site with:
+#     bundle update
+#     bundle exec jekyll serve
+
+# This config file affect your entire site. It is only read when Jekyll is started
+# If you change this file, you must restart the server process.
+
+# The build is slightly different if you are running in production mode or in development mode
+# Set the JEKYLL_ENV environment variable to 'production' to enable a production build - like this
+#      JEKYLL_ENV=production bundle exec jekyll serve  
 
 client:
   directory:  lakruzz
@@ -8,25 +17,6 @@ client:
 name:         Continuous Delivery Metric Model
 
 
-
-
-
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# The build is slightly different if you are running in production mode or in development mode
-# Set the JEKYLL_ENV environment variable to 'production' to enable a production build - like this
-# JEKYLL_ENV=production bundle exec jekyll serve  
-
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
 # remote_theme: thetechcollective/minimal-mistakes
 minimal_mistakes_skin    : codemamo 
 
@@ -35,11 +25,11 @@ locale                   : "en-US"
 title                    : &title "Continuous Delivery Metric Model"
 title_separator          : "-"
 description              : &description "Continuous Delivery Metric Model"
-subtitle                 : "Software as a Factory" # site tagline that appears below site title in masthead
+subtitle                 : &subtitle "Software as a Factory" # site tagline that appears below site title in masthead
 name                     : *title # can be overriden by site.client.name
-url                      : "https://codemamo.lakruzz.com"
+url                      : "https://codememo.lakruzz.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "lakruzz/codemamo-ttc" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "lakruzz/codememo" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/images/cards-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title

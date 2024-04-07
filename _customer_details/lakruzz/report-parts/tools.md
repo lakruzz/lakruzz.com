@@ -3,7 +3,7 @@ title:      Tools
 caption:    The current tooling landscape
 weight:     35
 web-report: true
-published:  true
+published:  false
 ---
 
 ## VCS

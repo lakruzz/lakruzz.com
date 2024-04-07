@@ -3,9 +3,9 @@ title:      Continuous Delivery Assessment
 caption:    Report based on workshop and interviews
 date:     2016-11-24
 author:
-  name: Tim Harris, Claus Schneider
-  co-authors: Thierry Lacour, Lars Kruse
-  logo: /images/praqma-logo.png
+  name: "Lars Kruse"
+  co-authors: ""
+#  logo: /images/praqma-logo.png
 weight:     1
 published:  true
 client_logo_margin: 0mm 0mm
