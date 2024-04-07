@@ -1,6 +1,9 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
+
 ### PolyScope is treated as a monolith
 
 Even though PolyScope generates multiple JAR files, it is treated as a monolith. 

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Lack of a test strategy
 
 From the workshops we determined the software developers and testers weren't always aware of what tests were executing or were intended to verify.

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Nexus setup not optimal
 
 The setup used in Nexus is not as the tool is designed and intended for. 

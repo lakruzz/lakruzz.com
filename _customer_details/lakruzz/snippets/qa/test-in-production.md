@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Access to production like environments is limited
 
 It's currently a tedious and manual task to get a robot available for testing. 

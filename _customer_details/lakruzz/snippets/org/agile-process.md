@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Team subcultures make collaboration challenging
 
 The teams aren't aligned in how they are developing software. 

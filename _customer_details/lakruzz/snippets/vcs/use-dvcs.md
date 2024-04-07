@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Current VCS does not support CI/CD well enough
 
 Subversion is too inflexible and and clunky for a real automated CI/CD approach. 

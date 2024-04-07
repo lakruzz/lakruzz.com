@@ -1,6 +1,7 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
 
 ### It builds on my machine
 

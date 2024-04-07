@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Messaging protocols (and public API) aren't managed/versioned
 
 The messaging protocols of your systems are not managed or versioned. 

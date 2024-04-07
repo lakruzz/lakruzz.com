@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### No pipeline measurements
 There is no overview of the pipeline's performance and how expensive its individual steps are.
 

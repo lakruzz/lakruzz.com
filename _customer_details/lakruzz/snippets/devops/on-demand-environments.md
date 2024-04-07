@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Vague build infrastructure and hardware utilization
 
 The server room setup with its mixture of VMware, Docker and physical machines isn't very clear. 

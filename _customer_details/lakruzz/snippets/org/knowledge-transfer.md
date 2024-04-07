@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Single points of failure on key resources
 
 We identified some _bus factor_ issues in DevOps, release management and security reviews. 

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Collaborating with end users is difficult
 
 The collaboration with distributors, installers and end users is currently handled mainly via emails by the Front Office team. 

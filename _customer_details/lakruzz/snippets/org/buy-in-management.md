@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Little data available on spent or wasted resources during development
 
 Currently, there is little data on the amount of resources spent on unplanned work and slow feedback loops. 

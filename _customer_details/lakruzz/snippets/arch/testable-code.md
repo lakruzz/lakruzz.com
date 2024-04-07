@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### PolyScope's monolithic JAR
 
 The PolyScope consists of many Java components, but one of them spans some 80% of the code base. 

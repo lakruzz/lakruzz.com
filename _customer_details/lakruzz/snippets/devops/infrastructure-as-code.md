@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Windows server is not managed
 
 The Windows machine and its tools aren't versioned or managed.

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Release Notes are manually created
 The release notes are handled in Confluence. It is a manual process and is time consuming. The Jira issues are extracted and post-processed for the final release note. It is glue-on quality - not built-in quality. The release note cannot be generated based on a meta-system like Jira alone. It does not have the source revision time record. Jira issues and releases in Jira do not understand relationship of changes in the SCM system.
 

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### No clear convention on product or subsystem versioning
 
 It was unclear how the dependencies were defined and used in the 'aggregations'. 

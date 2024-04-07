@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### A fifth of your tasks are tied to a "Trash can" task.
 
 You have a "trash can" task in Jira, which is used throughout all releases.

@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Infrastructure information is for administrators only
 
 Information regarding your infrastructure setup is hidden on a "secret" page, only accessible by administrators.

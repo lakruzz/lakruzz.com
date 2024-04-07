@@ -1,6 +1,8 @@
 ---
 ---
 
+**_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
+
 ### Vague responsibility of pipeline definition
 
 The goal and feedback needs of the pipeline are unclear. 
