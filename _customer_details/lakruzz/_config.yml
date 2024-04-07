@@ -1,6 +1,6 @@
 client:
-  directory:  universalrobots
-  name:       Universal Robots
-  url:        http://www.universal-robots.com
-  logo:       /images/universalrobots.jpg
-name:         CoDe Metric Report
+  directory:  lakruzz
+  name:       lakruzz
+  url:        https://codemamo.lakruzz.com
+  logo:       /images/lakruzz/cards-icon.png
+name:         Continuous Delivery Metric Model
