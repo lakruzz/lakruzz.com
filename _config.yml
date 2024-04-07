@@ -280,7 +280,7 @@ collections:
     permalink: /:title/
   posts:
     output: true
-    permalink: /posts/:title/
+    permalink: /stories/:title/
   customer_details:
     output: true  
 
