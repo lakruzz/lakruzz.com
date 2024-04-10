@@ -26,7 +26,12 @@ title: Score
       <article>
         <div class="card_">
           <a href="{{ c.url }}">{{ c.title }}</a>
-          {% if score %}<div class="score">{{ score }}</div>{% endif %}
+          <div class="icons">
+            {% if simplicity == '3' %}<div class="complexity"><i class="fa-solid fa-apple-whole"></i></div>{% endif %}
+            {% if simplicity == '2' %}<div class="complexity"><i class="fa-solid fa-user-group"></i></div>{% endif %}
+            {% if simplicity == '1' %}<div class="complexity"><i class="fa-solid fa-mountain-sun"></i></div>{% endif %}
+            {% if score %}<div class="score">{{ score }}</div>{% endif %}
+        </div>
           <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }}"></div>
         </div>
         <div class="content">

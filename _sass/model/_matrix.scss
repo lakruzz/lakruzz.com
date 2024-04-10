@@ -89,8 +89,9 @@
       }
       font-size: 10px;
 
-      .score{
+      .score, .complexity {
         font-size: 10px;
+        width: calc($card-width-matrix*0.2);
       }
 
       .bg{
