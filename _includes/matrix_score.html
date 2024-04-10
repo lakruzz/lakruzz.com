@@ -31,7 +31,7 @@
               {% assign payback    = gauge_values[2] %}
               {% assign simplicity = gauge_values[3] %}
               {% assign score = score | strip_newlines %}
-              {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+              {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback %}{% endcapture %}
               {% assign score = score | strip_newlines %}
               {% capture l_title %}{% include func/get-level-title.html level=c.level l_sorted=l_sorted %}{% endcapture %}
               {% assign l_title = l_title | strip_newlines %}
@@ -39,7 +39,13 @@
                 {% capture card_html %}
                     <div class="card_">
                       <div class="bg" style="border-color: #{{ a.color }}; opacity: {{ l.opacity }}"></div>
-                      {% if score != '0' %}<div class="score">{{ score }}</div>{% endif %}
+                      <div class="icons">
+                        {% if simplicity == '3' %}<div class="complexity"><i class="fa-solid fa-apple-whole"></i></div>{% endif %}
+                        {% if simplicity == '2' %}<div class="complexity"><i class="fa-solid fa-user-group"></i></div>{% endif %}
+                        {% if simplicity == '1' %}<div class="complexity"><i class="fa-solid fa-mountain-sun"></i></div>{% endif %}
+                        {% if score != '0' %}<div class="score">{{ score }}</div>{% endif %}                      
+                      </div>
+                  
                       <a href="{{ c.url }}">{{ c.title }}</a>
                     </div>
                 {% endcapture %}
