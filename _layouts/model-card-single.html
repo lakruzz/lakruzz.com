@@ -15,7 +15,7 @@ layout: single
 
       <div class="card_">
         {{ page.title }}
-        <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+        <div class="bg area-{{ a_details[3] }}" style="opacity: {{ l_details[2] }};"></div>
       </div>
   
       <div class="details">
@@ -46,7 +46,7 @@ layout: single
 
     <div class="model-tags">
       <div class="model-tag area">
-        <a href="{{ a_details[1] }}#tag" style="background-color: #{{ a_details[2] }};">
+        <a href="{{ a_details[1] }}#tag"  class="area-{{ a_details[3] }}" style="color: white;">
           {{ a_details[0] }}
         </a>
       </div>

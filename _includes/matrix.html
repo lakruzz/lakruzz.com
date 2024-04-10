@@ -16,7 +16,7 @@
       {% assign a_fname = a.path | split:'/' | last | split:'.' | first %}
       <div class="matrix-cell header header-area">
         <span>
-          <a href="{{ a.url }}#tag" style="color: #{{ a.color }};">{{ a.title }}</a>
+          <a href="{{ a.url }}#tag" class="area-{{ a.weight }}" style="background-color:unset;">{{ a.title }}</a>
         </span>
       </div>
       {% for l in l_sorted %}
@@ -29,7 +29,7 @@
               {% if l_title == l.title %}
                 {% capture card_html %}
                     <div class="card_">
-                      <div class="bg" style="border-color: #{{ a.color }}; opacity: {{ l.opacity }}"></div>
+                      <div class="bg area-{{ a.weight }}" style="opacity: {{ l.opacity }}"></div>
                       <a href="{{ c.url }}">
                         {{ c.title }}
                       </a>
