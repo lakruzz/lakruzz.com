@@ -65,23 +65,33 @@
       margin-bottom: 0.5em;
     }
   
-    h4:before {
-      /*content: "";*/
-      /*background-image: url("/images/remedy.png");*/
-      /*background-size: 24px 24px;*/
-      /*background-repeat: no-repeat;*/
-      /*display: inline-block;*/
-      /*opacity: 0.5;*/
-      /*width: 24px;*/
-      /*height: 24px;*/
-      /*padding: 10px;*/
-      /*margin-left: 0px;*/
+    h2:before {
       margin-right: 0.4em;
-      /*margin-bottom: -1px;*/
-      /*margin-top: 0px;*/
-      content: "\f0aa";
+      content: "\f1e5"; // <i class="fa-solid fa-binoculars"></i>
       font-family: FontAwesome;
     }
+    
+    
+    h3:before {
+      margin-right: 0.4em;
+      content: "\f0aa"; // <i class="fa-solid fa-circle-arrow-up"></i>
+      font-family: FontAwesome;
+    }
+
+    h4:before{
+      margin-right: 0.4em;
+      content: "\f0a9"; // <i class="fa-solid fa-circle-arrow-right"></i>
+      font-family: FontAwesome;
+      
+    }    
+    
+    h5:before{
+      margin-right: 0.4em;
+      content: "\f0ab"; // <i class="fa-solid fa-circle-arrow-down"></i>
+      font-family: FontAwesome;
+      
+    }
+
     .nav-prev-next{
       a{
         bottom: 0;
