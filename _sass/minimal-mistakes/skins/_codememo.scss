@@ -70,7 +70,7 @@ $footer-background-color: mix(#000, $background-color, 30%) !default;
 $link-color: mix($primary-color, $text-color, 40%) !default;
 $link-color-hover: mix(#fff, $link-color, 25%) !default;
 $link-color-visited: mix(#000, $link-color, 25%) !default;
-$masthead-link-color: $ttc-light-grey-1 !default;
+$masthead-link-color: $ttc-dark-grey !default;
 $masthead-link-color-hover: mix(#000, $ttc-mustard-3, 20%) !default;
 $masthead-background-color: $ttc-dark-grey !default;
 $footer-background-color: $masthead-background-color;
