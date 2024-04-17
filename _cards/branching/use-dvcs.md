@@ -1,7 +1,7 @@
 ---
 title:      Use distributed VCS
 caption:    Embrace the full power of modern versioning
-level:      65
+level:      15
 area:       vcs
 visuals:    
 throughput:       

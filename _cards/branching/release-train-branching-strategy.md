@@ -1,7 +1,7 @@
 ---
 title:      Release train branching strategy
 caption:    Tug along or be left behind - we're releasing on rails
-level:      30
+level:      45
 area:       vcs
 visuals:    
 throughput: 
