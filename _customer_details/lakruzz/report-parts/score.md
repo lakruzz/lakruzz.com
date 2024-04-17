@@ -6,7 +6,7 @@ web-report: true
 published:  true
 ---
 
-During the individual workshops for each area, we had an exercise where the participants had to evaluate and score the five cards that belong to the area. 
+During the individual workshops for each area, we do an exercise where the participants evaluate and score the five cards that belong to the area. 
 Through six workshops over two days we ended up scoring all 30 cards in the model.
 
 The participants were split into smaller groups of 3-4 people, and each group was given one card to score. 

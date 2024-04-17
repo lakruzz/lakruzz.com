@@ -71,19 +71,21 @@ Maybe, sure! - But then again; you would be surprised how slow the world is movi
 
 Each tile in the matrix has it's own landing-page which contains:
 
-- A score on each of the four gauges _Throughput, Feedback, Payback_ and  _Simplicity_ and a _total score_, calculated based on a weighted algorithm ([explained in details here](/gauges/)).
+- A score on each of the four gauges _Throughput, Feedback, Payback_ and _Complexity_ and a _total score_, which is the sum of the effect; _Throughput + Feedback + Payback_.
 - A short description.
 - A list of findings marked with a priority by the MoSCoW rules.
 - Each finding is then followed up by least one, sometimes more, suggested possible mitigation.
 
-What to look for: As mentioned earlier, the gauges and the total score help to easily identify:
+What to look for: As mentioned earlier, the gauges, the total score and the level of complexity help to easily identify:
 
 ### _Low hanging fruits_
 
-Findings that score high: in the range 21-27. These ar issues that would have a huge impact and that are relatively easy or simple to implement.
+Findings that score high: in the range 7-9. and marked as 1<sup>st</sup> level of complexity with <i class="fa-solid fa-apple-whole"/> are low hanging fruit. These are issues that would have a huge impact and that are relatively easy or simple to implement.
 
-### _Blockers_
+### _Team efforts_
 
-Findings that score relatively high in  _Throughput, Feedback, Payback_ but very low in _Simplicity_. These will show up with scores 7-9 but, but note that they only qualify as _blockers_ if _Simplicity_ is 1.
+Findings that score high: in the range 7-9. and marked as 2<sup>nd</sup> level of complexity with <i class="fa-solid fa-user-group"/> are team efforts. They are probably more important than some of your low-scoring low-hanging fruits, but easy to overlook, because they are not necessarily easy.
 
-We call them _blockers_ because they are equally important to fix as the _low hanging fruits_ but due to the nature of these; they are difficult and often expensive, maybe even impossible to fix. So teams and organizations tend to ignore them.
+### _Mountains to climb_
+
+Findings that score relatively high in in the range 7-9 and marked as 3<sup>rd</sup> level of complexity with <i class="fa-solid fa-mountain-sun"/> are Mountains to climb — or even blockers. They can be equally important to fix as the _low hanging fruits_ but due to the nature of these; they are difficult and often expensive, maybe even impossible to fix. So teams and organizations tend to ignore them.

@@ -19,17 +19,17 @@ title: Score
       {% assign throughput = gauge_values[0] %}
       {% assign feedback   = gauge_values[1] %}
       {% assign payback    = gauge_values[2] %}
-      {% assign simplicity = gauge_values[3] %}
+      {% assign complexity = gauge_values[3] %}
       {% assign score = score | strip_newlines %}
-      {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+      {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback complexity=complexity %}{% endcapture %}
       {% assign score = score | strip_newlines %}
       <article>
         <div class="card_">
           <a href="{{ c.url }}">{{ c.title }}</a>
           <div class="icons">
-            {% if simplicity == '3' %}<div class="complexity"><i class="fa-solid fa-apple-whole"></i></div>{% endif %}
-            {% if simplicity == '2' %}<div class="complexity"><i class="fa-solid fa-user-group"></i></div>{% endif %}
-            {% if simplicity == '1' %}<div class="complexity"><i class="fa-solid fa-mountain-sun"></i></div>{% endif %}
+            {% if complexity == '3' %}<div class="complexity"><i class="fa-solid fa-apple-whole"></i></div>{% endif %}
+            {% if complexity == '2' %}<div class="complexity"><i class="fa-solid fa-user-group"></i></div>{% endif %}
+            {% if complexity == '1' %}<div class="complexity"><i class="fa-solid fa-mountain-sun"></i></div>{% endif %}
             {% if score %}<div class="score">{{ score }}</div>{% endif %}
         </div>
           <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }}"></div>
