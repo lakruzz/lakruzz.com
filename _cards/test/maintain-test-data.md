@@ -3,12 +3,8 @@ title:      Maintain test data
 caption:    Test data as code
 level:      45
 area:       qa
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/maintain-test-data.png
 ---
 
 Management and maintenance of your test data is considered part of your Quality Assurance strategy. Your test data is versioned and stored as an artifact.

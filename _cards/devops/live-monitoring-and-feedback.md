@@ -3,12 +3,8 @@ title:      Live monitoring and feedback
 caption:    It's 10pm. Do you know where your code is?
 level:      95
 area:       devops
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/live-monitoring-and-feedback.png
 ---
 
 Your software is in production, but how is it doing?  You want to have insight into the runtime health of your system.

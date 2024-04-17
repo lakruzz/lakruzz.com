@@ -3,12 +3,8 @@ title:      Code metrics
 caption:    Crunching the code will reveal trends and tendencies
 level:      15
 area:       arch
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/code-metrics.png
 ---
 
 Analyzing your code is cheap but valuable. Scouring your code and producing interesting metrics helps you keep check on all kinds of creeping issues.

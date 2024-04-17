@@ -3,12 +3,8 @@ title:      Full traceability
 caption:    Run a tight ship - control software from cradle to grave
 level:      75
 area:       build
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/full-trace.png
 ---
 
 Take an arbitrary piece of hardware; As part of the Product Lifecycle Management the manufacturer has a complete trace to the individual versions of all the components that went into it.

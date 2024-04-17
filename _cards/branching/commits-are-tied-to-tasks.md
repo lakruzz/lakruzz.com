@@ -3,12 +3,8 @@ title:      Commits are tied to tasks
 caption:    Don't change the code for no reason at all
 level:      25
 area:       vcs
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/commits-are-tied-to-tasks.png
 ---
 
 Every time the code changes, it traces back to _some_ task being done.

@@ -3,12 +3,8 @@ title:      Infrastructure as code
 caption:    The best way to define, document and deliver your IT is with code
 level:      65
 area:       devops
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/infrastructure-as-code.png
 ---
 
 Every aspect of your entire development and release process can be traced back to some kind of version controlled code.

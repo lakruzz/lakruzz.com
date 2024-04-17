@@ -47,7 +47,7 @@ scores:
 
   # vcs
   #                                       T F P S
-  commits-are-tied-to-task:               1 2 0 1
+  commits-are-tied-to-tasks:              1 2 0 1
   release-train-branching-strategy:       3 2 1 1
   version-numbers:                        0 2 1 2
   use-dvcs:                               3 2 1 3

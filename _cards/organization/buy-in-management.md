@@ -3,12 +3,8 @@ title:      Buy-in from management
 caption:    Continuous Delivery is not a grass root approach
 level:      35
 area:       org
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/buy-in-management.png
 ---
 
 Initiatives, new tools and approaches are often of natural interest to developers and they might experiment and research without explicitly being told to do so.

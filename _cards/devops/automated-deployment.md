@@ -3,12 +3,8 @@ title:      Automated deployment
 caption:    Don't use manual processes for your most important step
 level:      35
 area:       devops
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/automated-deployment.png
 ---
 
 

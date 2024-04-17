@@ -298,7 +298,9 @@ defaults:
       share: false # true
       related: false # true
       search: true # true
-      pagination: false # true  # next/prev buttons   
+      pagination: false # true  # next/prev buttons
+      header:
+        teaser: /assets/images/cards/codememo.png   
   - scope:
       type: levels
     values:
@@ -310,6 +312,8 @@ defaults:
       related: false # true
       search: true # true
       pagination: false # true  # next/prev buttons         
+      header:
+        teaser: /assets/images/cards/codememo.png
   - scope:
       type: cards
     values:
@@ -332,7 +336,9 @@ defaults:
       related: # true
       search: true # true
       pagination: false # true  # next/prev buttons    
-# minimal mistakes
+      header:
+        teaser: /assets/images/cards/codememo.png
+  # minimal mistakes
   - scope:
       type: posts
       path: ""

@@ -3,12 +3,8 @@ title:      Test in production
 caption:    Murphy and me - Errors will eventually happen in production
 level:      85
 area:       qa
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/test-in-production.png
 ---
 
 A word of precaution; _testing in production_ is not to be confused with _releasing untested code_.

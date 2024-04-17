@@ -3,12 +3,8 @@ title:      Automated builds
 caption:    Yes. But it doesn't build on THAT machine.
 level:      15
 area:       build
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/automated-builds.png
 ---
 
 When code changes are committed to the repository, your CI server kicks in automatically and starts a build.

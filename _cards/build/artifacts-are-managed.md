@@ -3,12 +3,8 @@ title:      Artifacts are managed
 caption:    Are you building that over and over and over again?
 level:      25
 area:       build
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/artifacts-are-managed.png
 ---
 
 An _artifact_ is _the output derived from your build process_.

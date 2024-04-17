@@ -3,7 +3,8 @@ title:      Version numbers matter
 caption:    Your software is more than just a number
 level:      65
 area:       vcs
-
+header:
+  teaser: /assets/images/cards/version-numbers.png
 
 
 

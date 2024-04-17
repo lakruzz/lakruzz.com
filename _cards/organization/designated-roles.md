@@ -3,12 +3,8 @@ title:      Designated roles
 caption:    A designated driver brings everybody home safe
 level:      65
 area:       org
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/designated-roles.png
 ---
 
 Shared responsibility often leads to misunderstandings. When the people involved  rely on the others to manage that responsibility.

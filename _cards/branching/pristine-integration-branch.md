@@ -3,12 +3,8 @@ title:      Pristine integration branch
 caption:    No offense, but you couldn't break the build even if you tried
 level:      85
 area:       vcs
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/pristine-integration-branch.png
 ---
 
 To integrate means to merge your code on to the same branch as the one your colleagues are working on.  So obviously if your code breaks something you are potentially jeopardizing the work space - and pace - of your team mates as well. To have a pristine integration branch means that it is _buildable_ at all times.

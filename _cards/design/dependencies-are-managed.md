@@ -3,12 +3,8 @@ title:      Dependencies are managed
 caption:    Get your dependencies straight
 level:      50
 area:       arch
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/dependencies-are-managed.png
 ---
 
 All software has dependencies; 

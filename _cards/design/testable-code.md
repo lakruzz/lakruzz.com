@@ -3,12 +3,8 @@ title:      Testable code
 caption:    Testable code gets tested - doh!
 level:      30
 area:       arch
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/testable-code.png
 ---
 
 Whether or not a particular code snippet gets tested is often a matter of how easy it _is_ to test.

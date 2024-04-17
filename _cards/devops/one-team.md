@@ -3,12 +3,8 @@ title:      One Team
 caption:    No dev, no ops, no QA - just us
 level:      5
 area:       devops
-
-
-
-
-
-
+header:
+  teaser: /assets/images/cards/one-team.png
 ---
 
 Groups of professionals contributing to the same product that are working in isolated silos and not talking to each other is not helping your project one bit.

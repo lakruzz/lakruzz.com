@@ -29,7 +29,6 @@ layout: single
         {% assign complexity = gauge_values[3] %}
         {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback complexity=complexity %}{% endcapture %}
         {% assign score = score | strip_newlines %}
-        {% if score != "0" %}
           <div class="gauges">
             <div class="gauge">Throughput {% include func/stars.html star_count=throughput %}</div>
             <div class="gauge">Feedback   {% include func/stars.html star_count=feedback %}  </div>
@@ -37,10 +36,13 @@ layout: single
             <div class="gauge">Complexity {% include func/stars.html star_count=complexity %}</div>
             <div class="score">
               Score
-              <span class="value">{{ score }}</span>
+              <span class="value">
+              {% if score != "0" %}
+                {{ score }}
+              {% endif %}
+              </span>
             </div>
           </div>
-        {% endif %}
       </div>
     </div>
 
