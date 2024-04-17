@@ -3,12 +3,12 @@ title:      Unit testing, mocks, stubs and proxies
 caption:    Keeping a check on your code's behavior
 level:      10
 area:       qa
-visuals:    
-throughput:        
-feedback:
-payback:
-simplicity:      
-weight: 1001
+
+
+
+
+
+
 ---
 
 Unit tests are used to test the semantics of your code; To verify it works as expected and keeps working as expected through changes.

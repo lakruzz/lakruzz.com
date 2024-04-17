@@ -3,12 +3,12 @@ title:      Individually releasable components
 caption:    Components should have low coupling and be self-contained
 level:      75
 area:       arch
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 4004
+
+
+
+
+
+
 ---
 
 This principle lends itself to common coding standards of high cohesion and low coupling.

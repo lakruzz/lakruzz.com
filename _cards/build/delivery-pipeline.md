@@ -3,12 +3,12 @@ title:      Delivery pipeline
 caption:    A full ride produces a release candidate
 level:      90
 area:       build
-visuals:    
-throughput:
-feedback:   
-payback:    
-simplicity:       
-weight: 0005
+
+
+
+
+
+
 ---
 
 Split up your builds and verifications into a pipeline consisting of multiple stages. 

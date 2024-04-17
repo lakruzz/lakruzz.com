@@ -3,12 +3,12 @@ title:      Dependencies are managed
 caption:    Get your dependencies straight
 level:      50
 area:       arch
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 4003
+
+
+
+
+
+
 ---
 
 All software has dependencies; 

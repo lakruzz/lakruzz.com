@@ -3,12 +3,12 @@ title:      Automated functional tests
 caption:    Testing from start to finish, automagically
 level:      25
 area:       qa
-visuals:    
-throughput:       
-feedback:
-payback:
-simplicity:      
-weight: 1002
+
+
+
+
+
+
 ---
 
 In a functional test, you test the features that the system offers as a whole, seen from the end user's perspective.

@@ -3,12 +3,12 @@ title:      Release train branching strategy
 caption:    Tug along or be left behind - we're releasing on rails
 level:      45
 area:       vcs
-visuals:    
-throughput: 
-feedback:   
-payback:    
-simplicity:       
-weight: 2002
+
+
+
+
+
+
 ---
 
 The release train branching strategy is similar to what is sometimes referred to as _late branching_ or _trunk based development_. 

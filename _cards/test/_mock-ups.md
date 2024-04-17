@@ -3,11 +3,11 @@ title:      Mock-ups and proxies
 caption:    If you can't make it - fake it!
 level:      30
 area:       qa
-visuals:    
-throughput:        
-feedback:     
-payback:
-simplicity:      
+
+
+
+
+
 ---
 
 Using mock-ups, stubs, fakes and proxies in your tests makes them faster, more efficient and more to-the-point.

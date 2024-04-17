@@ -3,11 +3,11 @@ title:      Access to production-like environment
 caption:    I need machines - lots of machines
 level:      65
 area:       qa
-visuals:    
-throughput:        
-feedback:
-payback:
-simplicity:
+
+
+
+
+
 ---
 
 Both successful deployment and functional testing are often considered part of the _definition of done_.

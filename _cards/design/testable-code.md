@@ -3,12 +3,12 @@ title:      Testable code
 caption:    Testable code gets tested - doh!
 level:      30
 area:       arch
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 4002
+
+
+
+
+
+
 ---
 
 Whether or not a particular code snippet gets tested is often a matter of how easy it _is_ to test.

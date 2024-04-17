@@ -3,11 +3,11 @@ title:      Design patterns
 caption:    The DORITH principle - DO the RIght THing
 level:      5
 area:       arch
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
+
+
+
+
+
 ---
 
 A basic awareness that something like system architecture even exists is manifested in the almost ancient conceptual idea of _design patterns_.

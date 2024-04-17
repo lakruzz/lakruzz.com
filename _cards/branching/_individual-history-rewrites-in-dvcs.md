@@ -3,12 +3,12 @@ title:      Individual history rewrites in DVCS
 caption:    Keeping a clean record
 level:      65
 area:       vcs
-visuals:    
-throughput:       
-feedback:
-payback:
-simplicity:     
-weight: 2004
+
+
+
+
+
+
 ---
 
 When finishing up work in your short-lived branches, clean up your local commit history before merging back into the integration branch.

@@ -3,12 +3,12 @@ title:      Explicit knowledge transfer
 caption:    Aim for a high "bus factor"
 level:      95
 area:       org
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 5005
+
+
+
+
+
+
 ---
 
 The _bus factor_ measures how many people in your corporation need to be run over by a bus before you go out of business. If you have a key player who's indispensable, then your bus factor is _1_.

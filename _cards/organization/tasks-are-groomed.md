@@ -3,12 +3,12 @@ title:      Tasks are groomed
 caption:    Size matters - small is beautiful
 level:      58
 area:       org
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 5003
+
+
+
+
+
+
 ---
 
 Assignments should be prepared for working before they qualify as actual tasks. The goal of a task must be known to the person who is implementing it.

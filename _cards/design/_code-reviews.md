@@ -3,11 +3,11 @@ title:      Code reviews
 caption:    Given enough eyeballs, all bugs are shallow
 level:      42
 area:       arch
-visuals:    
-throughput:       
-feedback:
-payback:
-simplicity:      
+
+
+
+
+
 ---
 
 Reviewing code can be justified both from a Quality Assurance perspective and from a knowledge spread perspective. 

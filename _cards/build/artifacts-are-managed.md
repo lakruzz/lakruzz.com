@@ -3,12 +3,12 @@ title:      Artifacts are managed
 caption:    Are you building that over and over and over again?
 level:      25
 area:       build
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 0002
+
+
+
+
+
+
 ---
 
 An _artifact_ is _the output derived from your build process_.

@@ -3,12 +3,12 @@ title:      Use distributed VCS
 caption:    Embrace the full power of modern versioning
 level:      15
 area:       vcs
-visuals:    
-throughput:       
-feedback:
-payback:
-simplicity:     
-weight: 2004
+
+
+
+
+
+
 ---
 
 Distributed version control systems are a faster, modern alternative with a healthy community. Due to its distributed nature, switching to git opens up many doors to automation.

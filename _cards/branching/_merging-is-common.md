@@ -3,11 +3,11 @@ title:      Merging is common
 caption:    Shed your fear for merges and enter the world of elegant branching models
 level:      15
 area:       vcs
-visuals:
-throughput:
-feedback:
-payback:
-simplicity:
+
+
+
+
+
 ---
 
 All branches but the integration branch are ideally short-lived and often revolve around a single task.

@@ -3,12 +3,12 @@ title:      Commits are tied to tasks
 caption:    Don't change the code for no reason at all
 level:      25
 area:       vcs
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 2001
+
+
+
+
+
+
 ---
 
 Every time the code changes, it traces back to _some_ task being done.

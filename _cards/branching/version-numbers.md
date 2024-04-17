@@ -3,12 +3,12 @@ title:      Version numbers matter
 caption:    Your software is more than just a number
 level:      65
 area:       vcs
-visuals:    
-throughput:
-feedback:   
-payback:    
-simplicity:      
-weight: 2003
+
+
+
+
+
+
 ---
 
 *Versioning schemes are a powerful tool.*

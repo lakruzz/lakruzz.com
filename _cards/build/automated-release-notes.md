@@ -3,12 +3,12 @@ title:      Automated release notes
 caption:    If it's boring - automate it. Release notes are boring.
 level:      45
 area:       build
-visuals:    []
-throughput:
-feedback:   
-payback:    
-simplicity:
-weight: 0003
+
+
+
+
+
+
 ---
 
 Whenever you ship a new release you probably need a release note, a report listing the new version number, fixed issues, new features...

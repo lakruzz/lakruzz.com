@@ -3,12 +3,12 @@ title:      Access to production-like environments
 caption:    Don't let infrastructure be the bottleneck
 level:      58
 area:       devops
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 3003
+
+
+
+
+
+
 ---
 
 Both successful deployment and functional testing are often considered part of the _definition of done_.

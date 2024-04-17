@@ -3,12 +3,12 @@ title:      Agile process
 caption:    Not Agilefall or Watergile - just plain agile
 level:      5
 area:       org
-visuals:    []
-throughput:
-feedback:
-payback:
-simplicity:
-weight: 5001
+
+
+
+
+
+
 ---
 
 Agile processes defies phases in the software development process. The 1st principle in the Agile Manifesto refers to _continuously delivering software_.  
