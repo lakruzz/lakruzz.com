@@ -99,13 +99,13 @@
     display: inline-block;
     line-height: 1em;
     padding: 0.5em 0.8em;
-    text-decoration: none;
+    text-decoration: none !important;
     &:visited{
       color: white;
     }
     &:hover{
       color: grey;
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
 }
