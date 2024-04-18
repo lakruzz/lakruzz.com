@@ -64,7 +64,7 @@ The different subsystems have different build technologies (e.g. Maven and Scons
 ### Split the monolith and add dependency management of the artifacts
 
 Splitting the monolith into subsystems and implementing true dependency management makes the build script obsolete. 
-It simply vanishes. Please refer to the [architecture cards](http://localhost:4000/areas/arch/#tag "Architecture & Design") for more information.
+It simply vanishes. Please refer to the [architecture cards](/areas/arch/#tag "Architecture & Design") for more information.
 
 ## Localization files are introduced late in the release process, leading to unexpected UI changes
 
