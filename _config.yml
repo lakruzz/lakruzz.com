@@ -60,6 +60,9 @@ search_provider          : lunr
 lunr:
   search_within_pages    : # true, false (default)
 font_awesome_kit_id      : 17b5a92563 # Font Awesome Kit ID
+head_scripts:
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js
+  - https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js
 
 # SEO Related
 google_site_verification :

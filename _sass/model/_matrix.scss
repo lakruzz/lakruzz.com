@@ -16,7 +16,7 @@
     vertical-align: top;
     margin-right: $card-gutter-matrix;
     margin-bottom: $card-gutter-matrix;
-    overflow:hidden;
+
     &.header{
       height: auto;
       a{
@@ -63,6 +63,19 @@
         display: table-cell;
         text-align: right;
         vertical-align: middle;
+      }
+    }
+    .carousel-indicators{
+      bottom: -10px !important;
+      li{
+        height: 8px;
+        opacity: 0.2;
+        width: 8px;
+        &.active, &:hover{
+          height: 10px;
+          opacity: 1;
+          width: 10px;
+        }
       }
     }
   }
