@@ -15,7 +15,7 @@ Praqma was, in it's early days, focusing on _configuration management, version c
 
 ## Version 1 - CI focus
 
-<a href="/images/about/codemamo.v1.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/images/about/codemamo.v1.png"/></a> I presented the first version of the model at the first Scandinavian Jenkins User Event in 2013. It was part of our dedicated focus to shift from being a CI company to a "_CD - Continuous Delivery_" company. At that debut presentation it was nothing more than a poster:
+<a href="/images/about/codemamo.v1.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/pages/about/codemamo.v1.png"/></a> I presented the first version of the model at the first Scandinavian Jenkins User Event in 2013. It was part of our dedicated focus to shift from being a CI company to a "_CD - Continuous Delivery_" company. At that debut presentation it was nothing more than a poster:
 
 CloudBees still has a blog post online: [_"What is Continuous Integration?"_](https://www.cloudbees.com/continuous-delivery/continuous-integration){: target="_blank"} that includes a picture of this first version.
 
@@ -37,7 +37,7 @@ We game'ified the process with huge _rich pictures_ on the wall and we developed
 
 The model framework would build a static website, but it had a unique feature that the `.pdf` to print the card deck from was automatically generated on-the-fly, so any last-minute changes, adaptions or customizations to the model could be implemented in matter op minutes.
 
-<a href="/images/about/docemamo.v2.21.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/images/about/docemamo.v2.21.png"/></a>
+<a href="/images/about/docemamo.v2.21.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/pages/about/codemamo.v2.21.png"/></a>
 
 The model framework, was later extended so that event the findings we observed during the assessment - the Continuous Delivery backlog - and the report to the customer including the executive summary - was written directly into a customer specific version of the model. The result of the process was delivered to the customer both as a static website that they could read in a browser and to accompany it a 50-70 page detailed report in `.pdf`. A report that the model framework automatically created based on the website content.
 

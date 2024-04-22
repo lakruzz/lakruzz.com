@@ -1,11 +1,17 @@
 @charset "utf-8";
 
-@import "base/variables";
-@import "base/typography";
-@import "helpers/bg";
-$fa-font-path: "/bower_components/components-font-awesome/fonts/";
-@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import "model/variables";
+@import "model/typography";
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+.bg{
+  border-style: solid;
+  border-width: 211pt;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
 
 * {
   box-sizing: border-box;
@@ -29,10 +35,6 @@ html {
 @page {
   margin: 0;
   size: 210mm 148.5mm;
-}
-
-.bg {
-    border-width: 211pt;
 }
 
 .page {
@@ -159,3 +161,5 @@ html {
     right: 10mm;
   }
 }
+
+

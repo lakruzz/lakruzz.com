@@ -10,10 +10,10 @@
 #      JEKYLL_ENV=production bundle exec jekyll serve  
 
 client:
-  directory:  lakruzz
-  name:       lakruzz
+  directory:  sample
+  name:       sample
   url:        https://codemamo.lakruzz.com
-  logo:       /images/lakruzz/cards-icon.png
+  logo:       /assets/images/cards-icon.png
 name:         Continuous Delivery Metric Model
 
 
@@ -31,7 +31,7 @@ url                      : "https://codememo.lakruzz.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "lakruzz/codememo" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/images/cards-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/cards-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -39,18 +39,18 @@ comments:
   provider               : # "giscus" # false (default)
 
   giscus:
-    repo                  : # "thetechcollective/giscussions"
-    repo_id               : # "R_kgDOLFpC_w"
-    category              : # "thetechcollective.dev"
-    category_id           : # "DIC_kwDOLFpC_84CceZI"
-    mapping               : # "pathname"
-    strict                : # "0"
-    reactions_enabled     : # "1"
-    emit_metadata         : # "0"
-    input_position        : # "top"
-    theme                 : # "light"
-    lang                  : # "en"
-    loading               : # "lazy"
+    repo                  : 
+    repo_id               : 
+    category              : 
+    category_id           : 
+    mapping               : 
+    strict                : 
+    reactions_enabled     : 
+    emit_metadata         : 
+    input_position        : 
+    theme                 : 
+    lang                  : 
+    loading               : 
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
