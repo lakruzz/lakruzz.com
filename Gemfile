@@ -22,4 +22,5 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem "jekyll-redirect-from"
   gem "jekyll-responsive-image"
+  gem "jekyll-remote-theme"
 end

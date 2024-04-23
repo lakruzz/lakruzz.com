@@ -19,6 +19,7 @@ name:         Continuous Delivery Metric Model
 
 # remote_theme: thetechcollective/minimal-mistakes
 minimal_mistakes_skin    : codememo 
+remote_theme             : lakruzz/jekyll-memo@main
 
 # Site Settings
 locale                   : "en-US"
@@ -96,32 +97,34 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Lars Kruse"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Continuous Delivery Evangelist"
   location         : "Somewhere"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:lars@lakruzz.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://www.lakruzz.com"
+#    - label: "Twitter"
+#      icon: "fab fa-fw fa-twitter-square"
+#      url: "https://twitter.com/"
+#    - label: "Facebook"
+#      icon: "fab fa-fw fa-facebook-square"
+#      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/lakruzz"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/lakruzz"
+#    - label: "Instagram"
+#      icon: "fab fa-fw fa-instagram"
+#      url: "https://instagram.com/"
 
-# Site Footer
 # Site Footer
 footer:
   powered_by: # Enabled if both name and url are defined
@@ -347,7 +350,7 @@ defaults:
       path: ""
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: # true
       share: true
