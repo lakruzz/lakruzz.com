@@ -1,0 +1,31 @@
+---
+title: Gauges
+permalink: /gauges/
+nav-weight: 30
+---
+
+{% assign sg = site.gauges | sort:"weight" %}
+{% assign index = 0 %}
+<div class="page-gauges">
+  <section>
+    {% for s in sg %}
+      <article>
+        <!--<a href="{{ s.url }}">-->
+          <!--<img src="{{ s.avatar }}" alt="{{ s.title }}">-->
+        <!--</a>-->
+        <div class="caption">
+          <h2>
+            {{ s.title }}
+          </h2>
+          <p>
+            {% comment %}{{ s.content | split:'<!--break-->' | first | markdownify | strip_html }}{% endcomment %}
+            <div class="caption">
+              {{ s.caption }}
+            </div>
+            {{ s.content }}
+          </p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+</div>

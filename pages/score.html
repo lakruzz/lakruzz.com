@@ -1,0 +1,59 @@
+---
+layout: page
+title: Score
+nav-weight: 20
+permalink: /score/
+---
+
+<div class="page-score layout-tag">
+  <div class="content">
+    {% assign l_sorted = site.levels | sort:'weight' | reverse %}
+    {% assign a_sorted = site.areas | sort:'weight' | reverse %}
+    {% assign page_filename = page.path | split:'/' | last | split:'.' | first %}
+
+    {% for c in site.cards %}
+      {% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+      {% assign a_details = a_details | strip_newlines | split:'|' %}
+      {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+      {% assign l_details = l_details | strip_newlines | split:'|' %}
+
+      {% capture gauge_values %}{% include /func/get-gauge-values.html path=c.path %}{% endcapture %}
+      {% assign gauge_values = gauge_values | split:" " %}
+      {% assign throughput = gauge_values[0] %}
+      {% assign feedback   = gauge_values[1] %}
+      {% assign payback    = gauge_values[2] %}
+      {% assign simplicity = gauge_values[3] %}
+      {% assign score = score | strip_newlines %}
+      {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+      {% assign score = score | strip_newlines %}
+      <article>
+        <div class="card_">
+          <a href="{{ c.url }}">{{ c.title }}</a>
+          {% if score %}<div class="score">{{ score }}</div>{% endif %}
+          <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }}"></div>
+        </div>
+        <div class="content">
+          <div class="caption">{{c.caption}}</div>
+          {{ c.content | split:'<!--break-->' | first | markdownify }}
+
+          {% capture card_snippets %}{% include /func/get-snippets-by-path.html path=c.path %}{% endcapture %}
+          {% assign card_snippets_stripped = card_snippets | strip_newlines | replace:' ','' %}
+          {% if c.content contains '<!--break-->' or card_snippets_stripped.size > 0 %}
+            <div class="readmore">
+              <a href="{{ c.url }}"><span style="font-family:FontAwesome;">&#xf0aa;</span>&nbsp;Read more…</a>
+            </div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+$( document ).ready(function() {
+    $(".page-score>.content>article").sort(sort_li).appendTo('.page-score>.content');
+    function sort_li(a, b){
+      return parseInt($(b).find('.score').text(), 10) > parseInt($(a).find('.score').text(), 10) ? 1 : -1;
+    }
+});
+</script>

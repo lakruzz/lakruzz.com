@@ -1,0 +1,28 @@
+<section>
+  <h3>Area</h3><p>{{ page.area }}</p>
+  <h3>Level</h3><p>
+    {% if page.level <= 20 %}
+      Novice
+    {% endif %}
+    {% if page.level > 20  and page.level <= 40 %}
+      Beginner
+    {% endif %}
+    {% if page.level > 40  and page.level <= 60 %}
+      Intermediate
+    {% endif %}
+    {% if page.level > 60  and page.level <= 80 %}
+      Advanced
+    {% endif %}
+    {% if page.level > 80  %}
+      Expert
+    {% endif %}
+  </p>
+  <h3>Throughput</h3><p>
+    <img style="width:90px" src="/images/{{page.throughput}}-star.png"></p>
+  <h3>Feedback</h3><p>
+    <img style="width:90px" src="/images/{{page.feedback}}-star.png"></p>
+  <h3>Payback</h3><p>
+    <img style="width:90px" src="/images/{{page.payback}}-star.png"></p>
+  <h3>Simplicity</h3><p>
+    <img style="width:90px" src="/images/{{page.simplicity}}-star.png"></p>
+</section>

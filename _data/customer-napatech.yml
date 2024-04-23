@@ -1,0 +1,23 @@
+# TODO remove?
+# Customer settings
+name:  CoDe Maturity
+logo:  /images/napatech-logo.png
+frontpage-title: CoDe Maturity Model # used on navigation menu for frontpage linkcards-icon
+
+cards:
+  -
+    card: anything-as-code
+    observation: This is an obeservation or analysis worth mentioning
+      Lorem ipsum dolor sit amet, dicit quaestio efficiendi cum et, ad ancillae intellegat eos. Enim errem eos no. Te wisi aeque pertinax vel, tota iudico scripserit duo et. No pro nusquam recteque vituperatoribus, facilis delicatissimi ei sed, eos probo molestiae ex. Fuisset blandit posidonium ex his, qui ea modus feugait.
+    issue: ntltfcders
+    action: ntltfcders-01
+  -
+    card: access-to-production-like-environment
+    observation: Some observation at Napatech
+      This is a _mark down_ formatted text, it can have any length. Maiestatis disputando duo cu. Homero efficiendi disputando ex cum.
+
+      Habeo minim **munere** pri cu. No per aliquip regione mnesarchum. Quod quot delicata te quo, case _indoctum_ eum at, vis no modus soluta adipisci.
+    issue: dvsdnthvacstprdctnlknv
+    action: dvsdnthvacstprdctnlknv-01
+    action: dvsdnthvacstprdctnlknv-02
+    action: dvsdnthvacstprdctnlknv-03

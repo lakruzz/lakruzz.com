@@ -1,0 +1,71 @@
+version: 1.0.0
+title: Continuous Delivey Maturity Test
+url: http://code-maturity.praqma.com
+questionaire:
+  -
+    title: Automated builds
+    url: http://code-maturity.praqma.com/automated-builds/
+    max: 75 #Redundant - can actually be calculated
+    questions:
+      -
+        ask: Are your builds automated?
+        description: By automated builds we mean builds that are automatically triggered - on a CI server - by a commit to the version control system.
+        type: single
+        options:
+          -
+            value: Yes
+            weight: 50
+            condition: autobuild
+          -
+            value: No
+            weight: 0
+      -
+        ask: How long does a developer wait for the first feed back after he or she has committed?
+        description: The sequence of job may include complex executions and may take a long time. This questions is not about how long the totale pipeline runs, but about, when the first feed-back is delivered to the developer.
+        require: autobuild
+        type: single
+        options:
+          -
+            value: less than 60 seconds
+            weight: 25
+          -
+            value: Between 1 and 3 minutes
+            weight: 15
+          -
+            value: Between 3 and 6 minutes
+            weight: 5
+          -
+            value: more than 6 minutes
+            weight: 0
+            condition: monolithpipe
+      -
+        ask: What is the reason for the long wait?
+        description:
+        require: monolithpipe
+        type: multiple
+        options:
+          -
+            value: We don't have unit tests - only full functional ones
+            weight: 0
+          -
+            value: We don't have enough servers
+            weight: 15
+  -
+    title: Artifacts are managed
+    url: http://code-maturity.praqma.com/artifacts-are-managed/
+    max: 20
+    questions:
+      -
+        ask: Are you storing the derived objects from your builds process
+        description: The term _derived objects_ we refer to the files that are generated from the build and compile process. Typically binary files.
+        type: multiple
+        options:
+          -
+            value: No
+            weight: 0
+          -
+            value: Yes, but only from the releases
+            weight: 5
+          -
+            value: Yes, all builds publisheds derived output to an artifact management server
+            weight: 20

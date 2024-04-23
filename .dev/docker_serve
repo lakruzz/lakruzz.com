@@ -1,0 +1,12 @@
+if [ $# -eq 0 ]
+then
+  docker run -it  --rm  --pid=host -v /$(pwd)://app:rw --workdir //app  --publish 80:4000 lakruzz/jekyll-plus jekyll serve --config _config.yml,_dev_config.yml --watch
+else
+  docker run -it  --rm  --pid=host -v /$(pwd)://app:rw --workdir //app  --publish 80:4000 lakruzz/jekyll-plus jekyll serve --config _config.yml,_dev_config.yml,_customer_details/$1/_config.yml --watch
+
+	echo "jekyll serve --config _config.yml,_customer-details/$1/_config.yml"
+	jekyll serve --config _config.yml,_customer-details/$1/_config.yml
+fi
+
+
+docker run -it  --rm  --pid=host -v /$(pwd)://app:rw --workdir //app  --publish 80:4000 lakruzz/jekyll-plus jekyll serve --config _config.yml,_dev_config.yml --watch

@@ -1,0 +1,79 @@
+---
+title: Print
+permalink: /print/
+layout: 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+
+<div class="page-print">
+  {% for c in site.cards %}
+    {% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+    {% assign a_details = a_details | strip_newlines | split:'|' %}
+    {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+    {% assign l_details = l_details | strip_newlines | split:'|' %}
+    <article class="page front">
+      <div class="card_">
+        <div class="card-title">
+          {{ c.title }}
+        </div>
+        <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+      </div>
+      <div class="details">
+        <div class="gauges">
+          <div class="gauge">Throughput </div>
+          <div class="stars-wrapper">{% include func/stars.html star_count=0 %}</div>
+          <div class="gauge">Feedback</div>
+          <div class="stars-wrapper">{% include func/stars.html star_count=0 %}</div>
+          <div class="gauge">Payback</div>
+          <div class="stars-wrapper">{% include func/stars.html star_count=0 %}</div>
+          <div class="gauge">Simplicity</div>
+          <div class="stars-wrapper">{% include func/stars.html star_count=0 %}</div>
+          <div class="score">Score</div>
+          <div class="score-cell"></div>
+        </div>
+      </div>
+    </article>
+    <article class="page back">
+      <div class="card_">
+        <div class="card-title">
+          {{ c.title }}
+        </div>
+        <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+      </div>
+      <div class="tags">
+        <div class="tag area">
+          <div class="label">
+            Area
+          </div>
+          <div class="value">
+            {{ a_details[0] }}
+          </div>
+        </div>
+        <div class="tag level">
+          <div class="label">
+            Level
+          </div>
+          <div class="value">
+            {{ l_details[0] }}
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="caption">{{ c.caption }}</div>
+        {{ c.content | split:'<!--break-->' | first | markdownify }}
+        <div class="url">{{ site.url | remove:"http://" }}{{ c.url | append:"@" | remove:"/@" }}</div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+</body>
+</html>

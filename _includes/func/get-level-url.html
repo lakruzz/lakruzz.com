@@ -1,0 +1,5 @@
+{% assign l_sorted = include.l_sorted %}
+{% assign l_sorted_size = l_sorted | size %}
+{% assign l_range = 100 | divided_by:l_sorted_size %}
+{% assign c_level_index = include.level | divided_by: l_range %}
+{{ l_sorted[c_level_index].url }}

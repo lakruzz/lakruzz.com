@@ -1,0 +1,36 @@
+.card_{
+  color: white;
+  font-family: $font-family-condensed;
+  font-size: 19px;
+  font-weight: normal;
+  height: $card-width-matrix;
+  line-height: 1.2em;
+  overflow: hidden;
+  position: relative;
+  width: $card-width-matrix;
+  a {
+    color: white;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    display: block;
+    height: 100%;
+    padding: 0.05 * $card-width-matrix;
+    text-decoration: none;
+    -moz-transition: color 0.5s ease;
+    -moz-transition: text-shadow 0.5s ease;
+    -o-transition: color 0.5s ease;
+    -o-transition: text-shadow 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -ms-transition: text-shadow 0.5s ease;
+  }
+  
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+}

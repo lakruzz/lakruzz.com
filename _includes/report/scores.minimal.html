@@ -1,0 +1,69 @@
+{% assign l_sorted = site.levels | sort:'weight' | reverse %}
+{% assign a_sorted = site.areas | sort:'weight' | reverse %}
+{% assign page_filename = page.path | split:'/' | last | split:'.' | first %}
+
+<section class="scores layout-card">
+  {% comment %}class *layout-card* is from card page to reuse ready *.scss{% endcomment %}
+  {% for c in site.cards %}
+    {% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+    {% assign a_details = a_details | strip_newlines | split:'|' %}
+    {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+    {% assign l_details = l_details | strip_newlines | split:'|' %}
+
+    {% capture gauge_values %}{% include /func/get-gauge-values.html path=c.path %}{% endcapture %}
+    {% assign gauge_values = gauge_values | split:" " %}
+    {% assign throughput = gauge_values[0] %}
+    {% assign feedback   = gauge_values[1] %}
+    {% assign payback    = gauge_values[2] %}
+    {% assign simplicity = gauge_values[3] %}
+    {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+    {% assign score = score | strip_newlines %}
+    {% if score != '0' %}
+      <div class="card-row">
+        <div class="card-header">
+          {% comment %}class is from card page to reuse ready *.scss{% endcomment %}
+          <div class="card_">
+            {{ c.title }}
+            <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+          </div>
+          <div class="details">
+            <div class="gauges">
+              <div class="gauge">Throughput {% include func/stars.html star_count=throughput %}</div>
+              <div class="gauge">Feedback   {% include func/stars.html star_count=feedback %}  </div>
+              <div class="gauge">Payback    {% include func/stars.html star_count=payback %}   </div>
+              <div class="gauge">Simplicity {% include func/stars.html star_count=simplicity %}</div>
+              <div class="score">
+                Score
+                <span class="value">{{ score }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="caption">
+            {{ c.caption }}
+          </div>
+        </div>
+        <div class="second-column">
+          <div class="tags">
+            <div class="tag area">
+              {{ a_details[0] }}
+              <div class="bg" style="border-color: #{{ a_details[2] }};"></div>
+            </div>
+            <div class="tag level">
+              {{ l_details[0] }}
+              <div class="bg" style="border-color: #444; opacity: {{ l_details[2] }};"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <script>
+  $( document ).ready(function() {
+  $(".scores>.card-row").sort(sort_li).appendTo('.scores');
+  function sort_li(a, b){
+    return parseInt($(b).find('.score>.value').text(), 10) > parseInt($(a).find('.score>.value').text(), 10) ? 1 : -1;
+  }
+  });
+  </script>
+</section>

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]
+  then
+    echo "Usage: ./serve <customer>"
+else
+	echo "jekyll serve --incremental --config _config.yml,_customer_details/$1/_config.yml"    
+	jekyll serve --incremental --config _config.yml,_customer_details/$1/_config.yml
+fi

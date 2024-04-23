@@ -1,0 +1,7 @@
+.stars{
+  width: $stars-width;
+  display: inline-block;
+  .s_empty{
+    opacity: 0.2;
+  }
+}

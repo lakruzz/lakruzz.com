@@ -1,0 +1,13 @@
+html:after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10000px;
+  /*background: url(../images/tmp-bg.png) 51% 0 no-repeat;*/
+  /*background: url(https://cloud.githubusercontent.com/assets/155492/10784081/4eb6b494-7d5c-11e5-966d-95d92cbb78d7.jpg) 51% 20px no-repeat;*/
+  background: url(https://cloud.githubusercontent.com/assets/797993/11590842/adc9fa3c-9aac-11e5-96ff-0724b81def82.png) 50% 156px no-repeat;
+  pointer-events: none;
+  opacity: 0.2;
+}

@@ -1,0 +1,16 @@
+.card_{
+  .score{
+    background: rgba(0,0,0,0.2);
+    bottom: 0;
+    cursor: pointer;
+    display:  inline-block;
+    font-weight: 300;
+    height: 20%;
+    padding-top: 0.05em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 20%;
+  }
+}

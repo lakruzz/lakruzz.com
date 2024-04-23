@@ -1,0 +1,30 @@
+<div id="{{ include.id }}" class="carousel slide" data-ride="carousel" style="box-shadow: 3px 3px 0px white, 6px 6px 0px #{{ include.color }};">
+
+  <ol class="carousel-indicators">
+    {% assign active_used = false %}
+    {% assign i = 0 %}
+    {% for c in include.items %}
+    <li data-target="#{{ include.id }}" data-slide-to="{{ i }}"{% unless active_used %} class="active"{% assign active_used = true %}{% endunless %} style="border-color: #{{ include.color }}; background-color: #{{ include.color }};"></li>
+      {% assign i = i | plus: 1 %}
+    {% endfor %}
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+  {% assign active_used = false %}
+  {% for c in include.items %}
+    <div class="item{% unless active_used %} active{% assign active_used = true %}{% endunless %}">
+      {{ c }}  
+    </div>
+  {% endfor %}
+  </div>
+
+  <!--<a class="left carousel-control" href="#{{ include.id }}" role="button" data-slide="prev">-->
+    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <!--<span class="sr-only">Previous</span>-->
+  <!--</a>-->
+  <!--<a class="right carousel-control" href="#{{ include.id }}" role="button" data-slide="next">-->
+    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+    <!--<span class="sr-only">Next</span>-->
+  <!--</a>-->
+
+</div>

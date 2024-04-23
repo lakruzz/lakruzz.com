@@ -1,0 +1,312 @@
+---
+---
+@charset "utf-8";
+@import "base/variables";
+@import "components/card";
+@import "components/tag";
+@import "components/matrix";
+@import "components/pic";
+@import "pages/card";
+@import "helpers/bg";
+/*@import "base/typography";*/
+$fa-font-path: "/bower_components/components-font-awesome/fonts/";
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+
+// Typography
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 11pt;
+  line-height: 1.4em;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  margin-top: 0.6em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+  break-after: avoid;
+
+}
+h1{
+  font-size: 3.157em * 0.8;
+  margin-top: 0;
+}
+h2{
+  font-size: 2.369em * 0.8;
+}
+h3{
+  font-size: 1.777em * 0.8;
+}
+h4{
+  font-size: 1.333em * 0.8;
+}
+.caption{
+  font-size: 1.777em * 0.8;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  line-height: 1.8em;
+  margin-top: -0.8em;
+  margin-bottom: 0.6em;
+}
+p, h2, h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+
+// Printing layout
+@page {
+  counter-increment: page;
+  counter-reset: page 1;
+  margin: 30mm 25mm 30mm 25mm;
+  size: A4 portrait;
+ @bottom-left {
+      content: counter(page) "/" counter(pages);
+  }
+}
+@page :first{
+  margin: 20mm;
+}
+.page-report>article{
+  clear: both;
+  page-break-after: always;
+}
+
+// Common components
+.card_{
+  page-break-inside: avoid;
+  -webkit-print-color-adjust: exact;
+}
+
+a, a *{
+  color: blue;
+  @media print{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+// toc.md
+
+.article-toc{
+  ul{
+    font-size: 1.6em;
+    margin-top: 2em;
+    padding: 0;
+    @media print{
+      font-size: 0.9em;
+    }
+    li{
+      line-height: 1.4em;
+      list-style-type: none;
+      margin-top: 0.3em;
+      &:nth-child(1), &:nth-child(2){
+        display: none;
+      }
+      &.toc-h1{
+        font-size: 1em;
+        font-weight: bold;
+        /*margin-top: 3mm;*/
+      }
+      &.toc-h2{
+        font-size: 0.8em;
+        margin-left: 3mm;
+      }
+      &.toc-h3{
+        font-size: 0.64em;
+        margin-left: 6mm;
+      }
+      &.toc-h4{
+        font-size: 0.512em;
+        margin-left: 9mm;
+      }
+    }
+  }
+}
+
+
+// front.md
+.article-front{
+  $matrix-zoom: 0.8;
+  h1,.caption{
+    text-align: center;
+  }
+  /*position: relative;*/
+  .matrix{
+    zoom: $matrix-zoom;
+    /*transform: scale($matrix-zoom);*/
+    /*transform-origin: 0 0;*/
+    /*-moz-transform: scale($matrix-zoom);*/
+    /*-moz-transform-origin: 0 0;*/
+    margin-left: 0;
+    margin-right: 0;
+    .header-level, .header-area{
+      display: none;
+    }
+    .matrix-cell:last-child{
+      margin-right: 0;
+    }
+    .matrix-row{
+      width: 600px;
+      margin: 0 auto;
+    }
+    a{
+      color: $color-white;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  .matrix-row, .columns{
+    width: 600px * $matrix-zoom;
+    margin: 0 auto;
+  }
+  .columns{
+    height: 25mm;
+    position: relative;
+    .column{
+      width: 49%;
+      float: none;
+      position: absolute;
+      bottom: 0;
+      &.column-author{
+        font-size: 0.58em;
+        line-height: 1.2em;
+        right: 0;
+        text-align: right;
+        width: 30%;
+        .author {
+          margin-bottom: 0.5em;
+        }
+        .date{
+          margin-bottom: 0.15em
+        }
+        img.author-logo{
+          width: 10.3em;
+          /*margin: 0.2em 0 0.2em 0.7em;*/
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+// score.md
+
+.article-score{
+  .layout-card{
+    .card-header{
+      margin-bottom: 150px;
+      margin-top: 150px;
+      overflow: hidden;
+      /*white-space: nowrap;*/
+      zoom: 0.3;
+      /*transform: scale(0.3);*/
+      /*transform-origin: 0 0;*/
+      /*-moz-transform: scale(0.3);*/
+      /*-moz-transform-origin: 0 0;*/
+    }
+    .card_, .details{
+      box-sizing: border-box;
+      float: left;
+    }
+    .card_{
+      overflow: hidden;
+      -webkit-print-color-adjust: exact;
+      .bg{
+        border-width: 9999mm;
+        border-style: solid;
+      }
+    }
+    .details{
+      width: $container-width / 2.0 * 1.4;
+      .gauges{
+        zoom: 1.65;
+        /*transform: scale(1.65);*/
+        /*transform-origin: 0 0;*/
+        /*-moz-transform: scale(1.65);*/
+        /*-moz-transform-origin: 0 0;*/
+        .score{
+          margin-bottom: -6px;
+        }
+      }
+    }
+    .caption{
+      float: left;
+      margin-left: 2em;
+      margin-top: 0;
+      width: 280mm;
+    }
+  }
+  .second-column{
+    display: none;
+    .tag{
+      -webkit-print-color-adjust: exact;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+}
+
+
+// findings.md
+.article-findings{
+  $overlapping: 100px;
+  .card_{
+    margin-right: 25px;
+    margin-bottom: 2em;
+    /*margin-top: 5px;*/
+    zoom: 0.8;
+    /*transform: scale(0.8);*/
+    /*transform-origin: 0 0;*/
+    /*-moz-transform: scale(0.8);*/
+    /*-moz-transform-origin: 0 0;*/
+  }
+  .card-wrapper{
+    padding-bottom: $overlapping;
+    page-break-inside: avoid;
+  }
+  .index-card {
+    margin-bottom: 1em;
+    overflow: hidden;
+    .content{
+      margin-top: -$overlapping;
+      /*font-size: 0.9em;*/
+      /*line-height: 1.3em;*/
+      /*margin-left: 125px;*/
+      h3,h4{
+        margin: 0;
+      }
+      h3{
+        font-size: 1.4em;
+      }
+      h4{
+        font-size: 1.2em;
+        &:before{
+          padding: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.newpage{
+  page-break-before: always;
+}
+
+@media print {
+  printed-footer {
+    position: fixed;
+    bottom: 0;
+    visibility: visible;
+    display: table-footer-group;
+  }
+  printed-footed:after {
+      counter-increment: page;
+      content: counter(page);
+  }
+}

@@ -1,0 +1,53 @@
+---
+layout:
+permalink: /report/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/report.css">
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <!--<script src="https://cdn.rawgit.com/dafi/tocmd-generator/master/js/jquery.toc.js"></script>-->
+  <script src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+  <!--TODO fetch cdn to local-->
+</head>
+<body>
+
+<div class="page-report">
+  {% assign report_parts = site.customer_details %}
+  {% assign report_parts = report_parts | sort:'weight' %}
+  {% for r in report_parts %}
+    {% assign client_substring = site.client.directory | prepend:"_customer_details/" %}
+    {% if r.path contains "report-parts" and r.path contains client_substring %}
+      <article class="article-{{ r.path | split:'/' | last | split:'.' | first }}">
+        <h1>{{ r.title }}</h1>
+        {% if r.caption != "" %}
+          <div class="caption">
+            {{ r.caption }}
+          </div>
+        {% endif %}
+        {{ r.content }}
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!--Should be called after all headers rendering-->
+<!--TODO move to separate js-->
+<script>
+  var tocSelectors = $('.article-toc .toc').data('toc-selectors');
+  console.log("tocSelectors = " + tocSelectors);
+  if(!tocSelectors){
+    tocSelectors = 'h1,h2,h3,h4'
+  }
+  $('.article-toc .toc').toc({
+    'selectors': tocSelectors, //elements to use as headings
+});
+</script>
+
+</body>
+</html>

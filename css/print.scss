@@ -1,0 +1,159 @@
+---
+---
+@charset "utf-8";
+
+@import "base/variables";
+@import "base/typography";
+@import "helpers/bg";
+$fa-font-path: "/bower_components/components-font-awesome/fonts/";
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,html,.page-print {
+  height: 100%;
+}
+.page-print {
+  /*background: white;*/
+  width: 210mm;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 16pt;
+  line-height: 1.3em;
+}
+
+@page {
+  margin: 0;
+  size: 210mm 148.5mm;
+}
+
+.page {
+  -webkit-print-color-adjust: exact;
+  height: 100%;
+  page-break-after: always;
+  position: relative;
+}
+
+.card_{
+  overflow: hidden;
+  height: 100%;
+  width: 148.5mm;
+  position: absolute;
+  font-size: 22mm;
+  top: 0;
+  left: 0;
+  .card-title{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    color: white;
+    line-height: 1.2em;
+    padding: 6% 8%;
+    font-family: 'Lato';
+    letter-spacing: 0.8px;
+  }
+}
+.details{
+  padding-top: 1em;
+  margin-left: 148.5mm;
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  left: -0.5mm;
+  padding-top: 2.05em;
+  .score{
+    display: none;
+    font-weight: bold;
+  }
+  .score-cell{
+    display: none;
+    $w: 5em;
+    width: $w;
+    height: 1.5em;
+    border-bottom: 0.3mm solid black;
+    margin-top: 2mm;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.3;
+  }
+}
+
+.gauges .stars-wrapper{
+  margin-top: 0.3em;
+  margin-bottom: 0.6em;
+  font-size: 1.5em;
+  opacity: 0.3;
+}
+
+.page.back{
+  display: table;
+  .card_{
+    width: 70mm;
+    height: 70mm;
+    font-size: 10.4mm;
+    .card-title{
+      padding: 8%;
+    }
+  }
+}
+
+.tags{
+  width: 70mm;
+  position: absolute;
+  bottom: 0;
+  top: 70mm;
+  margin-top: 1.1em;
+}
+
+.tag{
+  margin-bottom: 1em;
+  padding: 0 0 0 8%;
+  .label{
+    font-family: Lato;
+    margin-bottom: 0.1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+  }
+  .value{
+    font-weight: normal;
+  }
+}
+
+.content{
+  display: table-cell;
+  font-size: 1.2em;
+  vertical-align: top;
+  padding: 8mm 10mm 7mm 80mm;
+  font-weight: 300;
+  .caption{
+    font-weight: normal;
+    letter-spacing: 0.016em;
+    font-family: 'Lato';
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+    line-height: 0.95em;
+  }
+  p{
+    margin-bottom: 0.5em;
+  }
+  .url{
+    opacity: 0.3;
+    background: #fff;
+    font-size: 0.6em;
+    font-weight: normal;
+    position: absolute;
+    bottom: 5mm;
+    right: 10mm;
+  }
+}

@@ -1,0 +1,56 @@
+# Site settings
+title: CoDe Maturity
+description: Continuous Delivery Maturity Model
+url: http://code-maturity.praqma.com
+name:  Contiuous Delivery Maturity # can be overriden by site.client.name
+logo:  /images/cards-icon.png # can be overriden by site.client.logo
+frontpage-title: Continuous Delivery Maturity Model
+
+client:
+  directory:  ttc
+  name:       .the tech collective
+  url:        https://www.thetechcollective.dev
+  logo:       images/ttc/thetechcollective.png
+name:         Continuous Delivery Maturity Model
+
+# Build settings
+markdown: kramdown
+future: true
+
+collections:
+  areas:
+    output: true
+    permalink: /areas/:title/
+  levels:
+    output: true
+    permalink: /levels/:title/
+  cards:
+    output: true
+    permalink: /:title/
+  gauges:
+    output: true
+    permalink: /gauges/:title/
+  customer_details:
+    output: true
+
+defaults:
+  -
+    scope:
+      type: areas
+    values:
+      layout: tag
+  -
+    scope:
+      type: levels
+    values:
+      layout: tag
+  -
+    scope:
+      type: cards
+    values:
+      layout: card
+  -
+    scope:
+      path: "" # any file
+    values:
+      layout: page

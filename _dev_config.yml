@@ -1,0 +1,47 @@
+# This config file is designed to support running Jekyll
+# from a docker environment
+
+# It assumes the following:
+# 1) You have Docker installed
+#    1a) If not then go:
+#        > brew cask install virtualbox
+#        > brew install docker
+#        > brew install docker-machine
+# 2) You have a docker-machine named "default" ready to use
+#    2a) If not then go:
+#       > docker-machine create --driver virtualbox default
+#    2b  ...or if you have it, but it isn't started then you go
+#       > docker-machine start default
+# 3) Your shell is prepared for using the default docker-machine
+#    3a)  If not then you go
+#       > eval "$(docker-machine env default)"
+# 4) You have defined a super nice alias called "djekyll" to start jekyll on
+#    docker-machine
+#    4a) If not, then this is it:
+#    > alias djekyll='docker run -i -t --rm -v $(pwd):/website:rw --workdir /website -p 80:4000 praqma/jekyll jekyll'
+#
+# Psssst: For you own convenince consider adding 3a and 4a to your environment file (E.g. .zshrc or .bashrc)
+#         and also 2b can be dealt with once and for all - see how at:
+#         https://docs.docker.com/machine/get-started/#start-local-machines-on-startup
+
+# If you have come this far you can run this site using
+# > djekyll --config _config.yml,_dev_config.yml
+
+# Required when running from Docker
+host: 0.0.0.0
+force_polling: true
+
+# Speed it up a buit
+incremental: false
+
+# Fail if front matter misbehaves
+strict_front_matter: true
+
+# How much to render? These all default to false
+show_drafts: true
+
+unpublished: false
+
+# Make the machine talk to you
+verbose: false
+profile: true

@@ -1,0 +1,29 @@
+footer{
+  background: $color-black;
+  color: $color-white;
+  padding: 10px 0;
+  a {
+    &, &:hover, &:focus{
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+  .author{
+    /*@extend .row;*/
+    font-size: 1em;
+    img{
+      height: 40px;
+      float: left;
+      margin-right: 10px;
+    }
+    span{
+      display: block;
+    }
+    .company{
+      margin-top: -1px;
+    }
+    .description{
+      font-size: 0.6em;
+    }
+  }
+}

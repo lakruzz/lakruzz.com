@@ -1,0 +1,11 @@
+*.*~
+_site
+.sass-cache
+.jekyll-metadata
+.idea/
+.phlow
+*.iml
+.DS_Store
+linkchecker.report.csv
+linkchecker.report.html
+*.orig

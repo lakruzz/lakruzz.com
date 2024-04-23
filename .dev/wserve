@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]
+  then
+    echo "Usage: ./wserve <customer>"
+    echo ""
+    echo "This requires watchy to be installed. Watchy is a node package that can monitor paths are respawn a command on changes."
+    echo ""
+    echo "To install watchy, run:"
+    echo "npm install -g watchy"
+    echo "Note: you might need to install node/npm first. On a Mac, the easy choice is 'brew install npm'"
+    echo ""
+    echo "To use without watchy, just use the supplied"
+    echo " ./serve <customer>"
+    echo "script instead."
+else
+    echo "watchy -w _customer_details/$1/snippets/ -- jekyll serve --config _config.yml,_customer_details/$1/_config.yml"    
+	watchy -w _customer_details/$1/snippets/ -- jekyll serve --config _config.yml,_customer_details/$1/_config.yml
+fi

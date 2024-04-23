@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="layout-tag">
+
+  {% include matrix.html %}
+
+  <div class="content">
+    {{ content }}
+
+    {% if page.color %}
+      {% assign style = "color: #" | append:page.color %}
+    {% elsif page.opacity %}
+      {% assign style = "opacity: " | append:page.opacity %}
+    {% endif %}
+    <a name="tag"></a><h1 style="{{ style }}">{{ page.title }}</h1>
+
+    {% assign l_sorted = site.levels | sort:'weight' | reverse %}
+    {% assign a_sorted = site.areas | sort:'weight' | reverse %}
+
+    {% assign page_filename = page.path | split:'/' | last | split:'.' | first %}
+
+    {% assign c_sorted = site.cards | sort:'level' %}
+    {% for c in c_sorted %}
+      {% capture l_title %}{% include func/get-level-title.html level=c.level l_sorted=l_sorted %}{% endcapture %}
+      {% assign l_title = l_title | strip_newlines %}
+      {% if l_title == page.title or c.area == page_filename  %}
+        {% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+        {% assign a_details = a_details | strip_newlines | split:'|' %}
+        {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+        {% assign l_details = l_details | strip_newlines | split:'|' %}
+        <article class="index-card">
+          <div class="card_">
+            <a href="{{ c.url }}">{{ c.title }}</a>
+            <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }}"></div>
+          </div>
+          <div class="content">
+            <div class="caption">{{c.caption}}</div>
+          {{ c.content | split:'<!--break-->' | first | markdownify }}
+
+          {% capture card_snippets %}{% include /func/get-snippets-by-path.html path=c.path %}{% endcapture %}
+          {% assign card_snippets_stripped = card_snippets | strip_newlines | replace:' ','' %}
+          {% if c.content contains '<!--break-->' or card_snippets_stripped.size > 0 %}
+              <div class="readmore">
+                <a href="{{ c.url }}"><span style="font-family:FontAwesome;">&#xf0aa;</span>&nbsp; Read more…</a>
+              </div>
+            {% endif %}
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div>

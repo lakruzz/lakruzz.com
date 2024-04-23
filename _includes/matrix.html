@@ -1,0 +1,55 @@
+{% assign l_sorted = site.levels | sort:'weight' | reverse %}
+{% assign a_sorted = site.areas | sort:'weight' | reverse %}
+
+<div class="matrix">
+  <div class="matrix-row header" style="margin-left: -92px;">
+    <div class="matrix-cell header">
+    </div>
+    {% for l in l_sorted %}
+      <div class="matrix-cell header header-level">
+        <a href="{{ l.url }}#tag" style="opacity: {{ l.opacity }}">{{ l.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  {% for a in a_sorted %}
+    <div class="matrix-row">
+      {% assign a_fname = a.path | split:'/' | last | split:'.' | first %}
+      <div class="matrix-cell header header-area">
+        <span>
+          <a href="{{ a.url }}#tag" style="color: #{{ a.color }};">{{ a.title }}</a>
+        </span>
+      </div>
+      {% for l in l_sorted %}
+        <div class="matrix-cell">
+          {% assign card_htmls = '' | split:'|' %}
+          {% for c in site.cards %}
+            {% if c.area == a_fname %}
+              {% capture l_title %}{% include func/get-level-title.html level=c.level l_sorted=l_sorted %}{% endcapture %}
+              {% assign l_title = l_title | strip_newlines %}
+              {% if l_title == l.title %}
+                {% capture card_html %}
+                    <div class="card_">
+                      <div class="bg" style="border-color: #{{ a.color }}; opacity: {{ l.opacity }}"></div>
+                      <a href="{{ c.url }}">
+                        {{ c.title }}
+                      </a>
+                    </div>
+                {% endcapture %}
+                {% assign card_html = card_html | strip_newlines %}
+                {% assign card_htmls = card_htmls | push: card_html %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% assign card_htmls_size = card_htmls | size %}
+          {% if card_htmls_size > 1 %}
+            {% capture carousel_id %}carousel-{{ l.title | slugify }}-{{ a.title | slugify }}{% endcapture %}
+            {% assign carousel_id = carousel_id | strip_newlines %}
+            {% include carousel.html items=card_htmls id=carousel_id color=a.color %}
+          {% elsif card_htmls_size == 1 %}
+            {{ card_htmls[0] }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

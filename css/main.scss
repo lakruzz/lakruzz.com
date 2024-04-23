@@ -1,0 +1,39 @@
+---
+---
+@charset "utf-8";
+
+/* path to glyphicons */
+$icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/* custom variable */
+/*$body-bg: red;*/
+
+/* any style customization must be before the bootstrap import */
+@import "base/variables";
+@import "base/layout";
+/*@import "helpers/mixins";*/
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+$fa-font-path: "/bower_components/components-font-awesome/fonts/";
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import "base/typography";
+@import "components/matrix";
+@import "components/card";
+@import "components/tag";
+@import "components/pic";
+/*@import "components/header";*/
+@import "components/carousel";
+@import "components/nav";
+@import "components/footer";
+@import "components/stars";
+@import "helpers/bg";
+/*@import "pages/page";*/
+@import "pages/card";
+@import "pages/score";
+@import "pages/gagues";
+@import "pages/toc";
+/*@import "pages/index";*/
+@import "pages/tag";
+/*@import "themes/theme";*/
+@import "base/print";
+
+/*@import "helpers/helpers";*/

@@ -1,0 +1,11 @@
+.page-gauges{
+  .stars{
+    font-size: 24.3px;
+  }
+  @media print {
+    article{
+      page-break-after: always;
+      padding: 2mm 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+nav.main-menu{
+  /*@extend .navbar;*/
+  /*@extend .navbar-default;*/
+  background: $color-black;
+  & > div{ // container
+  }
+  ul{
+    float: none;
+    /*@extend .row;*/
+  }
+}
+.navbar-nav{
+  & > li {
+    font-size: 0.8em;
+    float: right;
+    &.logo {
+      display: inline;
+      float: left;
+      font-size: 1.2em;
+      a {
+        padding: 0;
+      }
+      img {
+        margin-right: 10px;
+        vertical-align: -20%;
+        height: 40px;
+      }
+    }
+    & > a {
+      color: $color-white;
+      line-height: 60px;
+      padding: 0 0 0 2em;
+      letter-spacing: 0.8px;
+      &:hover, &.active {
+        background: none;
+      }
+      &:focus{
+        background: none;
+      }
+    }
+  }
+}

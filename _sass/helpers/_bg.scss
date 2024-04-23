@@ -1,0 +1,11 @@
+// Used to make printable background for cards and tags.
+// Be sure you've set `overflow: hidden; position: relative;` to a parent
+// `border-color` should be set by inline styles.
+.bg{
+  border-style: solid;
+  border-width: 99999pt;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}

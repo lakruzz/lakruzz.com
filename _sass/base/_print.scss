@@ -1,0 +1,23 @@
+@media print {
+  body{
+    font-size: 6mm;
+  }
+  @page{
+    size: 148.5mm 210mm;
+  }
+  .main-menu, footer, header{
+    display: none !important;
+  }
+  .main-area{
+    min-height: calc(100vh - 200px);
+    padding: 0 16mm;
+    margin: 0;
+    width: 220.5mm;
+  }
+  blockquote{
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+  }
+
+}

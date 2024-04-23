@@ -1,0 +1,49 @@
+{% comment %}
+Arguments
+toc — if not empty, include renders the table of contents only. Links lead to defferent pages of the model
+{% endcomment %}
+
+<div class="findings layout-tag">
+  <div class="content">
+    {% comment %}classes *layout-tag* and *content* are to reuse existing styles{% endcomment %}
+    {% assign l_sorted = site.levels | sort:'weight' | reverse %}
+    {% assign c_sorted = site.cards | sort:'level' %}
+    {% for c in c_sorted %}
+      {% capture l_title %}{% include func/get-level-title.html level=c.level l_sorted=l_sorted %}{% endcapture %}
+      {% assign l_title = l_title | strip_newlines %}
+      {% if c.area == include.area  %}
+
+        {% capture card_snippets %}{% include /func/get-snippets-by-path.html path=c.path %}{% endcapture %}
+        {% assign card_snippets_stripped = card_snippets | strip_newlines | replace:' ','' %}
+        {% if card_snippets_stripped.size > 0 %}
+          {% comment %}{% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+          {% assign a_details = a_details | strip_newlines | split:'|' %}
+          {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+          {% assign l_details = l_details | strip_newlines | split:'|' %}{% endcomment %}
+          <article>
+            {% comment %}<!--div class="card-wrapper">
+              <div class="card_">
+                <a href="{{ c.url }}">{{ c.title }}</a>
+                <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }}"></div>
+              </div>
+            </div-->{% endcomment %}
+            {% if include.toc %}
+              <h3>{{ c.title }}</h3>
+              <div data-url="{{ c.url }}" class="toc-link">
+                {% comment %}
+                we'll output all the content of snippet. JS on the page will leave headers and make links out of them.
+                {% endcomment %}
+                {{ card_snippets }}
+              </div>
+            {% else %}
+              <div class="content layout-card">
+                {% comment %}class *layout-card* is to reuse existing styles{% endcomment %}
+                {{ card_snippets }}
+              </div>
+            {% endif %}
+          </article>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

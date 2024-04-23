@@ -1,0 +1,13 @@
+body{
+  min-width: 900px;
+}
+header.site-header, nav.main-menu>div, .main-area, footer>div{
+  @extend .container;
+}
+
+.main-area{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  min-height: calc(100vh - 200px);
+  min-width: 1000px;
+}

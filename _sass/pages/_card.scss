@@ -1,0 +1,114 @@
+.layout-card{
+  $card-width: $container-width / 2.0 - 1;
+  .card-header{
+    margin-bottom: 40px;
+    overflow: hidden;
+    .card_ {
+      padding: 6px 12px;
+    }
+  }
+  .card_, .details{
+    float: left;
+    width: $card-width;
+    height: $card-width;
+  }
+  .card_{
+    font-size: $card-width * $card-font-size-multiplier;
+  }
+  .details{
+    padding-left: 0.06*$card-width;
+    position: relative;
+    .gauges{
+      /*bottom: -9px;*/
+      bottom: 0;
+      font-family: $font-family-base;
+      font-size: 1.3em;
+      font-weight: 300;
+      line-height: 1.6em;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      .score{
+        border-top: rgba(0,0,0,0.1) 1px solid;
+        margin-top: 17px;
+        padding-top: 9px;
+        margin-bottom: -8px;
+        .value{
+          font-weight: bold;
+          font-size: 1.5em;
+          width: $stars-width;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .caption{
+    font-family: $font-family-condensed;
+    font-size: 2.827em;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  h4:before {
+    /*content: "";*/
+    /*background-image: url("/images/remedy.png");*/
+    /*background-size: 24px 24px;*/
+    /*background-repeat: no-repeat;*/
+    /*display: inline-block;*/
+    /*opacity: 0.5;*/
+    /*width: 24px;*/
+    /*height: 24px;*/
+    /*padding: 10px;*/
+    /*margin-left: 0px;*/
+    margin-right: 0.4em;
+    /*margin-bottom: -1px;*/
+    /*margin-top: 0px;*/
+    content: "\f0aa";
+    font-family: FontAwesome;
+  }
+  .nav-prev-next{
+    a{
+      bottom: 0;
+      display: block;
+      position: fixed;
+      top: 0;
+      white-space: nowrap;
+      width: 50px;
+      &:hover{
+        background: rgba($color-black, 0.2);
+      }
+      span.title{
+        display: block;
+        transform: rotate(-90deg);
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        transform-origin: left top;
+        height: 50px;
+        padding-left: 80px;
+        line-height: 50px;
+        &:before{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 0.4em;
+          vertical-align: -6%;
+          font-size: 25px;
+        }
+      }
+      &.prev{
+        left: 0;
+        span.title:before{
+          content: "↑";
+        }
+      }
+      &.next{
+        right: 0;
+        span.title:before{
+          content: "↓";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if page.url == "/index.html" %}
+    <title>{{ site.title }}: {{ site.description }}</title>
+  {% elsif page.title %}
+    <title>{{ site.title }}: {{ page.title }}</title>
+  {% elsif page.tag %}
+    <title>{{ site.title }}: {{ page.tag }}</title>
+  {% else %}
+    <title>{{ site.title }}: {{ site.description }}</title>
+  {% endif %}
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+  <link rel="alternate" type="application/rss+xml" title="Subscribe via RSS" href="/feed.xml" />
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <meta name="google-site-verification" content="NW7KLg-ZdHbdHYZ60xnCn4WjNBPiGgBXyRBWcjWuiJg" />
+
+</head>

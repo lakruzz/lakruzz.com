@@ -1,0 +1,54 @@
+---
+layout: page
+nav-weight: 1
+title: Table of contents
+permalink: /toc/
+categories: page-toc
+published: none
+---
+
+<div class="toc">
+  <h2>{% include func/get-area-title.html   area="build" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="build" %}
+
+  <h2>{% include func/get-area-title.html   area="qa" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="qa" %}
+
+  <h2>{% include func/get-area-title.html   area="vcs" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="vcs" %}
+
+  <h2>{% include func/get-area-title.html   area="devops" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="devops" %}
+
+  <h2>{% include func/get-area-title.html   area="arch" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="arch" %}
+
+  <h2>{% include func/get-area-title.html   area="org" %}</h2>
+  {% include report/get-area-findings.html toc="true" area="org" %}
+</div>
+
+<script>
+  var toc = $(".toc");
+  var headers = toc.find("h1, h2, h3, h4, h5" ).each(function(){
+        //console.log($(this).parent());
+        var url = $(this).closest(".toc-link").data("url");
+        if(url){
+          var id = $(this).attr('id');
+          //var html = $(this).html();
+          //console.log(html);
+          //html = html.replace("h1", "h2");
+          //html = html.replace("h2", "h3");
+          //html = html.replace("h3", "h4");
+          //html = html.replace("h4", "h5");
+          //$(this).html(html);
+          //console.log(html);
+          var a = $("<a>",{ href: url+"#"+id });
+          $(this).wrap(a);
+        }
+        else{
+          var span = $("<span>");
+          $(this).wrap(span);
+        }
+      }).parent();
+  toc.empty().append(headers);
+</script>

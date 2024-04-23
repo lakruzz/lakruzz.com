@@ -1,0 +1,127 @@
+---
+layout: default
+---
+
+{% capture a_details %}{% include func/get-area-details.html area=page.area %}{% endcapture %}
+{% assign a_details = a_details | strip_newlines | split:'|' %}
+{% capture l_details %}{% include func/get-level-details.html level=page.level %}{% endcapture %}
+{% assign l_details = l_details | strip_newlines | split:'|' %}
+<article class="layout-card">
+
+
+
+  <div class="card-header">
+
+    <div class="card_">
+      {{ page.title }}
+      <div class="bg" style="border-color: #{{ a_details[2] }}; opacity: {{ l_details[2] }};"></div>
+    </div>
+
+    <div class="details">
+      <div class="tags">
+        <div class="tag area">
+          <a href="{{ a_details[1] }}#tag" style="background-color: #{{ a_details[2] }};">
+            {{ a_details[0] }}
+          </a>
+        </div>
+        <div class="tag level">
+          <a href="{{ l_details[1] }}#tag" style="background: #444; opacity: {{ l_details[2] }};">
+            {{ l_details[0] }}
+          </a>
+        </div>
+      </div>
+      {% capture gauge_values %}{% include /func/get-gauge-values.html path=page.path %}{% endcapture %}
+      <!--{% include /func/get-gauge-values.html path=page.path %}-->
+      <!--{{ gauge_values | jsonify }}-->
+      {% assign gauge_values = gauge_values | split:" " %}
+      {% assign throughput = gauge_values[0] %}
+      {% assign feedback   = gauge_values[1] %}
+      {% assign payback    = gauge_values[2] %}
+      {% assign simplicity = gauge_values[3] %}
+      {% capture score %}{% include /func/get-score.html throughput=throughput feedback=feedback payback=payback simplicity=simplicity %}{% endcapture %}
+      {% assign score = score | strip_newlines %}
+      {% if score != "0" %}
+        <div class="gauges">
+          <div class="gauge">Throughput {% include func/stars.html star_count=throughput %}</div>
+          <div class="gauge">Feedback   {% include func/stars.html star_count=feedback %}  </div>
+          <div class="gauge">Payback    {% include func/stars.html star_count=payback %}   </div>
+          <div class="gauge">Simplicity {% include func/stars.html star_count=simplicity %}</div>
+          <div class="score">
+            Score
+            <span class="value">{{ score }}</span>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <div class="content">
+      <div class="caption">{{ page.caption }}</div>
+    {{ content }}
+  </div>
+
+  {% include /func/get-snippets-by-path.html path=page.path %}
+
+
+  {% comment %}
+  Prev-next navigation
+  {% endcomment %}
+
+  {% assign  cards = site["cards"]  %}
+  {% assign  cards = cards | sort:"weight"  %}
+  {% for card in cards  %}
+    {% if card.title == page.title %}
+      {% unless forloop.first %}
+        {% assign card_prev = prev %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next = cards[forloop.index] %}
+        {% assign card_next = next %}
+      {% endunless %}
+    {% endif %}
+    {% assign prev = card %}
+  {% endfor %}
+  <script>
+  document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '{{card_prev.url}}'; }
+  if (e.keyCode == '39') { window.location = '{{card_next.url}}'; }
+  if (e.keyCode == '85') { window.location = '/'; }
+  };
+  </script>
+  <div class="nav-prev-next">
+    {% if card_prev %}
+      <a href="{{card_prev.url}}" class="prev" title="Press ← on keyboard">
+        <div class="wrapper">
+          <span class="title">{{ card_prev.title }}</span>
+        </div>
+      </a>
+    {% endif %}
+    {% if card_next %}
+      <a href="{{card_next.url}}" class="next" title="Press → on keyboard">
+        <div class="wrapper">
+          <span class="title">{{ card_next.title }}</span>
+        </div>
+      </a>
+    {% endif %}
+  </div>
+
+</article>
+
+<script>
+  var flash = function(elements) {
+    var opacity = 100;
+    var color = "255,232,87";
+    var interval = setInterval(function() {
+      opacity -= 3;
+      if (opacity <= 0) clearInterval(interval);
+      $(elements).css({background: "rgba("+color+", "+opacity/100+")"});
+    }, 60);
+  };
+
+  var hash = window.location.hash;
+  console.log(hash);
+  if(hash){
+    flash($(hash));
+  }
+</script>

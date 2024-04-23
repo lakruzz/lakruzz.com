@@ -1,0 +1,1 @@
+{% comment %}TODO delete takes card path (without extention), returns config card description or nothing{% endcomment %}{% assign c_fname = include.path | split:'/' | last | split:'.' | first %}{% for c in site.client.cards %}{% if c.filename == c_fname %}{{ c.snippets | join:"<!-- snippet separator -->" }}{% endif %}{% endfor %}

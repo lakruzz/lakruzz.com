@@ -1,0 +1,1 @@
+{% for a in site.areas %}{% assign a_fname = a.path | split:'/' | last | split:'.' | first %}{% if a_fname == include.area %}{{ a.title }}{% endif %}{% endfor %}

@@ -1,0 +1,6 @@
+{% assign l_sorted = site.levels | sort:'weight' | reverse %}
+{% assign l_sorted_size = l_sorted | size %}
+{% assign l_range = 100 | divided_by:l_sorted_size %}
+{% assign l_index = include.level | divided_by: l_range %}
+{% assign l = l_sorted[l_index] %}
+{{ l.title }}|{{ l.url }}|{{ l.opacity }}|{{ l.weight }}

@@ -1,0 +1,63 @@
+.matrix{
+  font-size: 0;
+  margin-left: -38px;
+  .matrix-row{
+  }
+  .matrix-cell{
+    font-size: $font-size-base;
+    font-weight: 500;
+    width: $card-width-matrix;
+    height: $card-width-matrix;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: $card-gutter-matrix;
+    margin-bottom: $card-gutter-matrix;
+    &.header{
+      height: auto;
+      a{
+        font-size: 1.2em;
+        display: block;
+        line-height: 1;
+        padding-top: 10px;
+        width: 100%;
+        height: 100%;
+
+        -moz-transition: color 0.5s ease;
+        -moz-transition: text-shadow 0.5s ease;
+        -o-transition: color 0.5s ease;
+        -o-transition: text-shadow 0.5s ease;
+        -ms-transition: color 0.5s ease;
+        -ms-transition: text-shadow 0.5s ease;
+      }
+    }
+    &.header-level{
+      margin-bottom: 8px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      text-align: left;
+      a {
+        color: #444;
+      }
+    }
+    &.header-area {
+      height: $card-width-matrix;
+      font-family: lato;
+      width: 32px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      span {
+        display: table;
+        height: 100%;
+        width: 100%;
+      }
+      a {
+        display: table-cell;
+        text-align: right;
+        vertical-align: middle;
+      }
+    }
+  }
+}

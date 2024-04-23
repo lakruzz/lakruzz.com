@@ -1,0 +1,16 @@
+.carousel{
+}
+
+.carousel-indicators{
+  bottom: -35px;
+  li{
+    height: 8px;
+    opacity: 0.2;
+    width: 8px;
+    &.active, &:hover{
+      height: 10px;
+      opacity: 1;
+      width: 10px;
+    }
+  }
+}
