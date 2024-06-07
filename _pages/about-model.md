@@ -1,17 +1,15 @@
 ---
 title: About the Continuous Delivery Maturity Model
+last_modified_at: 2024-03-18
 ---
-
 This model originates from the time when I founded and operated Praqma. A company specialized in Continuous Delivery implementation of software development processes. Praqma is now gone. The company was swallowed in an merger and acquisition process in 2019 and the model didn't survive. It was stored away in a GitHub repository and never used again.
 {: .kicker}
 
 ...until now.
 
-## History 
+## History
 
 Praqma was, in it's early days, focusing on _configuration management, version control systems, build optimization, build automation, static code analysis, test automation_. Around that time we would probably refer to all that as just _"CI - Continuous Integration_". In Praqma we were very engaged in the Jenkins CI community. We had developed more than 20 plugins as commission work for our clients and released them as Open Source to the community. We had a very close collaboration with CloudBees - the company behind Jenkins CI and Kohsuke Kawaguchi who originally developed Hudson (the predecessor to Jenkins) as an internal project at Sunn, and at that time he was the Jenkins CI Open Source Community lead - on CloudBees' pay-roll.
-
-
 
 ## Version 1 - CI focus
 

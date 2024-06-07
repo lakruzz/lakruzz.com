@@ -76,6 +76,8 @@ $footer-background-color: $masthead-background-color;
 $muted-text-color: $ttc-mustard;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 
+$label-color: $ttc-dark-grey !default;
+
 
 $success-color: $ttc-mint !default;
 $warning-color: $ttc-mustard !default;
@@ -88,9 +90,11 @@ $active-color: mix(#fff, $primary-color, 80%) !default;
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
 .page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+  color: #333;
 }
+
 
 .ais-search-box .ais-search-box--input {
   background-color: $form-background-color;
 }
+

@@ -1,11 +1,18 @@
 ---
-title: The workshop
+title:  "The Full Assessment"
+excerpt: Continuous Delivery is to software development what lean is to manufacturing. We strive for Lean Software Development. A one-piece flow with quality built-in.
+last_modified_at: 2024-06-06
+search: true
+author: Lars Kruse
+author_profile: false
+header:
+  teaser: /assets/images/pics/ws-0025.jpg
 
 valuestream:
   - url: &img3 /assets/images/pics/ws-0003.jpg
     image_path: *img3
     alt: "placeholder image 3"
-    title: "Image 3 title caption"
+    title: "Everyone is contributing to the Value Stream Mapping process"
   - url: &img2 /assets/images/pics/ws-0002.jpg
     image_path: *img2
     alt: "placeholder image 2"
