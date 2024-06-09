@@ -50,19 +50,7 @@ boards:
   - url: &img19 /assets/images/pics/ws-0019.jpg
     image_path: *img19
     alt: "placeholder image 19"
-    title: "Image 19 title caption"  
-  - url: &img20 /assets/images/pics/ws-0020.jpg
-    image_path: *img20
-    alt: "placeholder image 20"
-    title: "Image 20 title caption"  
-  - url: &img21 /assets/images/pics/ws-0021.jpg
-    image_path: *img21
-    alt: "placeholder image 21"
-    title: "Image 21 title caption"  
-  - url: &img15 /assets/images/pics/ws-0015.jpg
-    image_path: *img15
-    alt: "placeholder image 15"
-    title: "Image 15 title caption"     
+    title: "Image 19 title caption"   
 
 fullpicture:
   - url: &img25 /assets/images/pics/ws-0025.jpg
@@ -115,6 +103,8 @@ score:
  
 ---
 
+![image-center](/assets/images/pics/ws-0003.jpg){: .align-center width="50%"}
+
 
 This model [originates](/about-model) from the time when I founded and operated Praqma. In this post, I'll describe how I conducted this Continuous Delivery Metric Assessment at more then 25 companies
 {: .kicker}
@@ -123,7 +113,7 @@ The name and concept “Continuous Delivery” is a deliberate reference to a le
 
 In the modern world of software development we use the concepts _Continuous Delivery_ and _DevOps_ to be the equivalents in software to what lean means to manufacturing.
 
-We strive for Lean Software Development.
+We strive for _Lean Software Development_.
 
 ## Value Stream Mapping - the _as-is_ picture
 
@@ -131,8 +121,8 @@ In Lean manufacturing there is a strict focus on Product Lifecycle Management �
 
 As in lean, we investigate and assess three different core phenomena that jeopardize an ideal delivery value stream:
 
-- **Muda**: Wastefulness – Things and processes that are excess, which don’t contribute to value.
-- **Muri**: Unevenness – Inefficient coordination of _takt_ and workflows that build up stock or create wait-states.
+- **Muda**: Wastefulness – things and processes that are excess, which don’t contribute to value.
+- **Muri**: Unevenness – inefficient coordination of _takt_ and workflows that build up stock or create wait-states.
 - **Mura**: Overburdenness – bad utilization of resources, scope creep and poor prioritizations
 
 Just as in a lean process we get the first impression of the current state from an engaging workshop exercise based on a Value Stream Mapping technique. We gather team members and stakeholders and facilitate them to draw a rich picture of the current (as-is) process. We mark the waste, the back-loops, the wait states, the excess manual processes, the communication conflicts etc.
@@ -144,6 +134,9 @@ I've gathered a handful af pictures from some of the workshops and the first pil
 {% include gallery id="valuestream" caption="The workshop starts with mapping out the Value Stream of the product as _rich pictures_ laid our on the walls" %}
 
 When the Value Stream begins to take form we introduce the _trouble markers_ which the participants use to mark where the process needs to be optimization in six different categories of troubles:
+
+
+![image-center](/assets/images/troubles.png){: .align-center width="50%"}
 
 - **Manual Work** - dull, repetitive work done my humans
 - **Queues** - processes where _takt_ is off due to lack of resources
@@ -162,9 +155,9 @@ It's very seldom that there exists such _one_ person that has the full overview 
 
 {% include gallery id="fullpicture" caption="The mappings show the troubles in the process and and all the painful back-loops" %}
 
-## The Goal - get the full picture – where we’re headed?
+## The Goal - get the full picture?
 
-The Dreyfus brothers published a model for skill acquisition which contributed to the field of Cognitive Science as early as in the 80’s to propose an early model for understanding intelligence and expertise.  This has inspired us to build a model, not necessarily – just – for maturity, but also for in-depth metrics.
+The Dreyfus brothers published a model for skill acquisition which contributed to the field of Cognitive Science as early as in the 80’s to propose an early model for understanding intelligence and expertise.  This has inspired us to build a model, not necessarily – or not just – for maturity, but also for in-depth metrics.
 
 In Continuous Delivery in context of software development we focus on different areas of knowledge or matter; Build, Test, Version control, DevOps, Architecture & Design and Organization & Culture. These areas can be molded and adapted to the individual client and assessment.
 
