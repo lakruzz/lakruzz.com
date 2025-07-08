@@ -15,8 +15,8 @@ tags:
   - gitops
   - semver
 excerpt: Git aliases are mostly used for nifty shorthand variants or combinations of existing git commands. But aliases can do anything that you can fit into one line - literally. This also makes them fun bash scripting exercises and inconceivably powerful.
-
 ---
+
 Git aliases are mostly used for nifty shorthand variants or combinations of existing git commands. But aliases can do anything that you can fit into one line - literally. This also makes them fun bash scripting exercises - and inconceivably powerful.
 {: .kicker }
 
@@ -66,7 +66,7 @@ _"Really! That looks complicated!"_
 
 Well yes, and no. This is a brilliant example of how aliases really are useful.
 
-The built-in `log` feature has some beautiful display features, and using the `--pretty` switch you can draw ASCII art trees of your branches and commits that really are - well artful. But no one wants to write, or even remembers, this relatively complicated `format:` string. Now I've created an alias called `tree` which since then has become my personal all time favourite git command.
+The built-in `log` feature has some beautiful display features, and using the `--pretty` switch you can draw ASCII art trees of your branches and commits that really are - well artful. But no one wants to write, or even remembers, this relatively complicated `format:` string. Now I've created an alias called `tree` which since then has become my personal all time favorite git command.
 
 And here's a few bonuses: First: The tab completion feature has built-in knowledge of my aliases. so `git tr<tab>` will expand into `git tree` and second: Since the `tree` command is a variant of the `log` command it still supports all the switches that `log` does. As an example; `log` supports the switch `-<number>` to limit the depth of the log to `<number>` items. So my `tree` command also supports `-<number>` out of the box. To see my git tree 32 commits deep I'll execute:
 
@@ -123,13 +123,13 @@ _"Yes! Really!"_
 Bumping <em>minor</em> in <code>1.2.3</code> becomes <code>1.3.0</code>.<br/>
 Bumping <em>patch</em> in <code>1.2.3</code> becomes <code>1.2.4</code>.
 
-<p/>SemVer's obvious use case is in versioning interfaces or individual component releases, where the protocol lays the foundation of programatically determining wether or not it's safe to update a given component or not. SemVer is the most important tool in the toolbox, when striving to kill the a bloated monolith system compound into multiple nimble individual component releases.
+<p/>SemVer's obvious use case is in versioning interfaces or individual component releases, where the protocol lays the foundation of programmatically determining wether or not it's safe to update a given component or not. SemVer is the most important tool in the toolbox, when striving to kill the a bloated monolith system compound into multiple nimble individual component releases.
 </div>{: .fact .right .medium}
 
 
 I will not make this blog about Semantic Versioning ([SemVer](https://semver.org){: target="_blank" title="Semantic Versioning"}) in general, but specifically about how to implement it in just two lines of code, using git aliases. So I assume that you're familiar with the concept - if not read up on it in the short recap in the fact-box.
 
-It's my belief, that a good workflow is one that is simple and easy to use. Sometimes workflows aren't simple and easy to use, and in context of git and git related workflows (e.g. GitOps) git aliases (...and git extensions) are a brilliant and obvious way to simplify a workflow so that every team member has a few everyday git favourite git commands which are shared among every temmember, and essentially implement the workflow - nice and easy. So before getting to work, I'll just set the scene and put a few words on the workflow I use and advocate.
+It's my belief, that a good workflow is one that is simple and easy to use. Sometimes workflows aren't simple and easy to use, and in context of git and git related workflows (e.g. GitOps) git aliases (...and git extensions) are a brilliant and obvious way to simplify a workflow so that every team member has a few everyday git favorite git commands which are shared among every team member, and essentially implement the workflow - nice and easy. So before getting to work, I'll just set the scene and put a few words on the workflow I use and advocate.
 
 ### I assume the following:
 {:.no_toc}
@@ -142,8 +142,9 @@ It's my belief, that a good workflow is one that is simple and easy to use. Some
   3. __SemVer:__ Any commit that is tagged according to _SemVer_ rules is automatically verified and deployed to the production environment.
 
 >WTF! - No Pull Requests?
+<!-- cspell:ignore bdgm BDFL -->
 
-It's worth noticing that in my workflow I don't use pull requests. The reason is really that while the generic concept of a _Pull Request (PR)_ undoubtedly exists, it is nevertheless implemented differently in [GitHub](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests){: target="_blank" title="GitHub belives the world stops spining if you don't use PR!"}, [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/){: target="_blank" title="GitLab calls them 'Merge Requests'"}, [BitBucket](https://www.atlassian.com/git/tutorials/making-a-pull-request){: target="_blank" title="Atlassian has it too!"}, [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/pull-requests){: target="_blank" title="...and (often) last: Microsoft does what everyone else does"}, each in its own proprietary implementation. And on top of that  PR's were originally designed, to support a [_Benevolent Dictator Governance Model (BDGM)_](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_dictator_and_lieutenants_workflow){: target="_blank" title="From the Git Book"} in which only the [Benevolent Dictator For Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life){: target="_blanks" title="Benevolent Dictator For Life - OSS term"} and the trusted lieutenants have write (push) access, and all other contributors were potentially seen as riff-raff and they would have read (pull) access - but not write access. To contribute they would then have to _fork_ or _branch_ the code, make the code suggestions and then place a _Pull Request_ with one of the trusted lieutenants, who would then read and validate the code for your, and if accepted then _they_ would pull it in. Quite a cumbersome and manual process. And in the light of the fact that in most of todays git repositories, all contributors already have write access, it seems like it's an obvious thing to optimize.
+It's worth noticing that in my workflow I don't use pull requests. The reason is really that while the generic concept of a _Pull Request (PR)_ undoubtedly exists, it is nevertheless implemented differently in [GitHub](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests){: target="_blank" title="GitHub believes the world stops spinning if you don't use PR!"}, [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/){: target="_blank" title="GitLab calls them 'Merge Requests'"}, [BitBucket](https://www.atlassian.com/git/tutorials/making-a-pull-request){: target="_blank" title="Atlassian has it too!"}, [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/pull-requests){: target="_blank" title="...and (often) last: Microsoft does what everyone else does"}, each in its own proprietary implementation. And on top of that  PR's were originally designed, to support a [_Benevolent Dictator Governance Model (BDGM)_](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_dictator_and_lieutenants_workflow){: target="_blank" title="From the Git Book"} in which only the [Benevolent Dictator For Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life){: target="_blanks" title="Benevolent Dictator For Life - OSS term"} and the trusted lieutenants have write (push) access, and all other contributors were potentially seen as riff-raff and they would have read (pull) access - but not write access. To contribute they would then have to _fork_ or _branch_ the code, make the code suggestions and then place a _Pull Request_ with one of the trusted lieutenants, who would then read and validate the code for your, and if accepted then _they_ would pull it in. Quite a cumbersome and manual process. And in the light of the fact that in most of todays git repositories, all contributors already have write access, it seems like it's an obvious thing to optimize.
 
 Let's have a look at what a pull request is _generically_ and why it may have survived and remained popular in many teams despite almost no one today works in a Benevolent Dictator Governance Model anymore. Generically, a PR is implemented as a short-lived temporary branch related to a specific increment (task) that needs some level of verification before merged into another branch - usually `master`. This is no different than the flow I advocate, where we say, that any code change must be done on a separate short-lived branch and only accepted into `master` if quality measures are sufficiently met. So consequently, my `ready/` branch is _like_ a pull request, It's simply a way to signal to my automated GitOps backend that I'm ready to take the test and see if my code is worthy of being integrated onto `master`. The advantage I get is that I'm only git native features - in this case simply a dedicated short-lived branch and a self-made naming convention. So consequently my setup is compliant with any Distributed Centralized Git repository strategy - including all the popular git-aaS-platform mentioned earlier.
 
@@ -271,7 +272,7 @@ git config --global alias.semver "\!git tag | grep -Eo '\d+\.\d+\.\d+' | sort | 
 
 But git aliases also automatically passes an any parameter to the execution. This is sometimes desired, as we saw in the `tree` alias previously, where the switch supported by `git log` was also automatically supported by `git tree`.
 
-But sometimes it's not desired - sometimes I don't accept parameters or switches, and I want them to be swallowed or ignoreed and sometimes (as you'll see later) I want to pass parameters or switches to the alias itself, not it's execution.
+But sometimes it's not desired - sometimes I don't accept parameters or switches, and I want them to be swallowed or ignored and sometimes (as you'll see later) I want to pass parameters or switches to the alias itself, not it's execution.
 
 
 So the `semver` implementation above would mean that an execution like `git semver some_rubbish_parameter` would make it fail, whereas I would like the rubbish parameter to be ignored.
@@ -287,7 +288,7 @@ f() {statement-1; statement-2; ...; statement-n; }; f
 # semver as closure
 f() { git tag | grep -Eo '\d+\.\d+\.\d+' | sort | tail -1; }; f
 ```
-
+<!-- cspell:ignore Aaarh -->
 But before we store it, let's consider, what happens if there aren't any SemVer tags set yet, if we're the first developer here. Aaarh! _Nothing_ is returned, so `bumpsemver` has nothing to bump. Let's fix that. Some teams wants to start the SemVer with `0.0.0` others with `0.9.0` or `1.0.0`. Let's store the team's `initial` preference in the config file in a new section called `[semver]``- something like:
 
 ```bash
@@ -421,7 +422,7 @@ So if the team distributes their shared aliases and config settings in general i
 git config --global alias.repo-config-to-global "!f(){ for f in $(git config --file `git root`/.gitconfig --list --name-only); do git config --global --get $f > /dev/null || git config --global $f "$(git config --file `git root`/.gitconfig --get $f)"; done; }; f"
 ```
 
-If you want to use `git repo-config-to-global` to update existing settings, you do it by deleting them first and reapplying them from the one in the repoitory:
+If you want to use `git repo-config-to-global` to update existing settings, you do it by deleting them first and reapplying them from the one in the repository:
 
 
 ```bash

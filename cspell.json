@@ -1,0 +1,63 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.git/**",
+        "**/.github/**",
+        "**/.vscode/**",
+        "**/.cspell/**",
+        "**/coverage/**",
+        "**/logs/**",
+        "**/tmp/**",
+        "**/temp/**",
+        "**/_site/**",
+        "_config.yml"
+    ],
+
+    "files": [
+        "**/*.md",
+        "**/*.txt",
+        "_data/**/*.json",
+        "**/*.yml",
+        "**/*.yaml"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "lakruzz",
+            "path": "./.cspell/lakruzz-dictionary.txt"
+        }
+    ],
+    "dictionaries": [
+        "lakruzz"
+    ],
+    "languageSettings": [
+        {
+            "languageId": "markdown",
+            "dictionaries": [
+                "lakruzz"
+            ]
+        },
+        {
+            "languageId": "plaintext",
+            "dictionaries": [
+                "lakruzz"
+            ]
+        }
+    ],
+    "ignoreRegExpList": [
+        "{%.*%}", // ignore inline liquid tags
+        "^---[\\s\\S]*?^---$", // ignore YAML front matter
+        "^```[\\s\\S]*?^```$", // ignore code block
+        "{%\\shighlight[\\s\\S]*?{%\\sendhighlight\\s%}", // ignore highlight liquid tag blocks
+        "`.*`", // ignore inline code 
+        "<code>.*</code>", // ignore HTML code tags
+        "<!--.*?-->" // ignore HTML comments
+
+
+    ]
+}

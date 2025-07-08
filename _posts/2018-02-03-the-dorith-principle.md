@@ -32,11 +32,11 @@ Without these strategies and employee handbooks, I can understand why the encour
 
 ## The Agile manifesto
 
-It may derive from an occupational hazard; We're in the software development business and the [agile manifesto](https://agilemanifesto.org){: target="_blank"} tends to be our credo. We honestly belive in motivated and self-organized teams, we belive in meritocracy and we acknowledge that requirements are constantly changing, we belive in technical excellence and in the focus that comes from minimizing work in progress - and we belive in retrospectives and continuous reflections as the primary input for continuous learning. We belive that creating value - such as working software - should be the primary measure of progress.
+It may derive from an occupational hazard; We're in the software development business and the [agile manifesto](https://agilemanifesto.org){: target="_blank"} tends to be our credo. We honestly believe in motivated and self-organized teams, we believe in meritocracy and we acknowledge that requirements are constantly changing, we believe in technical excellence and in the focus that comes from minimizing work in progress - and we believe in retrospectives and continuous reflections as the primary input for continuous learning. We believe that creating value - such as working software - should be the primary measure of progress.
 
 To me - as a manager who tends to recite from [the twelve principles](https://agilemanifesto.org/principles.html){: target="_blank"} of the Agile Manifesto more frequently than most - the whole vision-strategy-tactics needs a different implementation than the traditional rock solid, well communicated approach.
 
-I simply don't belive in rock solid.
+I simply don't believe in rock solid.
 
 ## DORITH
 
@@ -64,7 +64,7 @@ The answer to your own question lies within your self: You make the right decisi
 _U2, A Beautiful Day_
 
 ## Small Steps Manifesto
-It's obvious that a few lines from a U2 pop song can't hold a magical answer to a complex problem; how to be a successful manger. But I belive that efficient management implies that people on the team are self-organized, motivated and empowered.
+It's obvious that a few lines from a U2 pop song can't hold a magical answer to a complex problem; how to be a successful manger. But I believe that efficient management implies that people on the team are self-organized, motivated and empowered.
 
 The small steps manifesto is still emerging, but it reads something like:
 
