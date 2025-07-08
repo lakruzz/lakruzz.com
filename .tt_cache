@@ -1,0 +1,7 @@
+{
+    "/workspaces/codememo": {
+        "gh project view 13 --owner lakruzz --format json --jq '.id'": "PVT_kwHOAAJfZM4A9Y0Q",
+        "gh project item-add 13 --owner lakruzz --url https://github.com/lakruzz/codememo/issues/30 --format json --jq '.id'": "PVTI_lAHOAAJfZM4A9Y0QzgcW8aE",
+        "gh project field-list 13 --owner lakruzz --format json --jq '.fields[] | select(.name == \"Status\")'": "{\"id\":\"PVTSSF_lAHOAAJfZM4A9Y0QzgxGtek\",\"name\":\"Status\",\"options\":[{\"id\":\"f75ad846\",\"name\":\"Todo\"},{\"id\":\"47fc9ee4\",\"name\":\"In Progress\"},{\"id\":\"ba2e627b\",\"name\":\"Delivery Initiated\"},{\"id\":\"98236657\",\"name\":\"Done\"}],\"type\":\"ProjectV2SingleSelectField\"}"
+    }
+}
