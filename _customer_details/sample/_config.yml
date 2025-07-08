@@ -2,5 +2,5 @@ client:
   directory:  lakruzz
   name:       lakruzz
   url:        https://codemamo.lakruzz.com
-  logo:       /images/lakruzz/cards-icon.png
+  logo:       /assets/images/lakruzz-logo.svg
 name:         Continuous Delivery Metric Model

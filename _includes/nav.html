@@ -1,0 +1,29 @@
+{% assign menu_items = site.pages %}
+{% for t in site.tag-pages %}
+  {% assign menu_items = menu_items | push:t %}
+{% endfor %}
+
+{% assign menu_items = menu_items | sort: "nav-weight" | reverse %}
+
+<nav class="main-menu">
+  <div style="min-width: 1000px;">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <ul class="nav navbar-nav">
+      <li class="logo">
+      <a{% if "/index.html" == page.url %} class="active"{% endif %} href="/">
+        {% assign logo = site.logo %}
+        {% if site.client.logo %}
+          {% assign logo = site.client.logo %}
+        {% endif %}
+        {% if logo %}<img src="{{ logo }}" alt="{{ name }}">{% endif %}{{ site.frontpage-title }}</a>
+      </li>
+      {% assign current-page-folder = page.url | split: "/" | shift | pop %}
+      {% for p in menu_items %}
+        {% if p.nav-weight %}
+          {% assign menu-item-folder = p.url | split: "/" | shift %}
+          <li><a{% if p.url == page.url or current-page-folder == menu-item-folder %} class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+{% assign card_basename = include.path | split:"/" | last | split:"." | first %}
+{% assign snippets = site.customer_details %}
+{% for s in snippets %}
+  {% assign client_substring = site.client.directory | prepend:"_customer_details/" %}
+  {% if s.path contains "snippets" and s.path contains client_substring %}
+    {% assign snippet_basename = s.path | split:"/" | last | split:"." | first %}
+    {% if snippet_basename == card_basename %}
+      {{ s.content | markdownify }}
+    {% endif %}
+  {% endif %}
+{% endfor %}

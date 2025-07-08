@@ -1,0 +1,210 @@
+/* ==========================================================================
+   CoDeMaMo skin
+   ========================================================================== */
+
+/* serif typefaces */
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap";
+@import "https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap";
+@import "https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// Roboto Serif 
+@import "https://fonts.googleapis.com/css?family=Roboto+Serif:400,700,400italic,700italic&display=swap";
+
+$ubuntu-mono: "Ubuntu Mono", monospace !default;
+$lato: "Lato", sans-serif !default;
+$oswald: "Oswald", sans-serif !default;
+$noto-serif: "Noto Serif", serif !default; 
+$roboto-serif: "Roboto Serif", serif !default;
+
+$global-font-family: $roboto-serif !default;
+$header-font-family: $oswald !default;
+$caption-font-family:$lato !default;
+$sans-serif-narrow: $lato !default;
+$sans-serif: $lato !default;
+$monospace: $ubuntu-mono !default;
+
+
+$area-10:          #fb001d !default;
+$area-20:           $area-10 !default;
+$area-30:           $area-10;
+$area-40:          #fa8b00 !default;
+$area-50:          #00e675 !default;
+$area-60:          #00a8ff !default;
+$area-70:          #d136f5 !default;
+$area-80:          #424242 !default;
+$area-90:            $area-80;
+
+/* type scale */
+$type-size-1: 39px !default; // ~39.056px
+$type-size-2: 31px !default; // ~31.248px
+$type-size-3: 25px !default; // ~25.008px
+$type-size-4: 20px !default; // ~20px
+$type-size-5: 16px !default; // ~16px
+$type-size-6: 14px !default; // ~12px
+$type-size-7: 12px !default; // ~11px
+$type-size-8: 11px !default; // ~10px
+
+/* headline scale */
+$h-size-1: $type-size-1 !default; // ~25.008px
+$h-size-2: $type-size-2 !default; // ~20px
+$h-size-3: $type-size-3 !default; // ~18px
+$h-size-4: 19px !default; // ~17px
+$h-size-5: 18px !default; // ~16.5px
+$h-size-6: $type-size-5 !default; // ~16px
+
+$doc-font-size: 16px !default;
+
+
+$lakruzz-red:         #a0221a !default;
+$lakruzz-dark-grey:   #1f1f1f !default;
+$lakruzz-light-grey:  #e0dfdc !default;
+$lakruzz-grey-2:      #8f8f91 !default;
+$lakruzz-cappuccino-3: #ede9e5 !default;
+
+
+$ttc-light-grey:   #e0dfdc !default;
+$ttc-dark-grey:    #1f1f23 !default;
+$ttc-grey:         #a3a2a0 !default;
+$ttc-mint:         #b9d2c3 !default;
+$ttc-purple:       #af9eb4 !default;
+$ttc-plum:         #64505a !default;
+$ttc-cappuccion:   #b6a798 !default;
+$ttc-mustard:      #deb778 !default;
+
+/* variants (lighter shades) */
+$ttc-light-grey-1: #e8e7e5 !default;
+$ttc-light-grey-2: #efefed !default;
+$ttc-light-grey-3: #f7f7f6 !default;
+
+$ttc-grey-1:       #57585a !default;
+$ttc-grey-2:       #8f8f91 !default;
+$ttc-grey-3:       #c7c7c8 !default;
+
+$ttc-mint-1:       #cbddd2 !default;
+$ttc-mint-2:       #dce8e1 !default;
+$ttc-mint-3:       #edf4f0 !default;
+
+$ttc-purple-1:     #c3b6c7 !default;
+$ttc-purple-2:     #d7ced9 !default;
+$ttc-purple-3:     #af9eb4 !default;
+
+$ttc-plum-1:       #8b7c83 !default;
+$ttc-plum-2:       #b1a7ac !default;
+$ttc-plum-3:       #d8d3d6 !default;
+
+$ttc-cappuccion-1: #c8bdb2 !default;
+$ttc-cappuccion-2: #dad3cb !default;
+$ttc-cappuccion-3: #ede9e5 !default;
+
+$ttc-mustard-1:    #e6c99a !default;
+$ttc-mustard-2:    #eedbbb !default;
+$ttc-mustard-3:    #f7eddd !default;
+
+/* Colors */
+$background-color: $lakruzz-light-grey !default;
+$text-color: $lakruzz-dark-grey !default;
+$primary-color: $lakruzz-red !default;
+$border-color: mix($primary-color, $background-color, 20%) !default;
+$code-background-color: $lakruzz-cappuccino-3 !default;
+$code-background-color-dark: mix(#000, $background-color, 20%) !default;
+$form-background-color: mix(#000, $background-color, 15%) !default;
+// $link-color: mix($primary-color, $text-color, 40%) !default;
+$link-color: $primary-color !default;
+$link-color-hover: mix(#fff, $link-color, 25%) !default;
+$link-color-visited: mix(#000, $link-color, 25%) !default;
+$masthead-link-color: $ttc-mustard !default;
+$masthead-link-color-hover: mix(#000, $ttc-mustard-3, 20%) !default;
+$masthead-background-color: $ttc-dark-grey !default;
+$footer-background-color: $masthead-background-color;
+$muted-text-color: $ttc-dark-grey;
+$navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
+$fact-background-color: $ttc-light-grey-3 !default;
+$fact-border-color: $lakruzz-red !default;
+
+
+$success-color: $ttc-mint !default;
+$warning-color: $ttc-mustard !default;
+$danger-color: $ttc-cappuccion !default;
+$info-color: $ttc-purple !default;
+$focus-color: $primary-color !default;
+$active-color: mix(#fff, $primary-color, 80%) !default;
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa,
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa  {
+  color: inherit;
+}
+
+.ais-search-box .ais-search-box--input {
+  background-color: $form-background-color;
+}
+
+.page__content {
+  
+  a:not(.btn) {
+  
+    color: $link-color;
+    transtion: color 0.5s ease;
+    -moz-transtion: color 0.5s ease;
+    -webkit-transtion: color 0.5s ease;
+    -o-transtion: color 0.5s ease;
+    transtion: text-shadow 0.5s ease;
+    -moz-transtion: text-shadow 0.5s ease;
+    -webkit-transtion: text-shadow 0.5s ease;
+    -o-transtion: text-shadow 0.5s ease;
+    text-decoration-line: none;
+    
+  
+    &:visited {
+      color: $link-color-visited;
+      text-decoration-line:none;
+    }
+  
+    &:hover {
+      color: $link-color-hover;
+      text-shadow: $text-color 0px 0px 2px;
+      text-decoration-line: none;
+    }
+  }
+}
+
+
+/* lakruzz syntax highlighting (base16, reference is to syntax.scss) */
+$base00: #ffffff !default; //not used in syntax.scss
+$base01: #e0e0e0 !default; //not used in syntax.scss
+$base02: #d0d0d0 !default; //not used in syntax.scss
+$base03: #b0b0b0 !default; //not used in syntax.scss
+$base04: #8f8f91 !default; //.gutter .c .cm .cp .c1 .cs .gp .sd
+$base05: #00aa5e !default; // .n .p .gh .nb .ni .nl .py .w .sc .bp
+$base06: #151515 !default; // .hll background color 
+$base07: #202020 !default; // not used in syntax.scss
+$base08: #aa0000 !default; // .err .gd .no. ne .nv .vc .vg .vi
+$base09: #aa5500 !default; // .l .m .mf .mh .mi .mo .se .si .il
+$base0a: #40a014 !default; // .kt .nc .nn
+$base0b: #a74d11 !default; // .g .ld .s .sb .s2 .sh .sx .sr .s1 .ss
+$base0c: #1e90ff !default; //.nt .nd .kn .gu .o .ow
+$base0d: #3777e6 !default; // .na .nf .nx
+$base0e: #0000aa !default; //.k .kc .kd .kp .kr
+$base0f: #cc6633 !default; //not used in syntax.scss
+
+pre, code {
+  font-size: $type-size-5 !important;
+  background-color: $code-background-color !important;
+  .highlight {
+    .c, .ch, .cm, .cp, .cpf, .c1, .cs { font-style: italic } /* Comment */
+    .gh, .gu, .nc, .ni, .nn, .nt { font-weight: bold }
+  }
+} 
+
+.pic {
+  pre, code {
+    font-size: $type-size-6 !important;
+
+  } 
+}
+
+
+
+

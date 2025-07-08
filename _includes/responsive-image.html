@@ -1,0 +1,68 @@
+{% capture srcset %}
+{% for i in resized %}
+/{{ i.path }} {{ i.width }}w,
+{% endfor %}
+{% endcapture %}
+
+{% capture class_caption_tuple %}
+class="pic caption"
+{% endcapture%}
+
+{% capture class_pic_tuple %}
+class="pic"
+{% endcapture%}
+
+{% if alt %}
+{% capture alt_tuple %}
+alt="{{ alt }}"
+{% endcapture%}
+{% endif %}
+
+{% if width %}
+{% capture width_tuple %}
+width="{{ width }}"
+{% endcapture%}
+{% capture styled_width_tuple %}
+style="width:{{ width }};"
+{% endcapture%}
+{% endif %}
+
+{% if title %}
+{% capture title_tuple %}
+title="{{ title }}"
+{% endcapture%}
+{% endif %}
+
+{% if class %}
+{% capture class_pic_tuple %}
+class="pic {{ class }}"
+{% endcapture%}
+{% capture class_caption_tuple %}
+class="pic caption {{ class }}"
+{% endcapture%}
+{% endif %}
+
+{% if url contains 'http' %}
+{% capture target_tuple %}
+target="_blank"
+{% endcapture %}
+{% endif %}
+
+{% if caption %}
+{% capture caption %}
+{{caption}}
+{% endcapture%}
+{% endif %}
+
+{% assign largest = resized | sort: 'width' | last %}
+
+{% if caption %}
+<div {{ class_caption_tuple | strip_newlines }} {{ styled_width_tuple | strip_newlines }}>
+  {% endif %}
+  {% if url%}
+  <a href="{{ url }}" {{ target_tuple | strip_newlines }} {{ title_tuple | strip_newlines }}>
+    {% endif %}
+    <img src="/{{ largest.path }}" srcset="{{ srcset | strip_newlines }}" {{ alt_tuple | strip_newlines }}
+      {{ title_tuple | strip_newlines }} {{ class_pic_tuple | strip_newlines }}
+      {{ width_tuple | strip_newlines }}>{% if url%}</a>{% endif %}{% if caption %}{{ caption | strip_newlines}}</div>
+{% endif %}

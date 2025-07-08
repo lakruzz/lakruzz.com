@@ -1,0 +1,187 @@
+.layout--model-page-single, .layout-card, .layout-tag{
+
+.card_{
+  color: white;
+  font-family: $font-family-condensed;
+  font-size: 17px;
+  font-weight: normal;
+  height: $card-width-matrix;
+  line-height: 1.2em;
+  overflow: hidden;
+  position: relative;
+  width: $card-width-matrix;
+  text-align: left;
+  z-index: 0;
+  a {
+    color: white;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0.05 * $card-width-matrix;
+    text-decoration: none;
+    position: absolute;
+    -moz-transition: color 0.5s ease;
+    -moz-transition: text-shadow 0.5s ease;
+    -o-transition: color 0.5s ease;
+    -o-transition: text-shadow 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -ms-transition: text-shadow 0.5s ease;
+
+  }
+
+
+  a:hover, a:active{
+    color: white;
+    text-decoration: none !important;
+    background-color: black;
+  }
+  
+
+
+  a:visited {
+    color: white;
+    text-decoration: none;
+
+  } 
+
+  // Used to make printable background for cards and tags.
+  // Be sure you've set `overflow: hidden; position: relative;` to a parent
+  // `border-color` should be set by inline styles.
+  .bg{
+    border-style: solid;
+    border-width: 80pt;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .icons{
+    height: 20%;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    pointer-events: none;
+    
+    .score{
+      background: rgba(0,0,0,0.2);
+      font-weight: 300;
+      padding-top: 0.05em;
+      height: calc($card-width-matrix*0.2);
+      width:  calc($card-width-matrix*0.2);
+      text-align: center;
+    }
+    .complexity{
+      height: calc($card-width-matrix*0.2);
+      width:  calc($card-width-matrix*0.2);
+      text-align: center;
+      margin-right: 5px;
+    }
+  }
+
+  
+
+}
+
+}
+
+// TODO: this replaces to old .tag class (remove it)
+.model-tag{
+  /*line-height: 1em;*/
+  font-size: 0.8em;
+  a{
+    color: white;
+    display: inline-block;
+    line-height: 1em;
+    padding: 0.5em 0.8em;
+    text-decoration: none !important;
+    &:visited{
+      color: white;
+    }
+    &:hover{
+      color: grey;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.stars{
+  width: $stars-width;
+  display: inline-block;
+  .s_empty{
+    opacity: 0.2;
+  }
+}
+
+.area-10, a.area-10, a.area-10:visited{
+  color: $area-10;
+  border-color: $area-10;
+  text-decoration: none; 
+  background-color: $area-10;
+
+} 
+.area-20, a.area-20, a.area-20:visited{
+  color: $area-20;
+  border-color: $area-20;
+  text-decoration: none; 
+  background-color: $area-20;
+
+} 
+.area-30, a.area-30, a.area-30:visited{
+  color: $area-30;
+  border-color: $area-30;
+  text-decoration: none; 
+  background-color: $area-30;
+
+}
+.area-40, a.area-40, a.area-40:visited{
+  color: $area-40;
+  border-color: $area-40;
+  text-decoration: none; 
+  background-color: $area-40;
+}
+.area-50, a.area-50, a.area-50:visited{
+  color: $area-50;
+  border-color: $area-50;    
+  text-decoration: none; 
+  background-color: $area-50;
+}
+.area-60, a.area-60, a.area-60:visited{
+  color: $area-60;
+  border-color: $area-60;
+  text-decoration: none; 
+  background-color: $area-60;
+
+}
+.area-70, a.area-70, a.area-70:visited{
+  color: $area-70;
+  border-color: $area-70;
+  text-decoration: none; 
+  background-color: $area-70;
+
+}
+.area-80, a.area-80, a.area-80:visited{
+  color: $area-80;
+  border-color: $area-80;
+  text-decoration: none; 
+  background-color: $area-80;
+
+}
+.area-90, a.area-90, a.area-90:visited{
+  color: $area-90;
+  border-color: $area-90;
+  text-decoration: none; 
+  background-color: $area-90;
+
+} 
+
+

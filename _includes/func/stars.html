@@ -1,0 +1,3 @@
+{% assign s_filled = include.star_count | minus: 1 %}
+{% assign s_empty = 1 | minus: s_filled %}
+<span class="stars">{% for s in (0..s_filled) %}<span class="s_filled"><i class="fa fa-star"></i></span> {% endfor %}{% for s in (0..s_empty) %}<span class="s_empty"><i class="fa fa-star-o"></i></span> {% endfor %}</span>

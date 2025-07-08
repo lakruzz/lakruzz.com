@@ -1,0 +1,128 @@
+.fact {
+    display: block;
+    background-color: $fact-background-color;
+    border-style: solid;
+    border-color: $fact-border-color;
+    border-width: 2px;
+    text-indent: initial; /* override*/
+    border-radius: $border-radius;
+    box-shadow: 0 1px 1px rgba($fact-border-color, 0.25);
+    padding-left:   10px;
+    padding-right:  10px;
+    padding-bottom: 10px;
+    padding-top:    10px;
+    font-size: 83%;
+    font-family: $sans-serif;
+    text-align: left;
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      clear: both;
+    }
+  
+    &.right {
+      float: right;
+      margin-left: 10px;
+      clear: left;
+    }
+  
+    &.left {
+      float: left;
+      margin-right: 10px;
+      clear: right;
+    }
+  
+    &.full {
+      width: 100%;
+    }
+  
+    &.wide {
+      width: 600px;
+    }
+  
+    &.medium {
+      width: 450px;
+    }
+  
+    &.small {
+      width: 250px;
+    }
+  
+    &.tiny {
+      width: 140px;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $fact-border-color;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .fact {
+      &.wide{
+        width: 100%;
+      }
+      &.left, &.right{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        clear: both;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .fact {
+      &.medium{
+        width: 100%;
+      }
+      &.left, &.right{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        clear: both;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .fact {
+      &.small{
+        width: 100%;
+      }
+      &.left, &.right{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        clear: both;
+      }
+    }
+  }
+  
+  
+  @media only screen and (max-width: 350px) {
+    .fact {
+      &.tiny{
+        width: 100%;
+      }
+      &.left, &.right{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        clear: both;
+      }
+    }
+  }

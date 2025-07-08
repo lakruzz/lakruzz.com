@@ -1,0 +1,23 @@
+<div class="findings layout-tag">
+  <div class="content">
+    {% comment %}classes *layout-tag* and *content* are to reuse existing styles{% endcomment %}
+    {% assign l_sorted = site.levels | sort:'weight' | reverse %}
+    {% assign c_sorted = site.cards | sort:'level' %}
+    {% for c in c_sorted %}
+      {% capture l_title %}{% include func/get-level-title.html level=c.level l_sorted=l_sorted %}{% endcapture %}
+      {% assign l_title = l_title | strip_newlines %}
+      {% if c.area == include.area  %}
+
+        {% capture card_snippets %}{% include /func/get-snippets-by-path.html path=c.path %}{% endcapture %}
+        {% assign card_snippets_stripped = card_snippets | strip_newlines | replace:' ','' %}
+        {% if card_snippets_stripped.size > 0 %}
+          {% comment %}{% capture a_details %}{% include func/get-area-details.html area=c.area %}{% endcapture %}
+          {% assign a_details = a_details | strip_newlines | split:'|' %}
+          {% capture l_details %}{% include func/get-level-details.html level=c.level %}{% endcapture %}
+          {% assign l_details = l_details | strip_newlines | split:'|' %}{% endcomment %}
+              {{ card_snippets }}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
