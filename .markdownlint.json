@@ -1,0 +1,8 @@
+{
+    "MD033": false,
+    "MD004": { "style": "dash" },
+    "MD013": false,
+    "MD036":false,
+    "MD041": {"allow_preamble": true, "level": 2},
+    "MD042":false
+}

@@ -7,7 +7,7 @@ header:
   teaser: /assets/images/cards/dependencies-are-managed.png
 ---
 
-All software has dependencies; 
+All software has dependencies;
 You may be using third party technology or you have a lot of individually released microservices, frameworks or libraries in your system architecture.
 
 Make sure there are no moving targets and don't rely on someone else's _master_, _latest_  or _stable release_. Cache everything you need in your own registry.

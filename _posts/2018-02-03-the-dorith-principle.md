@@ -64,6 +64,7 @@ The answer to your own question lies within your self: You make the right decisi
 _U2, A Beautiful Day_
 
 ## Small Steps Manifesto
+
 It's obvious that a few lines from a U2 pop song can't hold a magical answer to a complex problem; how to be a successful manger. But I believe that efficient management implies that people on the team are self-organized, motivated and empowered.
 
 The small steps manifesto is still emerging, but it reads something like:
@@ -77,6 +78,7 @@ The DORITH principle allows you to learn - it allows you to practice that art of
 It simply allows you to be tactical - relative to where you are headed.
 
 ## Pivot without mercy or guilt
+
 Making decisions based on your own rationale, however conscious they may be, is bound to have some limitations - for all of us. It's build into the principle, that some of the decisions will doubtlessly be bad or questionable.
 
 Suck it up!

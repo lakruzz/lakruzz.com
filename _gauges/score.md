@@ -10,7 +10,7 @@ The algorithm used is:
 
     (throughput + feedback + payback)
 
-Each card is also assessed for complexity, you should pay attention to the cost of implementation: 
+Each card is also assessed for complexity, you should pay attention to the cost of implementation:
 
 <i class="fa-solid fa-apple-whole"/> It's a low hanging fruit.
 

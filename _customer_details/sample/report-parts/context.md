@@ -18,8 +18,8 @@ The interviews and workshops related to the CoDeMeMo has the purpose of getting 
 
 The goal of the interviews and workshops is two-fold:
 
- * To raise awareness in the software development team of some of the best practice methods, tools and processes available for improving efficiency and producing higher quality software.
- * To outline a roadmap as a practical guide to achieving this goal.
+- To raise awareness in the software development team of some of the best practice methods, tools and processes available for improving efficiency and producing higher quality software.
+- To outline a roadmap as a practical guide to achieving this goal.
 
 Awareness is achieved by conducting a considerable part of the interviews and workshops and facilitated discussions with the developers in the software team.
 
@@ -36,13 +36,13 @@ These letters represent the authors opinionated recommendation of priority for t
 
 The lettering refers to the _MoSCoW principle_ for prioritization:
 
-* __Must have__
+- __Must have__
 A condition that must be satisfied in the final solution for the solution to be considered a success.
-* __Should have__
+- __Should have__
 A condition that should be included in the solution if it is possible. A critical condition indeed but not discriminating for success if left out.
-* __Could have__
+- __Could have__
 A condition that could be included if time and resources permit. It is considered desirable but not strictly necessary for success.
-* __Won’t have__ (not used in this report)
+- __Won’t have__ (not used in this report)
 A condition that is not currently relevant and which will not be implemented but could potentially become relevant in a future scope.
 
 The prioritization that we have come up with is meant to be a catalyst for your internal discussions - you may not agree with our priorities in which case you should obviously go with your own.
@@ -52,5 +52,3 @@ This approach should enable you to copy most sections marked with __&#xf0aa;__{:
 All you need to do hereafter is to groom the task, estimate the work, and put it on your backlog. <!--TODO: https://github.com/lakruzz/codememo/issues/42 -->
 
 <!--TODO: add a few pictures from the workshops -->
-
-

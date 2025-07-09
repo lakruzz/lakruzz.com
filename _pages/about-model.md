@@ -55,19 +55,19 @@ To show-case the features of the model I have added a anonymized and generalized
 
 Any references to any the 24 companies or even the specific mentioning of their tool-stack, organization, location, domain of operation, or any data for that matter, that could possibly identify them is weeded out or scrambled.
 
-So what is left on these pages is an _example_ or a _story_ of what a Continuous Delivery Assessment report based on this model _could_ look like. 
+So what is left on these pages is an _example_ or a _story_ of what a Continuous Delivery Assessment report based on this model _could_ look like.
 
 But hey! Feel free to read much more into it than just that; I can reveal to you, that a large majority of the most important findings in the various areas and levels were common and shared among many of the companies. In short; their issues and challenges were seldom unique and even if this sample assessment is not based on observations done in your specific organization I would be surprised if your weren't able - none the less - to read _some_ of it, as-if it was your own assessment.
 
 ## How to read the model
 
-<a href="/"><img width="32px" align="left" style="margin-right: 13px;" alt="Continuous Delivery Maturity Matrix" src="/images/lakruzz/cards-icon.png"/></a> 
+<a href="/"><img width="32px" align="left" style="margin-right: 13px;" alt="Continuous Delivery Maturity Matrix" src="/images/lakruzz/cards-icon.png"/></a>
 
 Hit the icon in the top-left corner to go to the front of the model. You will see 5 levels of expertise - _Novice, Beginner, Intermediate, Advanced and Expert_. These levels are a chosen as a reference to [The Dreyfus Brother's model for skill acquisition](https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition){: target="_blank"} which contributed to the field of _Cognitive Science_ as early as in the 80's to propose an early model for understanding intelligence.
 
 In context of Continuous Delivery we chose to focus on six different areas of knowledge. _Build, Test, Version control, DevOps, Architecture & Design_ and _Organization & Culture_. These categories can be seen as a-sign-o-the-times - back then. You would think that some of these areas no longer impose a problem. Surely for use on modern software development products and teams these areas should be updated.
 
-Maybe, sure! - But then again; you would be surprised how slow the world is moving - in large organizations. 
+Maybe, sure! - But then again; you would be surprised how slow the world is moving - in large organizations.
 
 I did make _one specific change;_  In the Version Control area I moved the card "Use Distributed VCS"  from the _Advanced_ level to _Novice_. In the eight years that has passed git has become so much af a standard that it's unavoidable - using git is now considered basic stuff.
 
@@ -91,4 +91,3 @@ Findings that score high: in the range 7-9. and marked as 2<sup>nd</sup> level o
 ### _Mountains to climb_
 
 Findings that score relatively high in in the range 7-9 and marked as 3<sup>rd</sup> level of complexity with <i class="fa-solid fa-mountain-sun"/> are Mountains to climb — or even blockers. They can be equally important to fix as the _low hanging fruits_ but due to the nature of these; they are difficult and often expensive, maybe even impossible to fix. So teams and organizations tend to ignore them.
-

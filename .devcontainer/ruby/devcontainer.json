@@ -13,9 +13,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "DavidAnson.vscode-markdownlint",
-                "streetsidesoftware.code-spell-checker"
-            ]
+				"DavidAnson.vscode-markdownlint",
+				"streetsidesoftware.code-spell-checker",
+				"esbenp.prettier-vscode"
+			]
         }
     },
     "features": {

@@ -19,3 +19,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# tt extension
+.tt_cache

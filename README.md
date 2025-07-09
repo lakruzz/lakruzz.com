@@ -1,6 +1,7 @@
 ---
 maintainer: lakruzz
 ---
+<!-- markdownlint-disable MD041 -->
 # Lakruzz.com
 
 ## All my uttering in one place
@@ -24,11 +25,13 @@ Over the years these writings ended up in different locations as I worked in dif
 This project is an effort to clean up – capture some of the good stuff and throw out what isn't relevant any more. I'm gathering it all on [lakruzz.com](https://lakruzz.com) and adding a few re-issue remarks here and there.
 
 ## The source is open
-This repository on github is open for everyone to examine. 
+
+This repository on github is open for everyone to examine.
 
 Over the years I've built quite a handful of utilities, tools, optimizations, workflows, templates etc. and this repo also becomes an use case for some of these tools.
 
-## Chip in!
+## Chip in
+
 Your feed back is very valuable and you are more than welcome to comment either in the Giscus enabled posts (you use your GitHub account to comment) or throw me an issue – [in the issues](../../issues/)
 
 _Lars Kruse_

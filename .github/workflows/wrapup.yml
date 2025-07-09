@@ -45,20 +45,17 @@ jobs:
 #        uses: actions/upload-pages-artifact@v3
         
   call_cspell_check:
-    name: Run spell check
+    name: Spell check
     permissions:
       statuses: write
     uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
 
-  markdownlint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install markdownlint-cli2
-        run: npm install -g markdownlint-cli2
-      - name: Check Markdown
-        run: markdownlint-cli2 "_*/**.md"
+  call_markdown_linter_check:
+    name: Linting
+    permissions:
+      statuses: write
+    uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main
+
 
   ## Deployment job
   #deploy:

@@ -27,9 +27,8 @@ echo "$PREFIX Installing the Ruby gems"
 bundle update
 bundle install
 
-echo "$PREFIX Installing the cspell cli"
-npm install cspell --global
-
+echo "$PREFIX Installing the cspell and markdownlint CLIs"
+npm install cspell markdownlint-cli2 --global
 
 echo "$PREFIX SUCCESS"
 exit 0

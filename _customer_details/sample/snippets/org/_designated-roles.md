@@ -1,13 +1,13 @@
 ---
 ---
-
+<!-- markdownlint-disable MD041 -->
 **_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
 
 ### Vague responsibility of pipeline definition
 
-The goal and feedback needs of the pipeline are unclear. 
-DevOps create and maintain the pipeline for the purpose of securing the build and artifacts for testing. 
-Developers have different interests, as they want a fast feedback loop, as the current feedback loop is long (2-3 hours). 
+The goal and feedback needs of the pipeline are unclear.
+DevOps create and maintain the pipeline for the purpose of securing the build and artifacts for testing.
+Developers have different interests, as they want a fast feedback loop, as the current feedback loop is long (2-3 hours).
 
 #### Settle the responsibility between infrastructure, DevOps and domain (S)
 
@@ -17,8 +17,8 @@ The Jenkins setup should be owned by DevOps, while the responsibility for the pi
 ### Front Office is an organizational 'hot-fix'
 
 Front Office is doing great and important work, but is essentially an organizational patch to fix the noise in development due to many customer opened issues.
-Based on the workshops, it seems the team handles technical customer support and release management (preparation and execution). 
-Customer support is important as a professional inbound and outbound communication and filter for development tasks. 
+Based on the workshops, it seems the team handles technical customer support and release management (preparation and execution).
+Customer support is important as a professional inbound and outbound communication and filter for development tasks.
 The preparation and execution of releases is, to a large extent, manual work, and the long lived branches aren't helping.
 
 #### Move Front Office back into R&D (C)

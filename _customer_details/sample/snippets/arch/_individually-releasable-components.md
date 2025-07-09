@@ -1,13 +1,12 @@
 ---
 ---
-
+<!-- markdownlint-disable MD041 -->
 **_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
-
 
 ### PolyScope is treated as a monolith
 
-Even though PolyScope generates multiple JAR files, it is treated as a monolith. 
-One of the jar files contains 80% of the code. 
+Even though PolyScope generates multiple JAR files, it is treated as a monolith.
+One of the jar files contains 80% of the code.
 That is possibly a monolith. But, conceptually, the rest aren't.
 
 #### Treat each JAR as a component (C)
@@ -18,12 +17,12 @@ This would help cut down your build times as you avoid rebuilding the individual
 
 ### Monolith build structure for PolyScope and Controller
 
-PolyScope and Controller may look like a monolith, but that is actually not true. 
+PolyScope and Controller may look like a monolith, but that is actually not true.
 They are two separate artifacts, but they are glued together by the build system and generation of the messaging API.
 
 #### Separate the two subsystems (M)
 
-It is understood that features and fixes often result in changes to both subsystems. 
-The same goes for updating the APIs and messages. 
-The APIs should be managed as dependency, which would resolve the subsystem coupling. 
-See the API solutions under *Dependencies are managed* for more information.
+It is understood that features and fixes often result in changes to both subsystems.
+The same goes for updating the APIs and messages.
+The APIs should be managed as dependency, which would resolve the subsystem coupling.
+See the API solutions under _Dependencies are managed_ for more information.

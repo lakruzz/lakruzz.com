@@ -105,7 +105,6 @@ score:
 
 ![image-center](/assets/images/pics/ws-0003.jpg){: .align-center width="50%"}
 
-
 This model [originates](/about-model) from the time when I founded and operated Praqma. In this post, I'll describe how I conducted this Continuous Delivery Metric Assessment at more then 25 companies
 {: .kicker}
 
@@ -134,7 +133,6 @@ I've gathered a handful af pictures from some of the workshops and the first pil
 {% include gallery id="valuestream" caption="The workshop starts with mapping out the Value Stream of the product as _rich pictures_ laid our on the walls" %}
 
 When the Value Stream begins to take form we introduce the _trouble markers_ which the participants use to mark where the process needs to be optimization in six different categories of troubles:
-
 
 ![image-center](/assets/images/troubles.png){: .align-center width="50%"}
 

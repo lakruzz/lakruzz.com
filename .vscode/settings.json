@@ -1,34 +1,7 @@
 {
-    "cSpell.customDictionaries": {
-        "custom-dictionary-workspace": {
-            "name": "custom-dictionary-workspace",
-            "path": "${workspaceFolder}/.cspell/lakruzz-dictionary.txt",
-            "addWords": true,
-            "scope": "workspace"
-        }
-    },
-    "cSpell.language": "en",
-    "cSpell.dictionaries": [
-        "custom-dictionary-workspace",
-        "lakruzz"
-    ],
-    "cSpell.languageSettings": [
-        {
-            "languageId": "markdown",
-            "dictionaries": [
-                "custom-dictionary-workspace",
-                "lakruzz"
-            ]
-        },
-        {
-            "languageId": "plaintext",
-            "dictionaries": [
-                "custom-dictionary-workspace",
-                "lakruzz"
-            ]
-        }
-    ],
-    "cSpell.ignoreRegExpList": [
-        "{%.*%}" // ignore liquid tags
-    ]
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": "always",
+        "source.fixAll.cspell": "explicit",
+        "source.fixAll.prettier": "explicit"
+    }
 }

@@ -23,14 +23,17 @@ Git aliases are mostly used for nifty shorthand variants or combinations of exis
 This blog contains quite a few git tricks, tips and even a recommended automated GitOps workflow. It's specifically detailed in terms of git aliases and utilization of git config. I've provided a short Table of Content so you can prepare for what's coming.
 
 ## Aliases
+
 Good git aliases are like collectors items. They are one-liners, that makes your life (the git related part of it) much easier. They are literally one line statements. Here's a short classical example:
 
 ```shell
 git config alias.co 'checkout'
 ```
+
 Now I can run `git co` as a shorthand substitute for `git checkout` This is a very popular use of git aliases - it saves me six chars every time I want to checkout a branch.
 
 ## Tab completion
+
 Tab completion is another nifty git feature worth mentioning when the talk is on optimizing your flow in git. In some git distributions it works out of the box, in others it needs [a bit of tweaking](https://stackoverflow.com/questions/12399002/how-to-configure-git-bash-command-line-completion){: target="_blank" title="How to configure git bash command line completion"} to be ignited. What it does is simply, that it finishes your git commands for you. If you type the beginning of a git command and then hit `<tab>` it will toggle through the options you have and when you found the one you like you hit `<enter>`.
 
 If I use tab completion then it turns our that I had no need for the `co` shorthand for `checkout` that I just created; I could already checkout with the same amount of key strokes (6): `git co<enter>` = `git c<tab><enter>`.
@@ -38,6 +41,7 @@ If I use tab completion then it turns our that I had no need for the `co` shorth
 _"OK! No revolution yet, but hang on a bit, it gets wilder"_
 
 ## Git config
+
 A word on the `git config` command too: It's essentially nothing but an in-line ini-file editor/reader of what is in your git configuration files. Git comes with knowledge of three system files; one is _local_ (default) and resides in the repository: `/.git/config` another one is _global_ and is in your user home folder: `~/.gitconfig`, and the last one is _system_ and sits in the `/etc/gitconfig` folder (I'm using *nix style locations - [get an in-depth understanding of config files here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config){: target="_blank"}).
 
 ```bash
@@ -55,7 +59,8 @@ So looking at the consequences of the previous `git config` command that created
 
 ...In fact could just have hacked that file directly in my editor, changes will take effect instantly when you save the file - I often find myself editing the config files more often than using `git config`.
 
-# Stepping it up a bit
+## Stepping it up a bit
+
 So let's find a more useful use of aliases - check this next one. I'm storing useful - but hard to remember - git command (scroll the code block to the right - it's long!)
 
 ```bash
@@ -73,6 +78,7 @@ And here's a few bonuses: First: The tab completion feature has built-in knowled
 ```bash
 git tree -32
 ```
+
 ...and get:
 
 {% responsive_image
@@ -84,6 +90,7 @@ git tree -32
 %}
 
 ## Git aliases vs git extensions
+
 An alternative to git aliases are git extensions. They behave very much the same way. A git extension is merely an executable - usually a script - that is made accessible from your `$PATH` and which follows the naming convention that it must be prefixed with `git-` so if I create the script `git-co` like this:
 
 ```bash
@@ -99,7 +106,7 @@ Well because one is light-weight and the other can hold unlimited amount of comp
 
 An extension is used when you want to extend git, not just with nifty shorthand variants and cute tricks, but entire landscapes of new features. Git's graphical display tool called `gitk` is really a quite extensive (12K+ lines of code) executable called [`git-gitk`](https://github.com/git/git/blob/master/gitk-git/gitk){: target="_blank" title="See it on GitHub"} written in Tcl/Tk.
 
-# Taking aliases to the next level
+## Taking aliases to the next level
 
 Let me introduce a nifty feature: _Full support of semantic versioning in all your git repositories_ that might seem quite complex, something that would require a full-blown git extension (and there are quite a handful of them out there on the internet, which proves that the feature is popular and useful) but which turn out, can be actually be implemented in just two lines of code, and stored as aliases.
 
@@ -126,17 +133,17 @@ Bumping <em>patch</em> in <code>1.2.3</code> becomes <code>1.2.4</code>.
 <p/>SemVer's obvious use case is in versioning interfaces or individual component releases, where the protocol lays the foundation of programmatically determining wether or not it's safe to update a given component or not. SemVer is the most important tool in the toolbox, when striving to kill the a bloated monolith system compound into multiple nimble individual component releases.
 </div>{: .fact .right .medium}
 
-
 I will not make this blog about Semantic Versioning ([SemVer](https://semver.org){: target="_blank" title="Semantic Versioning"}) in general, but specifically about how to implement it in just two lines of code, using git aliases. So I assume that you're familiar with the concept - if not read up on it in the short recap in the fact-box.
 
 It's my belief, that a good workflow is one that is simple and easy to use. Sometimes workflows aren't simple and easy to use, and in context of git and git related workflows (e.g. GitOps) git aliases (...and git extensions) are a brilliant and obvious way to simplify a workflow so that every team member has a few everyday git favorite git commands which are shared among every team member, and essentially implement the workflow - nice and easy. So before getting to work, I'll just set the scene and put a few words on the workflow I use and advocate.
 
-### I assume the following:
+### I assume the following
+
 {:.no_toc}
 
-* I'm working in a [Centralized Distributed Workflow](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_centralized_workflow){: target="_blank" title="From the Git Book"} This is typically the case for all team using a git-as-a-Service platforms (mine is GitHub but _any_ will do).
-* The repository has a declarative pipeline defined which monitors certain events in the centralized repository (mine is in Circle CI but _any_ will do).
-* The declarative pipeline implements "GitOps" That is; When _something_ happens in git, then stuff is automatically verified, promoted or deployed. I have three actions/levels in my repos:
+- I'm working in a [Centralized Distributed Workflow](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#_centralized_workflow){: target="_blank" title="From the Git Book"} This is typically the case for all team using a git-as-a-Service platforms (mine is GitHub but _any_ will do).
+- The repository has a declarative pipeline defined which monitors certain events in the centralized repository (mine is in Circle CI but _any_ will do).
+- The declarative pipeline implements "GitOps" That is; When _something_ happens in git, then stuff is automatically verified, promoted or deployed. I have three actions/levels in my repos:
   1. __Ready:__ Any new commit that arrives on a branched prefixed with `ready/` is automatically rebased against  `master` and verified. If the verification is successful it's automatically merged (guaranteed to be fast-forward, since it's already rebased) to `master`
   2. __Master:__ Any new commit that reaches the `master` branch is automatically verified - and if flawless - deployed to the stage environment.
   3. __SemVer:__ Any commit that is tagged according to _SemVer_ rules is automatically verified and deployed to the production environment.
@@ -157,6 +164,7 @@ And it's true that in most teams _Pull Requests_ are associated with, or sometim
 The choice to ditch reviews as quality gates and to only use native git commands as opposed to proprietary implementations of Pull Requests has to do with my general admiration of the concept of _lean_ and _automation._ A review, regardless if it's done by a peer or a mentor, can't possibly be automated, since it requires a reel persons sincere opinion. Essentially this makes the review belong to a validation process as opposed to a verification process. For that reason it can not possibly become part of the process that's supposed to run automatically - as it would inevitably introduce a wait state - an in lean processes waiting is considered waste. I'm not adding waste to my flow - I'm removing it!
 
 ### My workflow is simply `workon` and `deliver`
+
 {:.no_toc}
 
 When a task is assigned to me (I'll use issue #34 as an example), I create a shot-lived branch for the task and implement my solution. The way I do this is to run `git workon 34` but that's because I'm using [a git extension](https://github.com/code-cafes/git-phlow){: target="_blank" title="Git Phlow"} that supports `git workon` I'll leave that for a later blog post. I't essentially roughly the same as:
@@ -181,6 +189,7 @@ When I've gotten the feedback from my peer or mentor - or if I don't need it - t
 ```bash
 git push origin 34-my-short-lived-issue-branch ready/34-my-short-lived-issue-branch
 ```
+
 The name `ready/` triggers my pipeline. If all is well then the rest is really as automated - and boring to watch - as a washing machine wash.
 
 Using Circle CI as an example, here's how my pipeline is defined:
@@ -211,9 +220,9 @@ Using Circle CI as an example, here's how my pipeline is defined:
       - html-proofer
     filters:
       branches:
-        ignore: /.*/
+        ignore: /._/
       tags:
-        only: /^.*\d+\.\d+\.\d+.*$/ # Contains a Semantic Version number
+        only: /^._\d+\.\d+\.\d+.*$/ # Contains a Semantic Version number
 {% endhighlight %}
 
 In case you're not that familiar with Circle CI but are more proficient in one of the many other declarative pipeline technologies I'll give you a quick run-down of what's going on in the YAML snippet above so you can do something similar in GitHub Actions, Azure Pipelines, GitLab CI, Jenkins - or _whatever_ declarative pipeline you are using - they all support something similar.
@@ -236,6 +245,7 @@ git push --tags
 This would trigger the `prod-deploy` workflow - which would again reuse the prep and build steps and then deploy to production being the website you're reading now.
 
 ### And this is where I now need a tool to help me
+
 {:.no_toc}
 
 {% responsive_image
@@ -258,6 +268,7 @@ It turns out that this is quite easy to get from a shell command like This:
 ```bash
 git tag | grep -Eo '\d\.\d\.\d' | sort | tail -1;
 ```
+
 OK, not very complicated, but still complicated enough to be cumbersome to type each time I need it.
 
 ## Storing bash scripts as one-line git aliases - using closures
@@ -273,7 +284,6 @@ git config --global alias.semver "\!git tag | grep -Eo '\d+\.\d+\.\d+' | sort | 
 But git aliases also automatically passes an any parameter to the execution. This is sometimes desired, as we saw in the `tree` alias previously, where the switch supported by `git log` was also automatically supported by `git tree`.
 
 But sometimes it's not desired - sometimes I don't accept parameters or switches, and I want them to be swallowed or ignored and sometimes (as you'll see later) I want to pass parameters or switches to the alias itself, not it's execution.
-
 
 So the `semver` implementation above would mean that an execution like `git semver some_rubbish_parameter` would make it fail, whereas I would like the rubbish parameter to be ignored.
 
@@ -332,7 +342,7 @@ Which would total the `semver` section in the config file to look like this:
 
 And finally, on top of everything, I'd like the alias to be so clever, that if I execute it wrongly, it does nothing wrong, but instead it just shows a nice and short instruction on how to use it correctly something like:
 
-```
+``` shell
 $ git bumpsemver
 Usage: git bumpsemver  --major|--minor|--patch [msg]
 
@@ -355,7 +365,7 @@ f(){
     else MSG="-m  \"$2\"";
   fi;
   levels=(`echo \$(git semver) | tr '.' ' '`);
-  if [ '_--major' == _$1 ];
+  if [ '_--major' ==_$1 ];
     then echo git tag -a $MSG $PREFIX$((${levels[0]}+1)).0.0;
   elif [ '_--minor' == _$1 ];
     then echo git tag -a $MSG $PREFIX${levels[0]}.$((${levels[1]}+1)).0;
@@ -390,7 +400,8 @@ git config --global alias.bumpsemver "\!f(){ PREFIX=\$(git config --global --get
 # >> scroll - it's very loooong >>
 ```
 
-# Git Config team collaboration - fixing the missing level in git config
+## Git Config team collaboration - fixing the missing level in git config
+
 OK, now I've given you an handful of useful git aliases, and `git config` settings. Now it would be nice, if everyone on the team, had these settings and aliases, then we would know that every team member was doing the same thing. As a team lead I could ask everyone  to execute all the commands that would set these aliases. Or distribute a script that did it, but I admit, that the commands are delicate, they are not even white-space tolerant, the removal of just one tiny white-space might render the alias useless. And personally I favour the principle of _Configuration as Code_  which mean that I would much rather distribute and version control a config file, as opposes to a script that sets the config file.
 
 But there is kind of a missing level in the whole git config story. `--system` and `--global` levels are on the developers own PC and out of reach for version control. `--local` is in the repository's `.git` folder which is kinda _underneath_ it all and not included in the version control and general `clone`, `pull`, `push`, `branch` scope.
@@ -404,6 +415,7 @@ First part is easy to achieve since the `git config` already supports that I can
 ```bash
 git config --file <repository-root>/.gitconfig alias.co checkout
 ```
+
 Hmmm, looks like all I need now is a generic way to get the repository root, something like `git root`. Such a git command doesn't exist, but I can get the root with `git rev-parse --show-toplevel` and I can easily make it a `git root` command if I want:
 
 ```bash
@@ -424,13 +436,13 @@ git config --global alias.repo-config-to-global "!f(){ for f in $(git config --f
 
 If you want to use `git repo-config-to-global` to update existing settings, you do it by deleting them first and reapplying them from the one in the repository:
 
-
 ```bash
 for setting in $(git config --file `git root`/.gitconfig --list --name-only); do git config --global --unset $setting; done;
 git rep-config-to-global
 # >> Scroll to the right - it's long >>
 ```
-# All in All - the final config file
+
+## All in All - the final config file
 
 It ended up like this:
 
@@ -446,7 +458,7 @@ It ended up like this:
   initial = 0.0.0
 ```
 
-# How to install
+## How to install
 
 You have options:
 
@@ -463,7 +475,7 @@ You have options:
 
 Copy and run theses four lines:
 
-```
+```shell
 git clone https://github.com/lakruzz/semver_git_alias.git
 cd semver_git_alias
 git config --local include.path ./../.gitconfig

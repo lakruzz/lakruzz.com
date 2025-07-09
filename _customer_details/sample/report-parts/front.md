@@ -25,8 +25,8 @@ client_logo_height: 30px
     <div class="url">{{  site.client.url  }}</div>
   </div>
   <div class="column column-author">
-    <div class="logo"><img src="{{ site.client.logo }}" style="{{ client_logo_style }}; visibility: hidden;"></div>
-    <img src="{{ page.author.logo }}" class="author-logo">
+    <div class="logo"><img alt="logo" src="{{ site.client.logo }}" style="{{ client_logo_style }}; visibility: hidden;"></div>
+    <img alt="author logo" src="{{ page.author.logo }}" class="author-logo">
     <div class="date">{{ page.date | date: '%B %d, %Y' }}</div>
     <div class="author">Author: <strong>{{ page.author.name }}</strong></div>
     <div class="author">Co-authors: <strong>{{ page.author.co-authors }}</strong></div>
