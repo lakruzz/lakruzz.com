@@ -30,7 +30,7 @@ I have turned on public comments on the pages using GitHub. You will need an acc
 
 - Would you like me to cover a specific topic?
 - Do you have questions regarding any of the content on this web?
-- Do you have wishes for a workshop or hackathon I could host?
+- Do you have wishes for a workshop or hackaton I could host?
 - _Anything...._
 
 [Send an email to the Editor in Chief](mailto:lars@lakruzz.com){: .btn .btn--primary target="_blank"}

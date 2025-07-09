@@ -123,7 +123,7 @@ As in lean, we investigate and assess three different core phenomena that jeopar
 
 - **Muda**: Wastefulness – things and processes that are excess, which don’t contribute to value.
 - **Muri**: Unevenness – inefficient coordination of _takt_ and workflows that build up stock or create wait-states.
-- **Mura**: Overburdenness – bad utilization of resources, scope creep and poor prioritizations
+- **Mura**: Overburdenness – bad utilization of resources, scope creep and poor prioritization
 
 Just as in a lean process we get the first impression of the current state from an engaging workshop exercise based on a Value Stream Mapping technique. We gather team members and stakeholders and facilitate them to draw a rich picture of the current (as-is) process. We mark the waste, the back-loops, the wait states, the excess manual processes, the communication conflicts etc.
 

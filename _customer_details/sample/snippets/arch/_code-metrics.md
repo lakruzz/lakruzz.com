@@ -4,6 +4,7 @@
 **_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
 
 ## No to low usage of code metrics
+<!-- cspell:ignore Qube VHDL  -->
 
 SonarQube was presented as the *only* code metrics tool implemented, but it reported so many findings that it's hardly used due to too much noise. 
 This is also in connection with your efforts in code reviews.

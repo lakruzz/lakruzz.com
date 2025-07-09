@@ -1,7 +1,7 @@
 ---
 title: Admin
 ---
-
+<!-- cspell:words Printables -->
 ## Printables
 - [Printable cards](/print/)
 - [All card backs for reading](/readable/)

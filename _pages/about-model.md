@@ -31,7 +31,7 @@ We wanted to create a unique assessment process where it was the customer's own 
 
 The assessment process we developed would span five _intense_ workdays on-site at the customer, with all hands on deck. Some of the larger assessments we did had 120 participants in the first-day Value Stream Mapping workshop.
 
-We game'ified the process with huge _rich pictures_ on the wall and we developed a deck of cards - one for each tile in the matrix - which we used in different workshop formats where the participants would score the cards by four different [gauges](/gauges/) and hereby identify both _"low hanging fruits"_ as well as _"blockers"_.
+We gameified the process with huge _rich pictures_ on the wall and we developed a deck of cards - one for each tile in the matrix - which we used in different workshop formats where the participants would score the cards by four different [gauges](/gauges/) and hereby identify both _"low hanging fruits"_ as well as _"blockers"_.
 
 The model framework would build a static website, but it had a unique feature that the `.pdf` to print the card deck from was automatically generated on-the-fly, so any last-minute changes, adaptions or customizations to the model could be implemented in matter op minutes.
 
@@ -41,7 +41,7 @@ The model framework, was later extended so that event the findings we observed d
 
 We had made the model a living example and a show case of what we was preaching - continuous delivery, anything-as-code, in this case even the customized model, the card deck, the result of the assessment.
 
-## Practial - real life use
+## Practical - real life use
 
 From late 2015 and until I left Praqma in 2018 I lead the development of this framework and Continuous Delivery assessment format and in that period I conducted 20 assessment. And we even managed to standardize the format and process to a degree where my colleagues at Praqma was able to execute the same assessment four times, without my attendance.
 
@@ -65,7 +65,7 @@ But hey! Feel free to read much more into it than just that; I can reveal to you
 
 Hit the icon in the top-left corner to go to the front of the model. You will see 5 levels of expertise - _Novice, Beginner, Intermediate, Advanced and Expert_. These levels are a chosen as a reference to [The Dreyfus Brother's model for skill acquisition](https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition){: target="_blank"} which contributed to the field of _Cognitive Science_ as early as in the 80's to propose an early model for understanding intelligence.
 
-In context of Continuous Delivery we chose to focus on six different areas of knowledge. _Build, Test, Version control, DevOps, Architecture & Design_ and _Organization & Culture_. These catagories can be seen as a-sign-o-the-times - back then. You would think that some of these areas no longer impose a problem. Surely for use on modern software development products and teams these areas should be updated.
+In context of Continuous Delivery we chose to focus on six different areas of knowledge. _Build, Test, Version control, DevOps, Architecture & Design_ and _Organization & Culture_. These categories can be seen as a-sign-o-the-times - back then. You would think that some of these areas no longer impose a problem. Surely for use on modern software development products and teams these areas should be updated.
 
 Maybe, sure! - But then again; you would be surprised how slow the world is moving - in large organizations. 
 

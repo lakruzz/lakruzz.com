@@ -5,6 +5,7 @@ weight:     35
 web-report: true
 published:  false
 ---
+<!-- cspell:ignore Crusible Gtest VHDL -->
 
 ## VCS
 * SVN

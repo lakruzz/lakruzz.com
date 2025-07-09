@@ -1,6 +1,8 @@
 ---
 ---
 
+<!-- cspell:ignore Qube  -->
+
 **_Note:<br/>The following is a curated mix of illustrative findings from various anonymized reports_**
 
 ### Lack of a test strategy
@@ -95,7 +97,7 @@ Identify and quarantine your problematic tests as soon as possible.
 This will go a long way towards stabilizing the pipeline and increasing confidence in the feedback loop. 
 An option is to place them in separate suite and execute them pipeline branch as a non-blocking step.
 
-#### Analyse and fix your quarantined tests (S)
+#### Analyze and fix your quarantined tests (S)
 
 Isolate each quarantined test and execute it individually to determine the root cause of its intermittent failures. 
 This can also be helpful in determining hidden dependencies.
@@ -112,7 +114,7 @@ Your tests should be able to run in _any_ order, as a completely isolated unit.
 An execution of a test suite should not be influenced by previous runs or parallel execution of other suites. 
 The test environment and all its dependencies should be easy to reproduce by developers.
 
-#### Analyse your code and determine its testability (S)
+#### Analyze your code and determine its testability (S)
 
 The value of your tests is directly related to the code it is testing.
 Review your code for testability, as code that is difficult to test comes hand in hand with fragile suites.

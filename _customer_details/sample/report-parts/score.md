@@ -109,7 +109,7 @@ It is, most likely, also rooted in the system complexity, architecture and depen
 
 Your self assessment on *Testable code* scored an 8 in *Architecture and Design* category. Only a two in the *Throughput* 
 but a full three in the other two value gauges, while still being perceived as difficult to implement. 
-This is a bit harder to analyse without really looking into the automated tests and the code itself. 
+This is a bit harder to analyze without really looking into the automated tests and the code itself. 
 
 Looking at the three blockers that stand out. 
 We could imagine, that we see a **red thread** leading back to the system complexity, architecture and dependencies. What do you think? 

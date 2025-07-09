@@ -56,7 +56,8 @@
         "{%\\shighlight[\\s\\S]*?{%\\sendhighlight\\s%}", // ignore highlight liquid tag blocks
         "`.*`", // ignore inline code 
         "<code>.*</code>", // ignore HTML code tags
-        "<!--.*?-->" // ignore HTML comments
+        "<!--.*?-->", // ignore HTML comments
+        "<a.*?/>", // ignore HTML anchor tags
 
 
     ]

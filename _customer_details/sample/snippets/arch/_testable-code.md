@@ -17,7 +17,7 @@ This has been proving difficult due to the tight internal coupling, however.
 It's important to picture and describe the current as well as the desired architectural state.
 
 - It provides a foundation for discussion and a common understanding of where PolyScope is at and where it is heading.
-- It enables future architectural endeavours, if necessary.
+- It enables future architectural endeavors, if necessary.
 - It'll help developers to prevent architectural technical debt when implementing features or fixes.
 
 #### Breakdown and prioritize the architectural work (M)
