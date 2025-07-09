@@ -23,6 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     container:
@@ -43,16 +44,11 @@ jobs:
 #        # Automatically uploads an artifact from the './_site' directory by default
 #        uses: actions/upload-pages-artifact@v3
         
-  cspell:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install cspell
-        run: npm install -g cspell
-      - name: Check spelling
-        run: cspell "_*/**.md"
+  call_cspell_check:
+    name: Run cspell spell check
+    permissions:
+      statuses: write
+    uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
 
   markdownlint:
     runs-on: ubuntu-latest
