@@ -32,5 +32,3 @@ Over the years I've built quite a handful of utilities, tools, optimizations, wo
 Your feed back is very valuable and you are more than welcome to comment either in the Giscus enabled posts (you use your GitHub account to comment) or throw me an issue – [in the issues](../../issues/)
 
 _Lars Kruse_
-
-I need to trikker a misspell
