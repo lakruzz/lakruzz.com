@@ -45,7 +45,7 @@ jobs:
 #        uses: actions/upload-pages-artifact@v3
         
   call_cspell_check:
-    name: Run cspell spell check
+    name: Run spell check
     permissions:
       statuses: write
     uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
