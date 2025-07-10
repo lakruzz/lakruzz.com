@@ -24,7 +24,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Try to restore cached _site
+        id: cache-site
+        uses: actions/cache/restore@v4
+        with:
+          path: _site
+          key: site-build-${{ github.sha }}        
       - name: Build with Jekyll
+        if: steps.cache-site.outputs.cache-hit != 'true'
         env:
           JEKYLL_ENV: production
         run: |

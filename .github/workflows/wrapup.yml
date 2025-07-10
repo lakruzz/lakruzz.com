@@ -35,14 +35,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
-#        env:
-#          JEKYLL_ENV: production
+        env:
+          JEKYLL_ENV: production
         run: |
           bundle update
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-#      - name: Upload artifact
-#        # Automatically uploads an artifact from the './_site' directory by default
-#        uses: actions/upload-pages-artifact@v3
+      - name: Create version.txt
+        run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
+      - name: Cache _site folder
+        uses: actions/cache/save@v4
+        with:
+          path: _site
+          key: site-build-${{ github.sha }}
         
   call_cspell_check:
     name: Spell check
@@ -55,16 +59,3 @@ jobs:
     permissions:
       statuses: write
     uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main
-
-
-  ## Deployment job
-  #deploy:
-  #  environment:
-  #    name: github-pages
-  #    url: ${{ steps.deployment.outputs.page_url }}
-  #  runs-on: ubuntu-latest
-  #  needs: [cspell, markdownlint]
-  #  steps:
-  #    - name: Deploy to GitHub Pages
-  #      id: deployment
-  #      uses: actions/deploy-pages@v4
