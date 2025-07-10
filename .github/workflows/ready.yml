@@ -38,7 +38,7 @@ jobs:
           bundle update
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
       - name: Create version.txt
-        run: echo "Built from GitHub repo ${{ github.repository }}, SHA: ${{ github.sha }}" > ./_site/version.txt
+        run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -68,7 +68,11 @@ jobs:
     uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main
   
   merge:
-    needs: call_pytest_with_coverage
+    needs: 
+      - call_cspell_check
+      - call_markdown_linter_check
+      - build
+      - deploy
     runs-on: ubuntu-latest
     steps:
 
