@@ -56,7 +56,7 @@ Identify the process steps that are manual, entirely or even partially so.
 Automate step by step and integrate them into the pipeline.
 
 ## Build script is an plaster on the monolith
-
+<!-- cspell:ignore Scons -->
 The build script is created to handle the monolith by plastering each of the subsystem builds into a single step.
 The different subsystems have different build technologies (e.g. Maven and Scons), but in order to make it all work as a monolith it is wrapped with shell script.
 

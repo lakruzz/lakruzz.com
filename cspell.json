@@ -6,7 +6,6 @@
         "**/bower_components/**",
         "**/vendor/**",
         "**/dist/**",
-        "**/build/**",
         "**/.git/**",
         "**/.github/**",
         "**/.vscode/**",

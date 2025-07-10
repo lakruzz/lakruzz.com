@@ -46,4 +46,6 @@ The security review is needed for the safety reaction of the device. Changes to 
 
 It is advised to implement Crucible/FishEye(already available) as the front-end for the review. It handles the statuses of the reviews. Given the data and status is available in the Atlassian suite it is possible to auto generate the review report ready for signature.
 
+<!-- cspell:words Praqmatic -->
+
 An option is to use [PAC](https://github.com/Praqma/Praqmatic-Automated-Changelog "Praqmatic Automated Changelog"){: target="_blank"} as a foundation, it's an open source tool that can be extended to also generate the review report.
