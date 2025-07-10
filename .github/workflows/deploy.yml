@@ -1,0 +1,75 @@
+
+name: Ready
+# This workflow is triggered by 'ready' branches 
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - 'main'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ruby:3.2.3-bullseye
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+      - name: Try to restore cached _site
+        id: cache-site
+        uses: actions/cache/restore@v4
+        with:
+          path: _site
+          key: site-build-${{ github.sha }}        
+      - name: Build with Jekyll
+        if: steps.cache-site.outputs.cache-hit != 'true'
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle update
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Create version.txt
+        if: steps.cache-site.outputs.cache-hit != 'true'
+        run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
+      - name: Upload artifact
+        if: steps.cache-site.outputs.cache-hit != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Install gh dependencies
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh extension install thetechcollective/gh-set-status --pin stable 
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        if : ${{ steps.deployment.outputs.page_url != '' }}
+        run: |
+          if ${ steps.deployment.outputs.page_url != '' }; then
+            echo "Deployment successful: ${{ steps.deployment.outputs.page_url }}"
+            gh set-status success "Deployment successful: ${{ steps.deployment.outputs.page_url }}"
+            exit 0
+          else
+            echo "Deployment failed."
+            gh set-status failure "Deployment failed"
+            exit 1
+          fi
+
