@@ -1,5 +1,5 @@
 
-name: Ready
+name: Deploy
 # This workflow is triggered by 'ready' branches 
 
 on:
@@ -9,8 +9,7 @@ on:
       - 'main'
 
 permissions:
-  contents: write
-  issues: write
+  statuses: write
 
 jobs:
 

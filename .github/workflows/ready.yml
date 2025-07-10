@@ -40,11 +40,17 @@ jobs:
       - name: Create version.txt
         if: steps.cache-site.outputs.cache-hit != 'true'
         run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
-      - name: Upload artifact
+      - name: Cache _site folder
         if: steps.cache-site.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: _site
+          key: site-build-${{ github.sha }}     
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+
 
   call_cspell_check:
     name: Spell check
