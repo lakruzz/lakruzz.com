@@ -60,7 +60,12 @@ jobs:
           gh extension install thetechcollective/gh-set-status --pin stable 
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
         uses: actions/deploy-pages@v4
+      - name: Set deployment status
+        id: deployed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if : ${{ steps.deployment.outputs.page_url != '' }}
         run: |
           if ${ steps.deployment.outputs.page_url != '' }; then
