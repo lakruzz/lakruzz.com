@@ -10,11 +10,6 @@ on:
     branches: 
       - '[0-9]*'
 
-# No special permissions defined before we need them
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -23,33 +18,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
-  build:
-    runs-on: ubuntu-latest
-    container:
-      image: ruby:3.2.3-bullseye
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        env:
-          JEKYLL_ENV: production
-        run: |
-          bundle update
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-      - name: Create version.txt
-        run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
-      - name: Cache _site folder
-        uses: actions/cache/save@v4
-        with:
-          path: _site
-          key: site-build-${{ github.sha }}
         
   call_cspell_check:
-    name: Spell check
+    name: Spelling
     permissions:
       statuses: write
     uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main

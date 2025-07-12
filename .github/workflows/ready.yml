@@ -7,50 +7,17 @@ on:
   push:
     branches: 
       - 'ready/*'
-
-permissions:
-  contents: write
-  issues: write
-
+      
 jobs:
 
-  build:
-    runs-on: ubuntu-latest
-    container:
-      image: ruby:3.2.3-bullseye
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-      - name: Try to restore cached _site
-        id: cache-site
-        uses: actions/cache/restore@v4
-        with:
-          path: _site
-          key: site-build-${{ github.sha }}        
-      - name: Build with Jekyll
-        if: steps.cache-site.outputs.cache-hit != 'true'
-        env:
-          JEKYLL_ENV: production
-        run: |
-          bundle update
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-      - name: Create version.txt
-        if: steps.cache-site.outputs.cache-hit != 'true'
-        run: echo "Built from GitHub repo ${{ github.repository }}, SHA ${{ github.sha }}" > ./_site/version.txt
-      - name: Cache _site folder
-        if: steps.cache-site.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: _site
-          key: site-build-${{ github.sha }}     
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-
+  call_jekyll_build: 
+    name: Build
+    permissions:
+      statuses: write
+      actions: write
+    secrets:
+      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+    uses: thetechcollective/workflows/.github/workflows/jekyll_build.yml@main
 
   call_cspell_check:
     name: Spell check
@@ -68,8 +35,10 @@ jobs:
     needs: 
       - call_cspell_check
       - call_markdown_linter_check
-      - build
+      - call_jekyll_build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
 
     - uses: actions/checkout@v4
@@ -98,6 +67,8 @@ jobs:
   close_issue:
     needs: merge
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
 
     - uses: actions/checkout@v4
@@ -128,3 +99,14 @@ jobs:
         ISSUE_BRANCH=$(echo "${{ github.ref_name }}" | sed 's/ready\///')
         git push origin ":${ISSUE_BRANCH}"
         echo "Deleted branch '${ISSUE_BRANCH}' from remote"  >> $GITHUB_STEP_SUMMARY
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: merge
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

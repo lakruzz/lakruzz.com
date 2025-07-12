@@ -1,0 +1,80 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Wrap up
+# This workflow is triggered on push to branches that begins with a number (issue-branches)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - '[0-9]*'
+
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+
+  restore:
+    name: Restore artifact
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+      id-token: write
+    outputs:
+      artifact-found: ${{ steps.restore-step.outputs.artifact-found }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+         
+      - name: Restore if artifact exists
+        id: restore-step
+        env:
+           GH_TOKEN: ${{ secrets.READY_PUSHER }}
+        run: |
+          set -x
+          set +e
+          gh auth status
+          gh run download -R ${{ github.repository }} -D _site -n jekyll-site-${{ github.sha }}
+          # gh run download -R ${{ github.repository }} -D _site -n jekyll-site-ba13d590ceb78e7e4572f58e1b715fd201f6ac94
+          result=$?
+          set -e
+          if [ $result -eq 0 ]; then
+            echo "artifact-found=true" >> $GITHUB_OUTPUT
+            echo "Restored existing artifact for SHA ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "artifact-found=false" >> $GITHUB_OUTPUT
+            echo "No existing artifact found for SHA ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          fi
+          exit 0
+
+  call_jekyll_build:
+    if: needs.restore.outputs.artifact-found != 'true'
+    needs: restore
+    name: Build
+    permissions:
+      statuses: write
+      actions: write
+      contents: read
+    secrets:
+      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+    uses: thetechcollective/workflows/.github/workflows/jekyll_build.yml@main
+        
+  call_cspell_check:
+    name: Spelling
+    permissions:
+      statuses: write
+    uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
+
+  call_markdown_linter_check:
+    name: Linting
+    permissions:
+      statuses: write
+    uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main

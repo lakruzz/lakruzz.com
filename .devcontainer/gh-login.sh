@@ -40,9 +40,9 @@ postcreate(){
       echo "$PREFIX ...using token from host"
       cat $(dirname $0)/_temp.token | base64 --decode | gh auth login --with-token
       echo "$PREFIX ...cleaning up after the initialize step"
-      rm -f $(dirname $0)/_temp.token       
       echo "$PREFIX Logged in to GitHub CLI - account status:"
       gh auth status
+      rm -f $(dirname $0)/_temp.token       
   else
       gh auth login -w -p https -h github.com
   fi
