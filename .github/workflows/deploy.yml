@@ -47,19 +47,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4    
 
-        # Always upload for Pages deployment (required by actions/deploy-pages)
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-          name: ${{ github.repository}}-${{ github.sha }}
-
+        # the build job uploads the pages artifact 
       - name: Deploy to GitHub Pages
         id: deployment
         continue-on-error: true
         uses: actions/deploy-pages@v4
         with:
-          artifact-name: ${{ github.repository}}-${{ github.sha }}
+          artifact-name: github-pages-${{ github.repository_id }}-${{ github.sha }}
         
       - name: Set deployment status
         id: deployed
