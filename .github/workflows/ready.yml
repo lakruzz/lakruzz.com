@@ -69,6 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      contents: write
     steps:
 
     - uses: actions/checkout@v4
@@ -89,9 +90,7 @@ jobs:
         # get the number from the branch name after 'ready/'
         ISSUE_NUMBER=$(echo "${{ github.ref_name }}" | grep -oP '(?<=ready/)\d+')
 
-        gh issue close "$ISSUE_NUMBER" --repo "${{ github.repository }}" --comment "Merged into main branch with commit ${{ github.sha }}"
-
-        echo "Closed issue [${ISSUE_NUMBER}](https://github.com/${{ github.repository }}/issues/${ISSUE_NUMBER})"  >> $GITHUB_STEP_SUMMARY
+        gh issue close "$ISSUE_NUMBER" --repo "${{ github.repository }}" --comment "Merged into main branch with commit ${{ github.sha }}"  >> $GITHUB_STEP_SUMMARY
 
         git push origin ":${{ github.ref_name }}"
         echo "Deleted branch '${{ github.ref_name }}' from remote"  >> $GITHUB_STEP_SUMMARY
