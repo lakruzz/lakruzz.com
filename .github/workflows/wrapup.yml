@@ -1,32 +1,30 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
 name: Wrapup
 # This workflow is triggered on push to branches that begins with a number (issue-branches)
-
+# It's designed to support the wrapup process in thetechcollective/gh-tt GitHub CLI extension
 on:
   workflow_dispatch:
   push:
     branches: 
       - '[0-9]*'
 
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
         
-  call_cspell_check:
+  cspell_check:
     name: Spelling
     permissions:
       statuses: write
-    uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
+    uses: lakruzz/workflows/.github/workflows/cspell_check.yml@experimental
+    with:
+      config_file: cspell.json 
 
-  call_markdown_linter_check:
+  markdown_linter:
     name: Linting
     permissions:
       statuses: write
-    uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main
+    uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
+    with:
+      config_file: .markdownlint.json

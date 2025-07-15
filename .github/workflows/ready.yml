@@ -10,92 +10,56 @@ on:
       
 jobs:
 
-  call_jekyll_build: 
+  jekyll_build: 
     name: Build
     permissions:
       statuses: write
-      actions: write
     secrets:
       READY_PUSHER: ${{ secrets.READY_PUSHER }}
-    uses: thetechcollective/workflows/.github/workflows/jekyll_build.yml@main
+    uses: lakruzz/workflows/.github/workflows/jekyll_build.yml@experimental
 
-  call_cspell_check:
-    name: Spell check
+  cspell_check:
+    name: Spelling
     permissions:
       statuses: write
-    uses: thetechcollective/workflows/.github/workflows/cspell_check.yml@main
+    uses: lakruzz/workflows/.github/workflows/cspell_check.yml@experimental
+    with:
+      config_file: cspell.json # default is cspell.json
 
-  call_markdown_linter_check:
+  markdown_linter:
     name: Linting
     permissions:
       statuses: write
-    uses: thetechcollective/workflows/.github/workflows/markdown_linter.yml@main
+    uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
+    with:
+      config_file: .markdownlint.json # default is .markdownlint.json
   
-  merge:
-    needs: 
-      - call_cspell_check
-      - call_markdown_linter_check
-      - call_jekyll_build
-    runs-on: ubuntu-latest
+  fast-forward-merge:
+    name: Merge
+    needs:
+      - cspell_check
+      - markdown_linter
+      - jekyll_build
     permissions:
       contents: write
-    steps:
+    secrets:
+      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+    uses: lakruzz/workflows/.github/workflows/fast_forward.yml@experimental
+    with:
+      target_branch: main #default is main
+      user_name: "Ready Pusher" #required 
+      user_email: "ready-pusher@lakruzz.com" # required
 
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        ref: main
-        token: ${{ secrets.READY_PUSHER }}
-        # This token is used to commit the changes back to the main branch
 
-    - name: Set up git config
-      run: |
-        git config --global user.name "GitHub Action: ready"
-        git config --global user.email "ready-pusher@lakruzz.com"
-
-    - name: Fast-Forward merge back to main
-      env:
-        GITHUB_TOKEN: ${{ secrets.READY_PUSHER }}
-
-        # checkout the main branch, fast-forward merge the changes from the ready branch and push the changes to origin
-      run: |
-        git checkout main
-        git merge --ff-only ${{ github.sha }}
-        git push origin main
-        echo "Successfully fast-forward merged '${{ github.sha }}' into main"  >> $GITHUB_STEP_SUMMARY
 
   close_issue:
-    needs: merge
-    runs-on: ubuntu-latest
+    needs: fast-forward-merge
     permissions:
       issues: write
       contents: write
-    steps:
-
-    - uses: actions/checkout@v4
-
-    - name: Set up git config
-      run: |
-        git config --global user.name "GitHub Action: ready"
-        git config --global user.email "ready-pusher@lakruzz.com"
-
-    - name: Close the issue
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-        # checkout the main branch, fast-forward merge the changes from the ready branch and push the changes to origin
-      run: |
-        # Read the github.ref_name to get the branch name
-        # The branch name is in the format 'ready/123.*'
-        # get the number from the branch name after 'ready/'
-        ISSUE_NUMBER=$(echo "${{ github.ref_name }}" | grep -oP '(?<=ready/)\d+')
-
-        gh issue close "$ISSUE_NUMBER" --repo "${{ github.repository }}" --comment "Merged into main branch with commit ${{ github.sha }}"  >> $GITHUB_STEP_SUMMARY
-
-        git push origin ":${{ github.ref_name }}"
-        echo "Deleted branch '${{ github.ref_name }}' from remote"  >> $GITHUB_STEP_SUMMARY
-
-        ISSUE_BRANCH=$(echo "${{ github.ref_name }}" | sed 's/ready\///')
-        git push origin ":${ISSUE_BRANCH}"
-        echo "Deleted branch '${ISSUE_BRANCH}' from remote"  >> $GITHUB_STEP_SUMMARY
-
+    uses: lakruzz/workflows/.github/workflows/close_issue.yml@experimental
+    with:
+      user_name: "Ready Pusher"
+      user_email: "ready-pusher@lakruzz.com"
+      delete_issue_branch: true # default is true
+      delete_ready_branch: true # default is true
