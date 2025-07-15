@@ -24,11 +24,9 @@ if [ -e $(dirname $0)/_temp.token ]; then
 fi
 
 echo "$PREFIX Installing the Ruby gems"
-bundle update
+bundle config set frozen true
 bundle install
 
-echo "$PREFIX Installing the cspell and markdownlint CLIs"
-npm install cspell markdownlint-cli2 --global
 
 echo "$PREFIX SUCCESS"
 exit 0

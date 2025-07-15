@@ -8,7 +8,15 @@
 		"ghcr.io/devcontainers/features/common-utils:2": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/hspaans/devcontainer-features/pytest:1": {}
+		"ghcr.io/devcontainers-extra/features/npm-packages:1": {
+			"packages": ["cspell", "markdownlint-cli2"]
+		},	
+		"ghcr.io/devcontainers/features/ruby:1": {
+			"version": "3.2"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": "imagemagick,libmagickwand-dev"
+		}
 	},
 	"customizations": {
 		"vscode": {
@@ -22,6 +30,8 @@
 
 	"initializeCommand": "./.devcontainer/initializeCommand.sh",
 	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"postStartCommand": "rm -f ./.devcontainer/_temp.token",
+	
 
 	// Mount the workspace folder one level higher than the git repo
 	"workspaceMount": "source=${localWorkspaceFolder}/../,target=/workspaces,type=bind",
