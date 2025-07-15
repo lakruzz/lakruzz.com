@@ -7,6 +7,8 @@ author: Lars Kruse
 author_profile: false
 header:
   teaser: /assets/images/pics/ws-0025.jpg
+sidebar:
+  nav: "codememo"
 
 valuestream:
   - url: &img3 /assets/images/pics/ws-0003.jpg

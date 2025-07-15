@@ -1,6 +1,9 @@
 ---
 title: About the Continuous Delivery Maturity Model
+permalink: /codememo/about-model/
 last_modified_at: 2024-03-18
+sidebar:
+  nav: "codememo"
 ---
 This model originates from the time when I founded and operated Praqma. A company specialized in Continuous Delivery implementation of software development processes. Praqma is now gone. The company was swallowed in an merger and acquisition process in 2019 and the model didn't survive. It was stored away in a GitHub repository and never used again.
 {: .kicker}

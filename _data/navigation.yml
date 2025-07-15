@@ -1,20 +1,33 @@
+# cspell:ignore Codememo
 # main links
 main:
 
   # - title: "Table of Contents"
   #   url: /toc/
-  - title: "Score"
-    url: /score/
-  - title: "Gauges"
-    url: /gauges/
+  - title: "Model"
+    url: /codememo/
   - title: "Stories"
     url: /stories/
-  - title: "About"
-    url: /about-model/
+
   - title: "💬"
     url: /contact/
   - title: "🍪"
     url: /terms/
+
+# Codememo links
+codememo:
+  - title: Model Content
+    children:
+      - title: "Matrix"
+        url: /codememo/
+      - title: "Gauges"
+        url: /codememo/gauges/
+      - title: "About the model"
+        url: /codememo/about-model/
+      - title: "The Full Assessment"
+        url: /stories/the-full-assessment/
+      - title: "Print Cards"
+        url: /codememo/print/
 
 # documentation links
 docs:

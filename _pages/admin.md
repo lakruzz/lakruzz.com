@@ -1,5 +1,6 @@
 ---
 title: Admin
+permalink: /codememo/admin/
 ---
 <!-- cspell:words Printables -->
 ## Printables

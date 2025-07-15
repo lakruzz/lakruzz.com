@@ -3,5 +3,8 @@
         "source.fixAll.markdownlint": "always",
         "source.fixAll.cspell": "explicit",
         "source.fixAll.prettier": "explicit"
-    }
+    },
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false
 }

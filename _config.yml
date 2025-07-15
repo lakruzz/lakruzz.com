@@ -271,16 +271,16 @@ compress_html:
 collections:
   areas:
     output: true
-    permalink: /areas/:title/
+    permalink: /codememo/areas/:title/
   levels:
     output: true
-    permalink: /levels/:title/
+    permalink: /codememo/levels/:title/
   cards:
     output: true
-    permalink: /:title/
+    permalink: /codememo/:title/
   gauges:
     output: true
-    permalink: /gauges/:title/
+    permalink: /codememo/gauges/:title/
   pages:
     output: true
     permalink: /:title/
