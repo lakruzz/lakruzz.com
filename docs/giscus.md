@@ -50,6 +50,10 @@ comments:
 
 note that the `<script>` keys uses dashes while the `_config.yml` keys uses underscores.
 
+## The include needed fixing
+
+In relation to [#66](https://github.com/lakruzz/codememo/issues/66) the `giscus.html` include as completely off.
+
 ## Test during development
 
 Comments are disabled by default in `development` environment.

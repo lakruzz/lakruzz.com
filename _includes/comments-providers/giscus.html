@@ -10,15 +10,19 @@
 
     var script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
-    script.setAttribute('data-repo', '{{ site.repository | downcase }}');
-    script.setAttribute('data-repo-id', '{{ site.comments.giscus.repo_id }}');
-    script.setAttribute('data-category', '{{ site.comments.giscus.category_name }}');
-    script.setAttribute('data-category-id', '{{ site.comments.giscus.category_id }}');
-    script.setAttribute('data-mapping', '{{ site.comments.giscus.discussion_term | default: "pathname" }}');
-    script.setAttribute('data-reactions-enabled', '{{ site.comments.giscus.reactions_enabled | default: 1 }}');
-    script.setAttribute('data-theme', '{{ site.comments.giscus.theme | default: "light" }}');
+    script.setAttribute('data-repo',              '{{ site.comments.giscus.repo              | downcase }}');
+    script.setAttribute('data-repo-id',           '{{ site.comments.giscus.repo_id            }}');
+    script.setAttribute('data-category',          '{{ site.comments.giscus.category           }}');
+    script.setAttribute('data-category-id',       '{{ site.comments.giscus.category_id        }}');
+    script.setAttribute('data-mapping',           '{{ site.comments.giscus.mapping           | default: "pathname" }}');
+    script.setAttribute('data-reactions-enabled', '{{ site.comments.giscus.reactions_enabled | default: "1" }}');
+    script.setAttribute('data-theme',             '{{ site.comments.giscus.theme             | default: "light" }}');
+    script.setAttribute('data-emit-metadata',     '{{ site.comments.giscus.emit_metadata     | default: "0" }}');
+    script.setAttribute('data-input-position',    '{{ site.comments.giscus.input_position    | default: "top" }}');
+    script.setAttribute('data-lang',              '{{ site.comments.giscus.lang              | default: "en" }}');
+    script.setAttribute('data-loading',           '{{ site.comments.giscus.loading           | default: "lazy" }}');
     script.setAttribute('crossorigin', 'anonymous');
-
+    script.async = true;
     commentContainer.appendChild(script);
   })();
 </script>

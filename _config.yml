@@ -42,7 +42,7 @@ comments:
   giscus:
     repo                  : "lakruzz/giscussions"
     repo_id               : "R_kgDOPNVyKw"
-    category              : "Lakruzz.com"
+    category              : "lakruzz.com"
     category_id           : "DIC_kwDOPNVyK84CtA9_"
     mapping               : "pathname"
     strict                : "0"
@@ -52,7 +52,6 @@ comments:
     theme                 : "catppuccin_latte"
     lang                  : "en"
     loading               : "lazy"
-
 
 atom_feed:
   path                   : # blank (default) uses feed.xml
