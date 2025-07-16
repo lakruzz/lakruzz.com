@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Pre-commit hook to run static checks
+# This runs cspell and markdownlint before allowing a commit
+
+echo "🔍 Running pre-commit checks..."
+
+# Run the static checks - same as in the GitHub workflow
+if cspell --no-progress && markdownlint-cli2 "**/*.md" "#node_modules"; then
+    echo "✅ It's a wrap - all checks passed!"
+    exit 0
+else
+    echo "❌ Auch - not good"
+    echo ""
+    echo "💡 Fix the issues above before committing."
+    echo "   You can run the same checks manually with:"
+    echo "   cspell --no-progress && markdownlint-cli2 \"**/*.md\""
+    exit 1
+fi
