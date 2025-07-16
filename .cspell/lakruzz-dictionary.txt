@@ -26,6 +26,7 @@ gemba
 Genbutsu
 Genchi
 Giscus
+giscussions
 Grundfos
 hackaton
 Hamel
@@ -60,6 +61,7 @@ ohhh
 Østerport
 Oticon
 outro
+Overburdenness
 PDCA
 Poka
 postcreate
@@ -80,7 +82,6 @@ Terma
 thetechcollective
 toplevel
 Tuborg
-Overburdenness
 Wenger
 worklog
 yadda

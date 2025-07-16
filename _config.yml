@@ -37,21 +37,23 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # "giscus" # false (default)
-
+  provider               : giscus # "giscus" # false (default)
+  ## https://giscus.app/ 
   giscus:
-    repo                  : 
-    repo_id               : 
-    category              : 
-    category_id           : 
-    mapping               : 
-    strict                : 
-    reactions_enabled     : 
-    emit_metadata         : 
-    input_position        : 
-    theme                 : 
-    lang                  : 
-    loading               : 
+    repo                  : "lakruzz/giscussions"
+    repo_id               : "R_kgDOPNVyKw"
+    category              : "Lakruzz.com"
+    category_id           : "DIC_kwDOPNVyK84CtA9_"
+    mapping               : "pathname"
+    strict                : "0"
+    reactions_enabled     : "1"
+    emit_metadata         : "0"
+    input_position        : "top"
+    theme                 : "catppuccin_latte"
+    lang                  : "en"
+    loading               : "lazy"
+
+
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
@@ -170,6 +172,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - cspell.json
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
@@ -352,7 +355,7 @@ defaults:
       layout: single
       author_profile: false
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
 
