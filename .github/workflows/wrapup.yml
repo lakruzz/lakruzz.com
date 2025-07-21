@@ -3,6 +3,15 @@ name: Wrapup
 # It's designed to support the wrapup process in thetechcollective/gh-tt GitHub CLI extension
 on:
   workflow_dispatch:
+    inputs:
+      build_environment:
+        description: 'Build environment for Jekyll'
+        required: false
+        default: 'ruby-debian'
+        type: choice
+        options:
+          - 'ruby-bookworm'
+          - 'ubuntu-latest'
   push:
     branches: 
       - '[0-9]*'
@@ -28,3 +37,24 @@ jobs:
     uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
     with:
       config_file: .markdownlint.json
+
+  # jekyll_build_ruby: 
+  #   name: Build
+  #   permissions:
+  #     statuses: write
+  #   secrets:
+  #     READY_PUSHER: ${{ secrets.READY_PUSHER }}
+  #   uses: lakruzz/workflows/.github/workflows/jekyll_build.yml@experimental
+  #   with:
+  #     build_environment: ${{ inputs.build_environment || 'ruby-bookworm' }}
+
+  jekyll_build_docker: 
+    name: Build from docker
+    permissions:
+      statuses: write
+      packages: write
+    secrets:
+      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+    uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental
+    with:
+      dockerfile: dockerfile
