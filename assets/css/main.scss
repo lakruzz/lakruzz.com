@@ -6,5 +6,5 @@ search: false
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "model"; // main partials
+@import "model"; // model partials
 @import "minimal-mistakes"; // main partials
