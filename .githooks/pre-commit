@@ -1,19 +1,125 @@
 #!/bin/bash
 
 # Pre-commit hook to run static checks
-# This runs cspell and markdownlint before allowing a commit
+# Mimic that tests run in the wrapup.yml flow in the GitHub workflow
+
+PASS=TRUE
+
+
+# Enable/disable specific checks
+RUN_RUFF="FALSE"
+RUN_PYTEST="FALSE"
+RUN_VITEST="FALSE"
+RUN_CSPELL="TRUE"
+RUN_MARKDOWNLINT="TRUE"
+
 
 echo "🔍 Running pre-commit checks..."
 
-# Run the static checks - same as in the GitHub workflow
-if cspell --no-progress && markdownlint-cli2 "**/*.md" "#node_modules"; then
-    echo "✅ It's a wrap - all checks passed!"
+
+
+
+# Ruff check
+if [ "$RUN_RUFF" == "TRUE" ]; then
+    printf "   ⏳ Pytest with coverage\r"
+    RUFF_OUT=$(ruff check --output-format=concise . 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ Ruff check"
+    else
+        echo "   ❌ Ruff check"
+        PASS=FALSE
+        RUFF=FALSE
+    fi
+fi
+
+# Pytest with coverage
+if [ "$RUN_PYTEST" == "TRUE" ]; then
+    printf "   ⏳ Pytest with coverage\r"
+    # Capture only STDERR (errors and summary), discard STDOUT (individual test progress)
+    PYTEST_OUT=$(pytest --cov=. --cov-report= -m unittest --tb=no -q 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ Pytest with coverage"
+    else
+        echo "   ❌ Pytest with coverage"
+        PASS=FALSE
+        PYTEST=FALSE
+    fi
+fi
+
+# Cspell
+if [ "$RUN_CSPELL" == "TRUE" ]; then
+    printf "   ⏳ CSpell check\r"
+    CSPELL_OUT=$( cspell lint --no-progress 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ CSpell check"
+    else
+        echo "   ❌ CSpell check"
+        PASS=FALSE
+        CSPELL=FALSE
+    fi
+fi
+
+#Markdownlint
+if [ "$RUN_MARKDOWNLINT" == "TRUE" ]; then
+    printf "   ⏳ MarkDown Lint check\r"
+    MARKDOWNLINT_OUT=$( markdownlint-cli2 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ MarkDown Lint check"
+    else
+        echo "   ❌ MarkDown Lint check"
+        PASS=FALSE
+        MARKDOWNLINT=FALSE
+    fi
+fi
+
+if [ "$RUN_VITEST" == "TRUE" ]; then
+    printf "   ⏳ Vitest check\r"
+    VITEST_OUT=$( npx vitest run --cache 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ Vitest check"
+    else
+        echo "   ❌ Vitest check"
+        PASS=FALSE
+        VITEST=FALSE
+    fi
+fi
+
+
+if [ "$PASS" == "TRUE" ]; then
     exit 0
 else
-    echo "❌ Auch - not good"
     echo ""
-    echo "💡 Fix the issues above before committing."
-    echo "   You can run the same checks manually with:"
-    echo "   cspell --no-progress && markdownlint-cli2 \"**/*.md\""
+    if [ "$RUFF" == "FALSE" ]; then
+        echo "Ruff issues:"
+        echo "${RUFF_OUT}"
+        echo ""
+    fi
+    if [ "$PYTEST" == "FALSE" ]; then
+        echo "Pytest issues:"
+        echo "${PYTEST_OUT}"
+        echo ""
+    fi
+    if [ "$CSPELL" == "FALSE" ]; then
+        echo "CSpell issues:"
+        echo "${CSPELL_OUT}"
+        echo ""
+    fi
+    if [ "$MARKDOWNLINT" == "FALSE" ]; then
+        echo "MarkDown lint issues:"
+        echo "${MARKDOWNLINT_OUT}"
+        echo ""
+    fi
+    if [ "$VITEST_OUT" == "FALSE" ]; then
+        echo "Vitest issues:"
+        echo "${VITEST_OUT}"
+        echo ""
+    fi
+    echo "👉  Fix the issues above before committing."
+    echo "💡  You can run the same checks manually with: '.githooks/pre-commit'"
     exit 1
 fi

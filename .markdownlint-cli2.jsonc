@@ -1,0 +1,16 @@
+{
+  // Configuration for markdownlint-cli2
+  "globs": [
+    "**/*.md",
+    "!node_modules/**",
+    "!temp/**"
+  ],
+  "config": {
+    "MD033": false,
+    "MD004": { "style": "dash" },
+    "MD013": false,
+    "MD036": false,
+    "MD041": { "allow_preamble": true, "level": 1 },
+    "MD042": false
+  }
+}

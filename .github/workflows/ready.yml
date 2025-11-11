@@ -10,8 +10,27 @@ on:
       
 jobs:
 
+  inherit-statuses:
+    name: Inherit statuses
+    permissions:
+      statuses: write
+      contents: read
+    uses: lakruzz/workflows/.github/workflows/inherit_statuses.yml@experimental  
+
+  mark-pending:
+    name: Statuses
+    needs: inherit-statuses
+    permissions:
+      statuses: write
+      contents: read
+    uses: lakruzz/workflows/.github/workflows/mark_pending.yml@experimental
+    with:
+      statuses: |
+        jekyll-build
+
   jekyll_build: 
     name: Build
+    needs: inherit-statuses
     permissions:
       statuses: write
       packages: write
@@ -21,27 +40,10 @@ jobs:
     with:
       dockerfile: dockerfile
 
-  cspell_check:
-    name: Spelling
-    permissions:
-      statuses: write
-    uses: lakruzz/workflows/.github/workflows/cspell_check.yml@experimental
-    with:
-      config_file: cspell.json # default is cspell.json
-
-  markdown_linter:
-    name: Linting
-    permissions:
-      statuses: write
-    uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
-    with:
-      config_file: .markdownlint.json # default is .markdownlint.json
   
   fast-forward-merge:
     name: Merge
     needs:
-      - cspell_check
-      - markdown_linter
       - jekyll_build
     permissions:
       contents: write
@@ -52,8 +54,6 @@ jobs:
       target_branch: main #default is main
       user_name: "Ready Pusher" #required 
       user_email: "ready-pusher@lakruzz.com" # required
-
-
 
   close_issue:
     needs: fast-forward-merge

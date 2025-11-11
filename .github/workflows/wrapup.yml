@@ -22,21 +22,37 @@ concurrency:
 
 jobs:
         
+  mark-pending:
+    name: Statuses
+    permissions:
+      statuses: write
+      contents: read
+    uses: lakruzz/workflows/.github/workflows/mark_pending.yml@experimental
+    with:
+      statuses: |
+        Spell check
+        Markdown Linting
+        jekyll-build
+
   cspell_check:
     name: Spelling
     permissions:
       statuses: write
+      contents: read
     uses: lakruzz/workflows/.github/workflows/cspell_check.yml@experimental
     with:
+      context: Spell check
       config_file: cspell.json 
 
   markdown_linter:
     name: Linting
     permissions:
       statuses: write
+      contents: read
     uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
     with:
-      config_file: .markdownlint.json
+      context: Markdown Linting
+      config_file: .markdownlint-cli2.jsonc
 
   # jekyll_build_ruby: 
   #   name: Build
@@ -48,11 +64,13 @@ jobs:
   #   with:
   #     build_environment: ${{ inputs.build_environment || 'ruby-bookworm' }}
 
-  jekyll_build_docker: 
+  jekyll_build_docker:
+    # context: jekyll-build (hard coded in the called workflow) 
     name: Build from docker
     permissions:
       statuses: write
       packages: write
+      contents: read
     secrets:
       READY_PUSHER: ${{ secrets.READY_PUSHER }}
     uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental

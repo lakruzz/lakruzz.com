@@ -4,14 +4,14 @@ author: Lars Kruse
 author_profile: true
 search: true
 header:
-  teaser: /assets/images/posts/octocat_alias.png
+  teaser: /assets/images/posts/github-enfant-terrible.png 
 tags:
   - git
   - github
-excerpt: Considering the fact that Git is a superior version control system and GitHub is a platform that uses Git intensely. It's a bit of a mystery how poorly GitHub managed to implement Pull Requests.
+excerpt: Considering the fact that Git itself is a superior version control system and GitHub is a platform that uses Git intensely. It's a bit of a mystery how poorly GitHub managed to implement Pull Requests.
 ---
 
-Considering the fact that Git is a superior version control system and GitHub is a platform that uses Git intensely. It's a bit of a mystery how poorly GitHub managed to implement Pull Requests (PRs)
+Considering the fact that Git itself is a superior version control system and GitHub is a platform that uses Git intensely. It's a bit of a mystery how poorly GitHub managed to implement Pull Requests (PRs)
 {: .kicker}
 
 <!-- cspell:ignore Gitea  Gerrit  -->
