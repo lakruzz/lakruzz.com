@@ -2,5 +2,17 @@
     "project": {
         "owner": "lakruzz",
         "number": 13
-    }
+    },
+    "wrapup": {
+      "policies": {
+        "poll": true
+      }
+    },
+    "deliver": {
+      "policies": {
+        "poll": true
+      }
+    }    
 }
+
+

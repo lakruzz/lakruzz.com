@@ -34,6 +34,7 @@ jobs:
     permissions:
       statuses: write
       packages: write
+      contents: read
     secrets:
       READY_PUSHER: ${{ secrets.READY_PUSHER }}
     uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental
