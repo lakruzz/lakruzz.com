@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Git aliases
 author: Lars Kruse
 author_profile: true

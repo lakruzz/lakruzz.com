@@ -11,12 +11,18 @@
 	"initializeCommand": "./.devcontainer/initializeCommand.sh",
 	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
 	"postStartCommand": "rm -f ./.devcontainer/_temp.token",
-    "customizations": {
+	"mounts": [
+		"source=${localEnv:HOME},target=/localhome,type=bind,consistency=cached"
+	],
+	"customizations": {
         "vscode": {
             "extensions": [
 				"DavidAnson.vscode-markdownlint",
 				"streetsidesoftware.code-spell-checker",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"github.vscode-github-actions",
+				"tamasfe.even-better-toml"
+
 			]
         }
     },

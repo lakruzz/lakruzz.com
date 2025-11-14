@@ -106,7 +106,7 @@ Dev containers have several lifecycle hooks that run at different stages of the 
 ## 🚀 Quick Reference Table
 
 | Event | Location | Frequency | Best For |
-|-------|----------|-----------|----------|
+| ----- | -------- | --------- | -------- |
 | `initializeCommand` | Host | Every open/rebuild | Host setup, token generation |
 | `postCreateCommand` | Container | Once (creation) | Dependency installation, DB setup |
 | `postStartCommand` | Container | Every start | Service startup, cleanup |
