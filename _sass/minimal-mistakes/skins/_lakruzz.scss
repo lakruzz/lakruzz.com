@@ -130,11 +130,17 @@ $info-color: $ttc-purple !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
 
-.author__urls.social-icons i,
-.author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
+.page__footer-follow .social-icons,
+.page__footer-copyright,
 .page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+  color: $ttc-mustard;
+}
+
+.footnotes{
+   color: $lakruzz-dark-grey;
+   font-family: $sans-serif;
+   font-size: $type-size-7;
 }
 
 .ais-search-box .ais-search-box--input {

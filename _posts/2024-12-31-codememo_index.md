@@ -12,6 +12,7 @@ header:
 sidebar:
   nav: "codememo"
 last_modified_at: 2024-01-01
+excerpt: The Continuous Delivery Metric Model. A conversation tool, you can use to identify low-hanging fuits and serious blockers.
 ---
 
 {% include matrix_score.html %}
