@@ -1,0 +1,9 @@
+{
+  // Configuration for markdownlint-cli2
+  "globs": [
+    "**/*.md",
+    "!node_modules/**",
+    "!**/temp/**"
+  ],
+  "extends": ".markdownlint.jsonc"
+}

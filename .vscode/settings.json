@@ -6,5 +6,7 @@
     },
     "css.validate": false,
     "scss.validate": false,
-    "less.validate": false
+    "less.validate": false,
+    "files.autoSave": "afterDelay",
+    "markdownlint.configFile": ".markdownlint-cli2.jsonc"
 }

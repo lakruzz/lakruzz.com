@@ -1,9 +1,9 @@
+// Configuration for markdownlint-cli2
 {
-  // Configuration for markdownlint-cli2
   "globs": [
     "**/*.md",
     "!node_modules/**",
-    "!temp/**"
+    "!**/temp/**"
   ],
   "config": {
     "MD033": false,
@@ -13,6 +13,5 @@
     "MD041": { "allow_preamble": true, "level": 1 },
     "MD042": false,
     "MD026": { "punctuation": ".," }
-
   }
 }

@@ -43,27 +43,11 @@ usage: gh tt deliver
 
 When an issue branch is `delivered` the issue is automatically closed. there is a git alias defined `git sweep` which will prune and delete all local branches that are deliverd and reset to `main`.
 
-## Annotate summaries to issues
-
-When annotating summaries using to issues using github flavoured MarkDown (`gh issue comment`), please consider the following:
-
-Unescaped backticks meant to mark code blocks and inline code, are likely to be mistaken as command substitutions. So for that reason don't use `--body` flag to commands like `gh issue create` and  `gh issue comment`. Instead generate the markdown in intermediate `*.md` files in the `./temp` folder and use the `--body-file` flag instead.
-
-Name the file the same as the branch we're working on, with a `.md` extension, and store it in the `./temp` folder. Open it in the editor for my review and annotations before posting it to the issue.
-
-When in @github agent mode and I ask to _annotate a comment on the current changeset to the issue_ you can always read the implied issue number from the current git branch - development branches are prefixed with an integer, and that is a reference to the issue being worked on. The branch name is part of the zsh prompt in the @terminal, and can be directly accessed.
-
-Do not summarize based on our conversation or individual commits on the issue branch. Instead summarise on the accumulated changes - the actual changeset - since we left `main` (equivalent to `git diff main...HEAD`).
-
-Make it a high-level overview of what was done (describe the changes), why it was done (the rationale behind our decisions), and any relevant context (maybe external links of general architectural or design decisions). The summary should have the header `##Change log summary` and even if I asked you to create such a summary earlier on this branch, you should still create the full summary again (don't just summarize the increment since last).
-
-The purpose of the summary is to help my future self and current team mates to recall and understand the purpose of - and rationale behind - the changes without needing to read through all the code or commit messages.
-
 ## Code style and design principles
 
 ## CLI output and print statements
 
-In general avoid adding print statements. We're developing a CLI for developers and we usually do not like verbose informative statements. If nothing happened, then nothing should be printed. I'll let you know explicitly when print statements are needed.
+In general avoid adding print statements. When a CLI tool we usually do not like verbose informative statements. If nothing happened, then nothing should be printed. I'll let you know explicitly when print statements are needed.
 
 ## DRY - Don't Repeat Yourself
 
@@ -75,7 +59,7 @@ When working on an issue,  keep the changeset small and focused on the issue at 
 
 ## Suggest new issues
 
-Feel free to point out code smells and suggest improvements, but do not implement them unless they are directly related to the issue. If they are severe and important enough, then offer to create a new issue for them. Follow the same approas as when you annotate summaries to issues comments (create a `*.md` file in the `temp` folder. create the issue using the `--body-file` flag).
+Feel free to point out code smells and suggest improvements, but do not implement them unless they are directly related to the issue. If they are severe and important enough, then offer to create a new issue for them. Follow the same approach as when you annotate summaries (see ./summary.instructions.md) to issues comments (create a `*.md` file in the `temp` folder. create the issue using the `--body-file` flag).
 
 ## Favor testable code
 
@@ -83,4 +67,4 @@ When writing code, favor testable code. This means that you should write code th
 
 ## Offer to write tests
 
-If you find that the code you're working on is not well tested, then offer to write tests for it. But to not write the tests unless I explicitly ask you to do so.
+If you find that the code you're working on is not well tested, then offer to write tests for it. But do not write the tests unless I explicitly ask you to do so.
