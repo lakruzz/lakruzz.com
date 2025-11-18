@@ -3,6 +3,7 @@ title: "GitHub's Enfant Terrible: Pull Requests"
 author: Lars Kruse
 author_profile: true
 search: true
+last_modified_at: 2025-11-18
 header:
   teaser: /assets/images/posts/github-enfant-terrible.png 
 tags:
@@ -31,7 +32,9 @@ or controversial way.
 <em>"the enfant terrible of configuration management"</em>
 </div>{: .fact .right .small}
 
-A _Pull Request (PR)_ is not a core Git concept, at best it is an _interpretation_ of an original Open Source community collaboration model based on _patches_. All Git platforms implement their own — slightly different — interpretations of the concept; _GitHub, GitLab, BitBucket, Azure DevOps, Launchpad, Gitea, Gerrit_ ...all! But for some reason GitHub's implementation is still suffering from what could best be categorized as _child deceases_. But the kid is now in it's late teenage years. Why isn't it fixed?
+A _Pull Request (PR)_ is not a core Git concept[^git-request-pull], at best it is an _interpretation_ of an original Open Source community collaboration model based on _patches_. All Git platforms implement their own — slightly different — interpretations of the concept; _GitHub, GitLab, BitBucket, Azure DevOps, Launchpad, Gitea, Gerrit_ ...all! But for some reason GitHub's implementation is still suffering from what could best be categorized as _child diseases_. But the kid is now in it's late teenage years. Why isn't it fixed?
+
+[^git-request-pull]: Git _does_ have a command [`git request-pull`](https://git-scm.com/docs/git-request-pull){: target="_blank"} But it's not what we're looking for, It's really (nothing more than) a reporting and email-template generating tool. It kinda summaries the todo-list that the maintainer will go through and it collects the info needed. So it might be _helpful_, but it doesn't actually provide any tool support; it doesn't fetch or merge anything.
 
 ## What is a Pull Request good for - originally?
 
@@ -65,7 +68,9 @@ When I argue this to my teams it is specifically these virtues listed above that
 
 However, this workflow is very labor intense when it's based on `diff` and `patch` in completely detached source repositories, especially for more complex code bases. Tool support is definitely needed for assessing changes in context, rather than in patch files, for supporting the back-and-forth process of feed-back and resolving merge conflicts.
 
-Linus Torvalds is the champ in this area, right from the start of the Linux kernel the community relied on a Distributed Version Control System (DVCS). The standard tools of that time; PVCS, CVS, Subversion etc. were all discarded as inferior. Instead the Linux Kernel project used BitKeeper. Supposedly the world's first DVCS. But the story goes, that Linus was discontent with using a proprietary tool he didn't control and had no influence on developing features for, so the Linux community stated building their own.
+Linus Torvalds is the champ in this area, right from the start of the Linux kernel the community relied on a Distributed Version Control System (DVCS). The standard tools of that time; PVCS, CVS, Subversion etc. were all discarded as inferior. Instead the Linux Kernel project used BitKeeper. Supposedly the world's first DVCS. But the story goes, that Linus ended up in a controversy with the makers of BitKeeper over allegation of the community trying to backward engineering the internals of the tool. So to avoid the conflict Linus started hacking on Git[^git].
+
+[^git]: A Blast from the past: Here's [a news updated from 2005](https://www.infoworld.com/article/2222534/after-controversy-torvalds-begins-work-on-git-2.html){: target="_blank" } on the controversy between the Linux Community and the makers of BitKeeper.
 
 Plural, there were more than one contender: Mercury, Bazar, Git all has a historical off-set in Linus' quest for a new home grown, Open Source Distributed Version Control System to replace BitKeeper.
 
