@@ -14,7 +14,7 @@ tags:
   - DevOps
   - DevX
 header:
-  teaser: /assets/images/posts/dora2024/dora-2024-1x1.png
+  teaser: /assets/images/posts/dora2024/dora-2024-1x2.png
 basics:
   - url: /assets/images/posts/dora2024/dora-metrics.png
     image_path: /assets/images/posts/dora2024/dora-metrics.png
@@ -84,11 +84,11 @@ _**Theirs:**_ Digital Operational Resilience Act (DORA)
 
 Since 2014 The DevOps Research and Assessment institute (DORA) has released their annual report on “State of DevOps”. The report is based on replies from more than 39K respondents, all of which are professionals working in software. The report is essentially a scavenger hunt in all this data. Looking for insights and trends and based on correlations in data the report setup hypotheses, triangulated with qualitative interviews, for what is happening in the world right now — The World of DevOps at least.
 
-This year's [report][report]{: target="_blank"} is 120 pages. Perhaps a bit much for most. But I'm a DevOps nerds, so each year I wait — full of suspense — for the report to be released in late october. So of course I read it. And this article is where I'll give you a curated highlight of the most interesting highlights.
+This year's [report][report]{: target="_blank"} is 120 pages. Perhaps a bit much for most. But I'm a DevOps nerd, so each year I wait — full of suspense — for the report to be released in late october. So of course I read it. And this article is where I'll give you a curated highlight of the most interesting highlights.
 
 ## DORA basics
 
-I have build and complied a deck of one-pagers explaining the DORA basics for newcomers. If you — like us — sit up and wait for the release of the report, then this 1<sup>st</sup> is probably too basic for you. If that's the case, skip it and  fast forward onto this year's report findings.
+I have build and complied a deck of one-pagers explaining the DORA basics for newcomers. If you — like me — sit up and wait for the release of the report, then this 1<sup>st</sup> is probably too basic for you. If that's the case, skip it and fast forward onto this year's report findings.
 
 {% include gallery id="basics" caption="1<sup>st</sup> deck: DORA Basics" %}
 
@@ -150,7 +150,10 @@ A scavenger hunt for that desired end-user cry out. "Yes - I love it!"
 
 :heart:
 
-If you are in any need of inspiration or practical help with beefing up your SDLC with some _DevX_, _IDP_, _PE_, _AI_, _Prompt engineering_ initiatives - or any other good old DevOpsy concepts such as _containerization_, _Infrastructure as Code_, _declarative pipelines_, _Semantic Versioning_ or the like. Then feel free to call upon us and invite os for a coffee and an inspirational insight into what contemporary Devops can do for you!
+If you are in any need of inspiration or practical help with beefing up your SDLC with some _DevX_, _IDP_, _PE_, _AI_, _Prompt engineering_ initiatives - or any other good old DevOpsy concepts such as _containerization_, _Infrastructure as Code_, _declarative pipelines_, _Semantic Versioning_ or the like. Then feel free to invite me for a coffee and an inspirational insight into what contemporary Devops can do for you!
+{: .kicker}
+
+_[It's free ...will work for food and coffee!](https://calendly.com/lakruzz/1hr){: target="_blank"}_
 {: .kicker}
 
 [report]: /assets/pdf/2024_final_dora_report.pdf "2024 State of DevOps Report"
