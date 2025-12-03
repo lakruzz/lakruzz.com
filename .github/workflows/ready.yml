@@ -40,7 +40,7 @@ jobs:
     uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental
     with:
       dockerfile: dockerfile
-
+      jekyll-build-args: "--source lakruzz.com"
   
   fast-forward-merge:
     name: Merge
