@@ -49,7 +49,7 @@
         }
     ],
     "ignoreRegExpList": [
-        "{%.*%}", // ignore inline liquid tags
+        "{%[\\s\\S]*%}", // ignore inline liquid tags
         "^---[\\s\\S]*?^---$", // ignore YAML front matter
         "^```[\\s\\S]*?^```$", // ignore code block
         "{%\\shighlight[\\s\\S]*?{%\\sendhighlight\\s%}", // ignore highlight liquid tag blocks
