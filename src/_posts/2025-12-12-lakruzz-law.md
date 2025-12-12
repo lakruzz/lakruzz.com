@@ -7,7 +7,7 @@ author_profile: rue
 cross-posts:
   - https://www.inc-inc.dk/stories/lakruzz-law/
 header:
-  teaser: /assets/images/posts/lakruzzlaw/lakruzzlaw-trimmed.png
+  teaser: /assets/images/posts/lakruzzlaw/lakruzzlaw-trimmed.jpg
 tags:
   - lakruzzlaw
   - conwayslaw
