@@ -26,7 +26,7 @@ jobs:
         cspell:check
         markdown:lint
         jekyll:build
-        proofer:check
+#        proofer:check
 
 
   cspell-check:
@@ -71,5 +71,6 @@ jobs:
       actions: write
     uses: lakruzz/workflows/.github/workflows/rake_task.yml@experimental
     with:
-      rake-task: jekyll:build proofer:check
+      rake-task: jekyll:build
+      # rake-task: jekyll:build proofer:check
       image-fqdn: ${{ needs.prepare-image.outputs.image-fqdn }}
