@@ -21,6 +21,6 @@ jobs:
       pages: write
       id-token: write
     secrets:
-      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+      token: ${{ secrets.READY_PUSHER }}
     uses: lakruzz/workflows/.github/workflows/deploy_pages.yml@experimental
 

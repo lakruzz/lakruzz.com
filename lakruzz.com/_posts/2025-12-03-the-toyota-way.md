@@ -179,8 +179,8 @@ This is the way Toyota identifies, analyzes, and solves problems using scientifi
 
 {% responsive_image
   path: "assets/images/posts/toyotaway/tw-assess.png"
-  alt: "Likert's original assessment"
-  caption: "Likert introduces a simple assessment for anyone to use in their own organization - I have distilled it into a one-page pdf file. Click this image to download it. And then simply grab two pens in different colors and with the one mark you current state fore each principle and with the other mark your vision for the future."
+  alt: "Liker's original assessment"
+  caption: "Liker introduces a simple assessment for anyone to use in their own organization - I have distilled it into a one-page pdf file. Click this image to download it. And then simply grab two pens in different colors and with the one mark you current state fore each principle and with the other mark your vision for the future."
   class: "pic center medium"
   url: /assets/pdf/ToyotaWayAssessment.pdf"
 %}

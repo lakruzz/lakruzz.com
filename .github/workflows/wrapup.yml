@@ -54,16 +54,6 @@ jobs:
       context: Markdown Linting
       config_file: .markdownlint-cli2.jsonc
 
-  # jekyll_build_ruby: 
-  #   name: Build
-  #   permissions:
-  #     statuses: write
-  #   secrets:
-  #     READY_PUSHER: ${{ secrets.READY_PUSHER }}
-  #   uses: lakruzz/workflows/.github/workflows/jekyll_build.yml@experimental
-  #   with:
-  #     build_environment: ${{ inputs.build_environment || 'ruby-bookworm' }}
-
   jekyll_build_docker:
     # context: jekyll-build (hard coded in the called workflow) 
     name: Build from docker
@@ -72,7 +62,7 @@ jobs:
       packages: write
       contents: read
     secrets:
-      READY_PUSHER: ${{ secrets.READY_PUSHER }}
+      token: ${{ secrets.READY_PUSHER }}
     uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental
     with:
       dockerfile: dockerfile
