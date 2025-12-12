@@ -1,17 +1,10 @@
+
 name: Wrapup
 # This workflow is triggered on push to branches that begins with a number (issue-branches)
 # It's designed to support the wrapup process in thetechcollective/gh-tt GitHub CLI extension
 on:
   workflow_dispatch:
-    inputs:
-      build_environment:
-        description: 'Build environment for Jekyll'
-        required: false
-        default: 'ruby-debian'
-        type: choice
-        options:
-          - 'ruby-bookworm'
-          - 'ubuntu-latest'
+
   push:
     branches: 
       - '[0-9]*'
@@ -23,48 +16,60 @@ concurrency:
 jobs:
         
   mark-pending:
-    name: Statuses
+    name: Pending
     permissions:
       statuses: write
       contents: read
     uses: lakruzz/workflows/.github/workflows/mark_pending.yml@experimental
     with:
       statuses: |
-        Spell check
-        Markdown Linting
-        jekyll-build
+        cspell:check
+        markdown:lint
+        jekyll:build
+        proofer:check
 
-  cspell_check:
-    name: Spelling
+
+  cspell-check:
+    name: Check
+    needs: mark-pending
     permissions:
       statuses: write
       contents: read
     uses: lakruzz/workflows/.github/workflows/cspell_check.yml@experimental
     with:
-      context: Spell check
+      context: cspell:check
       config_file: cspell.json 
 
-  markdown_linter:
+  markdown-linter:
     name: Linting
+    needs: mark-pending
     permissions:
       statuses: write
       contents: read
     uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
     with:
-      context: Markdown Linting
+      context: markdown:lint
       config_file: .markdownlint-cli2.jsonc
 
-  jekyll_build_docker:
-    # context: jekyll-build (hard coded in the called workflow) 
-    name: Build from docker
+  prepare-image:
+    name: Fetch or Build
     permissions:
-      statuses: write
       packages: write
-      contents: read
-    secrets:
-      token: ${{ secrets.READY_PUSHER }}
-    uses: lakruzz/workflows/.github/workflows/jekyll_build_with_dockerfile.yml@experimental
+    uses: lakruzz/workflows/.github/workflows/docker_with_cache.yml@experimental
     with:
       dockerfile: dockerfile
-      jekyll-build-args: "--source lakruzz.com"
+      hash-files: Gemfile.lock
+      image-tag: docker-workflow-image
 
+  rake-tasks:
+    name: Multiple
+    needs: [mark-pending, prepare-image]
+    permissions:
+      statuses: write
+      contents: read
+      packages: read
+      actions: write
+    uses: lakruzz/workflows/.github/workflows/rake_task.yml@experimental
+    with:
+      rake-task: jekyll:build proofer:check
+      image-fqdn: ${{ needs.prepare-image.outputs.image-fqdn }}

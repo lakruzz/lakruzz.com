@@ -9,6 +9,8 @@ gem "webrick"
 gem "faraday-retry"
 gem "csv"
 gem "rmagick", "~> 4.3.0"
+gem "html-proofer", "~> 5.1.0"
+gem "rake", "~> 13.3.1"
 
 
 # If you have any plugins, put them here!

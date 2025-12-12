@@ -9,14 +9,13 @@ PASS=TRUE
 # Enable/disable specific checks
 RUN_RUFF="FALSE"
 RUN_PYTEST="FALSE"
-RUN_VITEST="FALSE"
 RUN_CSPELL="TRUE"
 RUN_MARKDOWNLINT="TRUE"
+RUN_RAKE_HTMLPROOFER="TRUE"
+RUN_RAKE_BUILD="TRUE"
 
 
 echo "🔍 Running pre-commit checks..."
-
-
 
 
 # Ruff check
@@ -76,16 +75,31 @@ if [ "$RUN_MARKDOWNLINT" == "TRUE" ]; then
     fi
 fi
 
-if [ "$RUN_VITEST" == "TRUE" ]; then
-    printf "   ⏳ Vitest check\r"
-    VITEST_OUT=$( npx vitest run --cache 2>&1)
+# Jekyll build via rake task
+if [ "$RUN_RAKE_BUILD" == "TRUE" ]; then
+    printf "   ⏳ Jekyll build check\r"
+    JEKYLL_BUILD_OUT=$(bundle exec rake jekyll:build 2>&1)
 
     if [ $? -eq 0 ]; then
-        echo "   ✅ Vitest check"
+        echo "   ✅ Jekyll build check"
     else
-        echo "   ❌ Vitest check"
+        echo "   ❌ Jekyll build check"
         PASS=FALSE
-        VITEST=FALSE
+        JEKYLL_BUILD=FALSE
+    fi
+fi
+
+# HTML proof via rake task
+if [ "$RUN_RAKE_HTMLPROOFER" == "TRUE" ]; then
+    printf "   ⏳ HTML proofer check\r"
+    HTMLPROOFER_OUT=$(bundle exec rake proofer:dev 2>&1)
+
+    if [ $? -eq 0 ]; then
+        echo "   ✅ HTML proofer check"
+    else
+        echo "   ❌ HTML proofer check"
+        PASS=FALSE
+        HTMLPROOFER=FALSE
     fi
 fi
 
@@ -119,6 +133,17 @@ else
         echo "${VITEST_OUT}"
         echo ""
     fi
+    if [ "$JEKYLL_BUILD" == "FALSE" ]; then
+        echo "Jekyll Build issues:"
+        echo "${JEKYLL_BUILD_OUT}"
+        echo ""
+    fi
+    if [ "$HTMLPROOFER" == "FALSE" ]; then
+        echo "HTML Proofer issues:"
+        echo "${HTMLPROOFER_OUT}"
+        echo ""
+    fi
+    
     echo "👉  Fix the issues above before committing."
     echo "💡  You can run the same checks manually with: '.githooks/pre-commit'"
     exit 1
