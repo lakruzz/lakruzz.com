@@ -16,7 +16,7 @@ Praqma was, in it's early days, focusing on _configuration management, version c
 
 ## Version 1 - CI focus
 
-<a href="/images/about/codemamo.v1.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/pages/about/codemamo.v1.png"/></a> I presented the first version of the model at the first Scandinavian Jenkins User Event in 2013. It was part of our dedicated focus to shift from being a CI company to a "_CD - Continuous Delivery_" company. At that debut presentation it was nothing more than a poster:
+<a href="/assets/images/model/about/codemamo.v1.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/model/about/codemamo.v1.png"/></a> I presented the first version of the model at the first Scandinavian Jenkins User Event in 2013. It was part of our dedicated focus to shift from being a CI company to a "_CD - Continuous Delivery_" company. At that debut presentation it was nothing more than a poster:
 
 CloudBees still has a blog post online: [_"What is Continuous Integration?"_](https://www.cloudbees.com/continuous-delivery/continuous-integration){: target="_blank"} that includes a picture of this first version.
 
@@ -34,11 +34,11 @@ We wanted to create a unique assessment process where it was the customer's own 
 
 The assessment process we developed would span five _intense_ workdays on-site at the customer, with all hands on deck. Some of the larger assessments we did had 120 participants in the first-day Value Stream Mapping workshop.
 
-We gameified the process with huge _rich pictures_ on the wall and we developed a deck of cards - one for each tile in the matrix - which we used in different workshop formats where the participants would score the cards by four different [gauges](/gauges/) and hereby identify both _"low hanging fruits"_ as well as _"blockers"_.
+We gameified the process with huge _rich pictures_ on the wall and we developed a deck of cards - one for each tile in the matrix - which we used in different workshop formats where the participants would score the cards by four different [gauges](/codememo/gauges/) and hereby identify both _"low hanging fruits"_ as well as _"blockers"_.
 
 The model framework would build a static website, but it had a unique feature that the `.pdf` to print the card deck from was automatically generated on-the-fly, so any last-minute changes, adaptions or customizations to the model could be implemented in matter op minutes.
 
-<a href="/images/about/docemamo.v2.21.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/pages/about/codemamo.v2.21.png"/></a>
+<a href="/assets/images/model/about/codemamo.v2.21.png" target="_blank"><img width="40%" align="right" alt="Continuous Delivery Maturity Matrix" src="/assets/images/model/about/codemamo.v2.21.png"/></a>
 
 The model framework, was later extended so that event the findings we observed during the assessment - the Continuous Delivery backlog - and the report to the customer including the executive summary - was written directly into a customer specific version of the model. The result of the process was delivered to the customer both as a static website that they could read in a browser and to accompany it a 50-70 page detailed report in `.pdf`. A report that the model framework automatically created based on the website content.
 
@@ -52,7 +52,7 @@ Praqma's last official version of the model is captured by the [Way Back Machine
 
 ## A live sample - it's just a story
 
-Here on there pages a [lakruzz.com](https://codememo.lakruzz.com) I'm now re-publishing the model. It has received a large overhaul. Under the hood a large majority of the code is rewritten, to enhance readability in general and media queries and responsive design on handheld devices. But more importantly I've turned the model into a template you can inherit from in your own static website in jekyll - I'll give a few pointers to how that can be done later. but for now I just want the release this MVP so we can get the model live again.
+Here on there pages a [lakruzz.com](https://www.lakruzz.com/codememo) I'm now re-publishing the model. It has received a large overhaul. Under the hood a large majority of the code is rewritten, to enhance readability in general and media queries and responsive design on handheld devices. But more importantly I've turned the model into a template you can inherit from in your own static website in jekyll - I'll give a few pointers to how that can be done later. but for now I just want the release this MVP so we can get the model live again.
 
 To show-case the features of the model I have added a anonymized and generalized write-up of some of the most typical or illustrative findings and mitigation from the total of 24 assessments that was conducted on the basis of this specific model. I started out with the three first cards in the _Build_ area - more will follow. You can subscribe to the feed in the footer to get updates.
 
@@ -64,7 +64,7 @@ But hey! Feel free to read much more into it than just that; I can reveal to you
 
 ## How to read the model
 
-<a href="/"><img width="32px" align="left" style="margin-right: 13px;" alt="Continuous Delivery Maturity Matrix" src="/images/lakruzz/cards-icon.png"/></a>
+<a href="/"><img width="32px" align="left" style="margin-right: 13px;" alt="Continuous Delivery Maturity Matrix" src="/assets/images/model/cards-icon.png"/></a>
 
 Hit the icon in the top-left corner to go to the front of the model. You will see 5 levels of expertise - _Novice, Beginner, Intermediate, Advanced and Expert_. These levels are a chosen as a reference to [The Dreyfus Brother's model for skill acquisition](https://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition){: target="_blank"} which contributed to the field of _Cognitive Science_ as early as in the 80's to propose an early model for understanding intelligence.
 

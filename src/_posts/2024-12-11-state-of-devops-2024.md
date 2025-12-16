@@ -8,8 +8,6 @@ author: Lars Kruse
 author_profile: true
 hidden: false
 published: true
-categories: 
-  - Test & DevOps
 tags:
   - DevOps
   - DevX

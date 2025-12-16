@@ -5,7 +5,7 @@ date:     2016-11-24
 author:
   name: "Lars Kruse"
   co-authors: ""
-#  logo: 
+  logo: /assets/images/lakruzz-logo.png
 weight:     1
 published:  true
 client_logo_margin: 0mm 0mm

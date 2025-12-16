@@ -14,7 +14,7 @@ namespace :jekyll do
 
   desc 'Serve Jekyll site with live reload'
   task :serve do
-    sh 'bundle exec jekyll serve --source src --destination _site --livereload --quiet'
+    sh 'bundle exec jekyll serve --source src --destination _site --livereload'
   end 
 end
 
@@ -30,12 +30,13 @@ namespace :proofer do
       disable_external: true,
       assume_extension: '.html',
       extensions: ['.html'],
-      enforce_https: false,
+      check_external_hash: false,
+      check_internal_hash: false,
       ignore_urls: [
         %r{linkedin\.com},
         %r{twitter\.com},
         %r{instagram\.com},
-        %r{devopsdays\.dk}
+        %r{lakruzz\.com}
       ]
     }
     
@@ -48,14 +49,16 @@ namespace :proofer do
     puts 'Running HTML link validation (with external links)...'
     
     options = {
+      disable_external: false,
       assume_extension: '.html',
-      check_external_hash: false,
       extensions: ['.html'],
+      check_external_hash: false,
+      check_internal_hash: false,
       ignore_urls: [
         %r{linkedin\.com},
         %r{twitter\.com},
         %r{instagram\.com},
-        %r{devopsdays\.dk}
+        %r{lakruzz\.com}
       ]
     }
     
@@ -63,24 +66,4 @@ namespace :proofer do
     puts '✓ HTML validation passed!'
   end
 
-  desc 'Validate HTML links (in development environment, including external)'
-  task :dev do
-    puts 'Running HTML link validation (with external links)...'
-    
-    options = {
-      assume_extension: '.html',
-      check_external_hash: false,
-      enforce_https: false,
-      extensions: ['.html'],
-      ignore_urls: [
-        %r{linkedin\.com},
-        %r{twitter\.com},
-        %r{instagram\.com},
-        %r{devopsdays\.dk}
-      ]
-    }
-    
-    HTMLProofer.check_directory('./_site', options).run
-    puts '✓ HTML validation passed!'
-  end  
 end

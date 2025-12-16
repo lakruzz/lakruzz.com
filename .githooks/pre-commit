@@ -11,7 +11,7 @@ RUN_RUFF="FALSE"
 RUN_PYTEST="FALSE"
 RUN_CSPELL="TRUE"
 RUN_MARKDOWNLINT="TRUE"
-RUN_RAKE_HTMLPROOFER="FALSE"
+RUN_RAKE_HTMLPROOFER="TRUE"
 RUN_RAKE_BUILD="TRUE"
 
 
@@ -92,7 +92,8 @@ fi
 # HTML proof via rake task
 if [ "$RUN_RAKE_HTMLPROOFER" == "TRUE" ]; then
     printf "   ⏳ HTML proofer check\r"
-    HTMLPROOFER_OUT=$(bundle exec rake proofer:dev 2>&1)
+#    HTMLPROOFER_OUT=$(bundle exec rake proofer:check 2>&1)
+    HTMLPROOFER_OUT=$(bundle exec rake proofer:check_external 2>&1)
 
     if [ $? -eq 0 ]; then
         echo "   ✅ HTML proofer check"

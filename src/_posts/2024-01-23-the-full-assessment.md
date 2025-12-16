@@ -107,7 +107,7 @@ score:
 
 ![image-center](/assets/images/pics/ws-0003.jpg){: .align-center width="50%"}
 
-This model [originates](/about-model) from the time when I founded and operated Praqma. In this post, I'll describe how I conducted this Continuous Delivery Metric Assessment at more then 25 companies
+This model [originates](/codememo/about-model) from the time when I founded and operated Praqma. In this post, I'll describe how I conducted this Continuous Delivery Metric Assessment at more then 25 companies
 {: .kicker}
 
 The name and concept “Continuous Delivery” is a deliberate reference to a lean or TPS inspired approach often used in manufacturing which takes offset in a one-piece flow that strives for quality built into the product as opposed to glued on - after it’s done.
@@ -163,7 +163,7 @@ In Continuous Delivery in context of software development we focus on different 
 
 After the Value Stream mapping session we present [the model](/) and ask the team to score each card from a miraculous point of view:
 
->_Imagine that the principle described on the card was fully implemented in your process. How much would it affect [throughput, feedback and payback](/gauges/) — and how complex would the implementation be_
+>_Imagine that the principle described on the card was fully implemented in your process. How much would it affect [throughput, feedback and payback](/codememo/gauges/) — and how complex would the implementation be_
 
 The model suggests different approaches, techniques, tools or principles, which represent different levels of expertise and proficiency. We use the model to conduct a facilitated discussion with the team and stakeholders. Through this workshop we will debate every single card and assess how relevant this capability is in context of the quality of the product and the Software Development Lifecycle.
 
@@ -189,7 +189,7 @@ A lean coffee workshop is a special workshop format that allows participants to 
 - A possible (maybe more) solution to mitigate it
 - The value each identified solution would yield to SDLC or product quality
 
-The findings are then recorded and presented as a detailed and customized note on each card - see card ["Automated Builds"](/automated-builds/) as an example (these are real finding from some of the assessments, but anonymized and used here to serve as examples). Also notice on the ["Automated Builds"](/automated-builds/) card, that the scoring from the workshop is captured. The score is 7 and [complexity is categorized](/gauges/) as _a group effort_.
+The findings are then recorded and presented as a detailed and customized note on each card - see card ["Automated Builds"](/codememo/automated-builds/) as an example (these are real finding from some of the assessments, but anonymized and used here to serve as examples). Also notice on the ["Automated Builds"](/codememo/automated-builds/) card, that the scoring from the workshop is captured. The score is 7 and [complexity is categorized](/codememo/gauges/) as _a group effort_.
 
 ## The report
 

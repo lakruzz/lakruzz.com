@@ -12,8 +12,6 @@ comments: true
 tags:
   - DevOps
   - The Toyota Way
-categories: 
-  - Test & DevOps
 header:
   teaser: /assets/images/posts/toyotaway/toyotaway-2nd.png
 philosophy:

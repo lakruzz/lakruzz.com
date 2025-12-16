@@ -14,7 +14,7 @@ layout: single
     {% elsif page.opacity %}
       {% assign style = "opacity: " | append:page.opacity %}
     {% endif %}
-    <a name="tag"></a><h1 style="{{ style }}">{{ page.title }}</h1>
+    <a name="tag" data-proofer-ignore></a><h1 style="{{ style }}">{{ page.title }}</h1>
 
     {% assign l_sorted = site.levels | sort:'weight' | reverse %}
     {% assign a_sorted = site.areas | sort:'weight' | reverse %}

@@ -16,7 +16,7 @@ This prevents local configuration from tampering with the builds, making them de
 #### Developers use reference image
 
 Ideally, there should be no difference between a developer's environment and that of the toll gate.
-This is achieved by making it easy for developers to spin up the standard image to run their builds, allowing them to [easily produce the same result](/on-demand-environments/ "Access to production-like environments") as the toll gate job.
+This is achieved by making it easy for developers to spin up the standard image to run their builds, allowing them to [easily produce the same result](/codememo/on-demand-environments/ "Access to production-like environments") as the toll gate job.
 
 ## Final delivery to customer is not automated
 
@@ -63,7 +63,7 @@ The different subsystems have different build technologies (e.g. Maven and Scons
 ### Split the monolith and add dependency management of the artifacts
 
 Splitting the monolith into subsystems and implementing true dependency management makes the build script obsolete.
-It simply vanishes. Please refer to the [architecture cards](/areas/arch/#tag "Architecture & Design") for more information.
+It simply vanishes. Please refer to the [architecture cards](/codememo/areas/arch/#tag "Architecture & Design") for more information.
 
 ### Localization files are introduced late in the release process, leading to unexpected UI changes
 
