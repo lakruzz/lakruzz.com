@@ -3,7 +3,7 @@
 title: Lakruzz' Law
 author: Lars Kruse
 search: true
-author_profile: rue
+author_profile: true
 cross-posts:
   - https://www.inc-inc.dk/stories/lakruzz-law/
 header:

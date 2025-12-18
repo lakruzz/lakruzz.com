@@ -52,6 +52,7 @@
         "{%[\\s\\S]*%}", // ignore inline liquid tags
         "^---[\\s\\S]*?^---$", // ignore YAML front matter
         "^```[\\s\\S]*?^```$", // ignore code block
+        "[\\^\\s\\S]*?]", // ignore markdown footnotes
         "{%\\shighlight[\\s\\S]*?{%\\sendhighlight\\s%}", // ignore highlight liquid tag blocks
         "`.*`", // ignore inline code 
         "<code>.*</code>", // ignore HTML code tags
