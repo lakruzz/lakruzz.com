@@ -371,6 +371,7 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
+    - width: 128
     - width: 255
     - width: 510
     - width: 1020

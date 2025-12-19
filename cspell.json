@@ -49,7 +49,7 @@
         }
     ],
     "ignoreRegExpList": [
-        "{%[\\s\\S]*%}", // ignore inline liquid tags
+        "{%[\\s\\S]*?%}", // ignore inline liquid tags
         "^---[\\s\\S]*?^---$", // ignore YAML front matter
         "^```[\\s\\S]*?^```$", // ignore code block
         "[\\^\\s\\S]*?]", // ignore markdown footnotes
