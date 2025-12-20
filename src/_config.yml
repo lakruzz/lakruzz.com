@@ -212,7 +212,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 4 # amount of posts to show
+paginate: # amount of posts to show
 paginate_path: /stories/page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -371,6 +371,7 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
+    - width: 128
     - width: 255
     - width: 510
     - width: 1020

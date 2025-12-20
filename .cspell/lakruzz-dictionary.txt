@@ -29,6 +29,7 @@ Giscus
 giscussions
 Grundfos
 hackaton
+hackatons
 Hamel
 Hansei
 Heijunka
@@ -68,6 +69,7 @@ postcreate
 Praqma
 Prolike
 savvyness
+scaleups
 sconsidered
 SDCA
 SDLC
@@ -77,6 +79,7 @@ slowification
 SMED
 sociotechnical
 Strandvejen
+Substack
 Takt
 takts
 Techfast
@@ -84,6 +87,7 @@ Terma
 thetechcollective
 toplevel
 Tuborg
+unconferences
 Wenger
 worklog
 Workon

@@ -13,6 +13,8 @@ main:
     url: /contact/
   - title: "🍪"
     url: /terms/
+  - title: "🤷‍♂️"
+    url: /about/
 
 # Codememo links
 codememo:
