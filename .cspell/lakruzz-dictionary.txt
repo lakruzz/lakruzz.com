@@ -3,6 +3,7 @@ Andon
 Andreessen
 Asser
 Atmel
+autonomation
 aways
 Borgergade
 Brüel
@@ -51,6 +52,8 @@ kruse
 Lakruzz
 Larusso
 Marmorkirken
+miscredit
+miscredited
 Miyagi
 Muda
 mura
@@ -65,12 +68,12 @@ outro
 Overburdenness
 PDCA
 Poka
+Poppendieck
 postcreate
 Praqma
 Prolike
 savvyness
 scaleups
-sconsidered
 SDCA
 SDLC
 Senpai
@@ -88,6 +91,7 @@ thetechcollective
 toplevel
 Tuborg
 unconferences
+wastefullness
 Wenger
 worklog
 Workon

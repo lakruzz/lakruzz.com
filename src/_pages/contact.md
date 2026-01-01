@@ -14,9 +14,9 @@ This is like a free coaching session - we will talk about you and your challenge
 
 ## Get a free workshop for your team
 
-We have a series of workshop and speaks that I have prepared, and done publicly and for free. I'll be happy to do it again. Despite that they are free in the literal meaning "costless" they are not cheap in the meaning "inferior" or "low quality". Quite the opposite, they showcase the seriousness and high quality I aim for in my engagement.
+I have a series of workshop and speaks that I have prepared, and done publicly and for free. I'll be happy to do it again. Despite that they are free in the literal meaning "costless" they are not cheap in the meaning "inferior" or "low quality". Quite the opposite, they showcase the seriousness and high quality I aim for in my engagement.
 
-I offer them as a private V.I.P. session. Only condition is that you sign up min 6 people (no max!) and that you set aside time to both prepare well before the workshop, and evaluate with me after.
+I offer them as a private V.I.P. session on your location. Only condition is that you sign up min 6 people (no max!) and that you set aside time to both prepare well before the workshop, and evaluate with me after.
 
 [Book a meeting](https://calendly.com/lakruzz){: .btn .btn--warning target="_blank" title="Opens in a new tab"}
 
