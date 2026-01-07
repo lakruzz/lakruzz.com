@@ -7,5 +7,12 @@
     line-height: 1em;
     padding: 0.5em 0.8em;
     text-decoration: none;
+    &:visited{
+      color: white;
+    }
+    &:hover{
+      color: grey;
+      text-decoration: none;
+    }
   }
 }

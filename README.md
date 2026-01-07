@@ -1,46 +1,100 @@
 ---
 maintainer: lakruzz
 ---
-# code-maturity
+# Continuous Delivery Maturity Model
 
-To avoid strugling with Jekyll setup, use our praqma/gh-pages Docker image doing:
+## Development environment
 
-* cd into your code-maturity git repository
-* run the following command, where <customername> is obviously the customers name without spaces etc. It often matches the long lived branch names in the repository for that customer.
+To avoid struggling with Jekyll setup, use the "Ruby" devcontainer. When you (re)build the container be sure to wait for the `postcreate.sh` script to finish.
 
+Build and serve the model (default) site like this
 
-**Serve to the network - non-local hosts**:
+```shell
+bundle exec jekyll serve
+````
 
-`docker run -i -t --rm --name code-maturity-gh-pages -v $(pwd):/home/jenkins -p 4444:4000 praqma/gh-pages ./pserve <customername>`
+To run a customer specific site include the customer specific `_config.yml` like this:
 
-**Serve locally**:
+```shell
+CUSTOMER=ttc         # Folder name in /_customer_details 
+bundle exec jekyll serve --config _config.yml,_customer_details/$CUSTOMER/_config.yml
+```
 
-`docker run -i -t --rm --name code-maturity-gh-pages -v $(pwd):/home/jenkins -p 4444:4000 praqma/gh-pages ./serve <customername>`
+## Changing the model
 
-*Note the slightly difference in using `pserve` script instead of `serve` script, as `pserve` run jekyll command with --host=0.0.0.0 which makes jekyll serve the website to non-localhosts.*
+The Model is defined by the content in the following folders:
 
-Our gh-pages Docker image:
+```
+/
+  _levels
+  _areas
+  _cards
+  _gauges
+``` 
 
-* https://github.com/Praqma/docker-gh-pages
-* https://hub.docker.com/r/praqma/gh-pages/
+### Areas and levels
+If you plan to change the model or want to create your own here's what you need to know
 
-## PLEASE SAVE FINAL REPORTS
+👉 The file names in areas are relevant to cards (explained next)but most important for Laying out the matrix the `title`and then `weight` that defines the order in both levels and areas files:
 
-When sending a customer the report in pdf-format, it should saves in several ways for references.
+```yaml
+---
+title: "Architecture & Design"
+weight: 40
+...
+---
+```
 
-* save the pdf-file with the customer folder in our `praqma.customers` Google Drive
-* tag the final customer version with `<CUSTOMER>.DELIVERED` so we can always find the final version
-* add the pdf report version to the `gh-pages` as well under the `res` folders
+### Cards
 
-## Report for print and admin link
+Cards are ordered in a similar way - only now the weight is called level. And the cards are defined to belong to a certain area by the areas filenames
 
-You can add an `/admin` to your url, e.g. `http://localhost:4444/admin/` to printable formats and other views.
+```yaml
+---
+title:      Access to production-like environment
+level:      65
+area:       qa
+...
+---
+```
 
-## Compatibility issues and backwards Compatibility
+## Adding customer specifc findings
 
-The `gh-pages` are always the latest version of the "engine" part, and where new reports branch of (yes, long-lived product variant branches used pr. customer) so this means that newest features described in this README are not always available on old customer branches.
+For a customer designed model use create a new dedicated folder under _customer_details
 
-It also means you should not merge latest master branch (`gh-pages`) to customer branches, as it might break their models.
+The folder should contain the following
+
+```
+_customer_details
+  customer
+    _config.yml
+    score.md
+    report-parts
+      content.md
+      findings.md
+      front.md
+      score.md
+      summary.md
+      toc.md
+      tools.md
+    snippets
+      arch
+        # md files with file names matching the card filenames
+      build
+      ...
+      # create a folder for each file-name in _areas
+```
+
+In the snippets files you can add findes in header level 3 and sugested mitigation in header level 4
+
+The file names must match _exactly_ the file name of the cards
+
+### Gauges
+The gauges are currently semi-hardcoded 🤷‍♂️ - sorry.
+
+## Admin
+
+The compiled site insludes and admin page `/admin/` than has links to the printable cards, the report and other stuff
 
 ## Know issues
 

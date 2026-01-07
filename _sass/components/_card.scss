@@ -8,6 +8,8 @@
   overflow: hidden;
   position: relative;
   width: $card-width-matrix;
+  text-align: left;
+  z-index: 0;
   a {
     color: white;
     font-size: 14px;
@@ -16,8 +18,10 @@
     letter-spacing: 0.8px;
     display: block;
     height: 100%;
+    width: 100%;
     padding: 0.05 * $card-width-matrix;
     text-decoration: none;
+    position: absolute;
     -moz-transition: color 0.5s ease;
     -moz-transition: text-shadow 0.5s ease;
     -o-transition: color 0.5s ease;
@@ -32,5 +36,11 @@
     text-decoration: none;
     background-color: black;
   }
+
+  a:visited {
+    color: white;
+  } 
+
+  
 
 }

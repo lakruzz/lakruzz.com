@@ -36,3 +36,12 @@ h4{
 printed-footer{
   visibility: hidden;
 }
+
+.kicker{
+  font-family: $font-family-condensed;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: $font-letter-spacing;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
