@@ -25,3 +25,4 @@
   release = "!f() { git push --tag && gh release create `gh semver` --latest --verify-tag  --notes-file `git root`/$1; }; f"
   issue-number = "!f() { git rev-parse --abbrev-ref HEAD | grep -oE '^[0-9]+'; }; f"
   mark-stable = "!f() { echo git checkout main && git tag -f stable $1 && git push origin --tags --force; }; f"
+  approve = "!f() { SHA=$(git rev-parse --short ${1:-HEAD}); git tag -a review/$SHA -s -m \"Approved by: $(git config --get user.name) ($(git config --get user.email))\" $SHA; }; f"
