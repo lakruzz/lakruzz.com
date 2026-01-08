@@ -14,18 +14,18 @@ excerpt: Get the best from two worlds, replace your peer-reviews with shift-left
 
 ![image-center]({{ page.header.teaser }}){: .align-center width="50%"}
 
-In a Quality-by-Design paradigm there is a widespread misunderstanding that _peer-reviews_ are required to be compliant. The truth is that a _four-eye principle_ is required, and _formal reviews_ are too. But using _peer-reviews_ as a quality gate violates almost every lean principle we can think of. Read on to learn what to do about it.
+In a Quality-by-Design paradigm there is a widespread misunderstanding that _peer-reviews_ are required to be compliant. The truth is that a _four-eye principle_ is required, and _formal reviews_ are too. But using _peer-reviews_ as a quality gate is not required and it  violates almost every lean principle we can think of. Read on to learn what to do about it.
 {: .kicker }
 
 ## Why peer&#8209;reviews used as quality gates are an anti&#8209;pattern
 
-To set the scene, let's imagine a team that strives for keeping the `main` branch as the only long-lived branch and maybe even in an _always-shippable_ state. To obtain this, each developer works on an issue branch and when ready to merge to `main` a Pull Request is created. The design and intent of the Pull Request is roughly that a host of checks are run in the pipeline, their statuses are recorded on the PR and if the checks pass a review is required, often by an arbitrary peer, but it can also be requested by a named colleague, maybe a mentor or an expert.
+To set the scene, let's imagine a team that strives for keeping the `main` branch as the only long-lived branch and maybe even in an _always-shippable_ state. To obtain this, each developer works on an issue branch and when ready to merge to `main` a Pull Request is created. The design and intent of the Pull Request is roughly as follows; a host of checks are run in the pipeline, their statuses are recorded on the PR and if the checks pass an additional manual review is required, often by an arbitrary peer, but it can also be requested by a named colleague, maybe a mentor or an expert.
 
 Now the PR just sits there until someone has the time to review and merge. Time passes.
 
-When the reviewer finally picks it up it there may even be change requests, usually based on some variant of the reviewer's _opinions_.
+When the reviewer finally picks it up it there may be change requests, usually based on some variant of the reviewer's _opinions_.
 
-Now the PR just sits there again waiting for the contributor to pick it up again. Time passes.
+Now the PR just sits there again waiting for the contributor to get back at it and pick it up again. Time passes.
 
 When the required changes are finally committed the PR becomes active again, the pipeline run again, the status checks are recorded again and a new reviews is required.
 
