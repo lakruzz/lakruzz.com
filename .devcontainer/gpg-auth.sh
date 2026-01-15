@@ -20,7 +20,7 @@ if [ -n "$_GPG_KEY" ]; then
   # Handle keys with pass phrases, so they prompt for passphrase on first use and store it for 2 hours
   echo "pinentry-mode loopback"  >> ~/.gnupg/gpg.conf
   echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
-  echo "default-cache-ttl 3600"  >> ~/.gnupg/gpg-agent.conf
+  echo "default-cache-ttl 7200"  >> ~/.gnupg/gpg-agent.conf
   echo "nmax-cache-ttl 7200"     >> ~/.gnupg/gpg-agent.conf
 
   
