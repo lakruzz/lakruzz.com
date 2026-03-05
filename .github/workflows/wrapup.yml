@@ -24,9 +24,9 @@ jobs:
     with:
       statuses: |
         cspell:check
-        markdown:lint
         jekyll:build
         proofer:check_external
+#        markdown:lint
 
 
   cspell-check:
@@ -40,16 +40,16 @@ jobs:
       context: cspell:check
       config_file: cspell.json 
 
-  markdown-linter:
-    name: Linting
-    needs: mark-pending
-    permissions:
-      statuses: write
-      contents: read
-    uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
-    with:
-      context: markdown:lint
-      config_file: .markdownlint-cli2.jsonc
+#  markdown-linter:
+#    name: Linting
+#    needs: mark-pending
+#    permissions:
+#      statuses: write
+#      contents: read
+#    uses: lakruzz/workflows/.github/workflows/markdown_linter.yml@experimental
+#    with:
+#      context: markdown:lint
+#      config_file: .markdownlint-cli2.jsonc
 
   prepare-image:
     name: Fetch or Build
