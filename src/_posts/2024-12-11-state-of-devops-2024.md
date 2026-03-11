@@ -82,7 +82,7 @@ _**Theirs:**_ Digital Operational Resilience Act (DORA)
 
 Since 2014 The DevOps Research and Assessment institute (DORA) has released their annual report on “State of DevOps”. The report is based on replies from more than 39K respondents, all of which are professionals working in software. The report is essentially a scavenger hunt in all this data. Looking for insights and trends and based on correlations in data the report setup hypotheses, triangulated with qualitative interviews, for what is happening in the world right now — The World of DevOps at least.
 
-This year's [report][report]{: target="_blank"} is 120 pages. Perhaps a bit much for most. But I'm a DevOps nerd, so each year I wait — full of suspense — for the report to be released in late october. So of course I read it. And this article is where I'll give you a curated highlight of the most interesting highlights.
+This year's [report][report]{: target="_blank"} is 120 pages. Perhaps a bit much for most. But I'm a DevOps nerd, so each year I wait — full of suspense — for the report to be released in late October. So of course I read it. And this article is where I'll give you a curated highlight of the most interesting highlights.
 
 ## DORA basics
 

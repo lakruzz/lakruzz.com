@@ -145,7 +145,7 @@ These tools are all open source and available for free for everyone who would li
 
 ### ⚠️ The issues are eclipsed by the pull request
 
-When we work extensively with _issues_, we'd like the comments related to the code developed in contest of that issue, but a  GitHub Pull Request is under the hood implemented as a specialized varian of a GitHub Issue - so when using the Pull Requests we get _another issue_ on top of the original issue, so now we have two logically identical issues - they both relate to the same development branch. It's a mess. we want comments, design decisions and work logs and audit trails in context of the original issue. It felt like GitHub Pull Request were nothing but intrusive party crashers.
+When we work extensively with _issues_, we'd like the comments related to the code developed in contest of that issue, but a  GitHub Pull Request is under the hood implemented as a specialized variant of a GitHub Issue - so when using the Pull Requests we get _another issue_ on top of the original issue, so now we have two logically identical issues - they both relate to the same development branch. It's a mess. we want comments, design decisions and work logs and audit trails in context of the original issue. It felt like GitHub Pull Request were nothing but intrusive party crashers.
 
 ### ⚠️ Pull Requests don't support true linear (`fast-forward`) history
 
