@@ -12,6 +12,7 @@
     "MD036": false,
     "MD041": { "allow_preamble": true, "level": 1 },
     "MD042": false,
-    "MD026": { "punctuation": ".," }
+    "MD026": { "punctuation": ".," },
+    "MD039": false
   }
 }

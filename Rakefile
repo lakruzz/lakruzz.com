@@ -31,13 +31,7 @@ namespace :proofer do
       assume_extension: '.html',
       extensions: ['.html'],
       check_external_hash: false,
-      check_internal_hash: false,
-      ignore_urls: [
-        %r{linkedin\.com},
-        %r{twitter\.com},
-        %r{instagram\.com},
-        %r{lakruzz\.com}
-      ]
+      check_internal_hash: false
     }
     
     HTMLProofer.check_directory('./_site', options).run
@@ -58,7 +52,10 @@ namespace :proofer do
         %r{linkedin\.com},
         %r{twitter\.com},
         %r{instagram\.com},
-        %r{lakruzz\.com}
+        %r{lakruzz\.com},
+        %r{konservative\.dk},
+        %r{alternativet\.dk},
+        %r{socialdemokratiet\.dk}
       ]
     }
     
