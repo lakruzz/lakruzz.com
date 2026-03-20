@@ -1,12 +1,15 @@
 # Custom Dictionary Words
+agentic
 Andon
 Andreessen
 Asser
 Atmel
 autonomation
 aways
+baed
 Borgergade
 Brüel
+Cabe
 componentized
 Cryptera
 CX'ers
@@ -81,6 +84,7 @@ postcreate
 Praqma
 Pretotyping
 Prolike
+Pryce's
 savvyness
 scaleups
 SDCA
