@@ -225,12 +225,13 @@
   }
 
   .archive__item-teaser {
-    @include breakpoint($small) {
-      max-height: 200px;
-    }
+    aspect-ratio: 1.91 / 1;
+    max-height: none;
 
-    @include breakpoint($medium) {
-      max-height: 120px;
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
