@@ -58,6 +58,8 @@ namespace :proofer do
         %r{socialdemokratiet\.dk},
         %r{enhedslisten\.dk},
         %r{github\.com\/signup},
+        %r{youtube\.com\/watch},
+        %r{ted\.com\/talks}
       ]
     }
     

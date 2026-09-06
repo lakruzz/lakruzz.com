@@ -7,8 +7,8 @@ search: true
 header:
   teaser: /assets/images/posts/dorith.jpg
 tags:
-  - LEAN
-  - agile
+  - Lean
+  - Agile
 ---
 
 DORITH is a contraction of sentence "DO the RIght THing". It's a principle that enables you to make decisions that will appear to be tactical and still allow you to learn as you go. Understand the in-situ challenge with  being tactical and start taking small steps in the right direction.

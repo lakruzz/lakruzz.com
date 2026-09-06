@@ -76,6 +76,7 @@ jobs:
       - mark-pending
       - cspell-check
       - markdown-linter
+      - proofer
     permissions:
       statuses: write
       contents: read

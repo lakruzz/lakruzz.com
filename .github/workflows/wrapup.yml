@@ -62,8 +62,10 @@ jobs:
       image-tag: docker-workflow-image
 
   rake-tasks:
-    name: Multiple
-    needs: [mark-pending, prepare-image]
+    name: Build and proof
+    needs:
+      - mark-pending
+      - prepare-image
     permissions:
       statuses: write
       contents: read
