@@ -55,7 +55,9 @@ namespace :proofer do
         %r{lakruzz\.com},
         %r{konservative\.dk},
         %r{alternativet\.dk},
-        %r{socialdemokratiet\.dk}
+        %r{socialdemokratiet\.dk},
+        %r{enhedslisten\.dk},
+        %r{github\.com\/signup},
       ]
     }
     

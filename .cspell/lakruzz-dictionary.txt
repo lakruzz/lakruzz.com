@@ -78,6 +78,7 @@ outro
 overburdenness
 Overburdenness
 PDCA
+pitche
 Poka
 Poppendieck
 postcreate

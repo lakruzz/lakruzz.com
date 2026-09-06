@@ -13,7 +13,7 @@ git config --local --get include.path | grep -e ../.gitconfig >/dev/null 2>&1 ||
 
 .devcontainer/gh-auth.sh 
 echo "$PREFIX Installing the TakT gh cli extension from devx-cafe/gh-tt "
-gh extension install devx-cafe/gh-tt --pin experimental
+gh extension install devx-cafe/gh-tt --pin stable
 echo "$PREFIX Installing the gh shorthand aliases"    
 gh alias import .devcontainer/.gh_alias.yml --clobber
 
